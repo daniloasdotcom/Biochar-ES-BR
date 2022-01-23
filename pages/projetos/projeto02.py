@@ -15,12 +15,13 @@ def Projeto02():
     ## Resumo
     """)
 
-    text02 = "<p style='text-align: justify;'> Este experimento de campo é também uma continuação de um ensaio " \
-             "estabelecido, em março de 2018 com recursos do EDITAL FAPES/SEAG Nº 06/2015, na área experimental do " \
-             "IFES - Campus de Alegre. Neste ensaio os biocarvões de casca de eucalipto são testados em tratamentos " \
-             "distribuídos num delineamento em blocos casualizados em um esquema fatorial 5 x 2, sendo cinco doses de " \
-             "biocarvões (0; 0,25%; 0,5%; 1,0% e 2% em volume de biocarvões por volume de sulco) produzidos sob duas " \
-             "temperaturas (350 ºc e 600 ºc).</p> "
+    text02 = "<p style='text-align: justify;'> Este experimento será estabelecido em laboratório. Biocarvões serão " \
+             "acrescido a amostras de solo a fim de promover a formação de agregados e em seguida serão analisados " \
+             "quanto ao conteúdo e disponibilidade de P para diferentes classes de agregados formados. Sendo que o P " \
+             "extraível com água representa o P facilmente disponível na planta, enquanto o P extraível com NaHCO3 " \
+             "também inclui P lábil adsorvido na superfície dos óxidos e hidróxidos de Fe e Al ou carbonato de cálcio " \
+             "(CaCO3). Já P extraível via os extratos ácidos (usando HCl e/ou H2SO4) representam o fosfato " \
+             "prontamente disponível ligado à Ca, Fe e Al "
 
     st.markdown(text02, unsafe_allow_html=True)
 

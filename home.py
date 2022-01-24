@@ -11,7 +11,7 @@ pj4 = "Tarefas da semana"
 
 
 st.sidebar.title('Menu')
-page_projeto = st.sidebar.selectbox('Escolha o Projeto de Pesquisa',
+page_projeto = st.sidebar.selectbox('Escolha um página de interesse',
                                     [pj1, pj2, pj3, pj4])
 
 def Choice():

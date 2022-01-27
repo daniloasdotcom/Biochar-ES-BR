@@ -52,66 +52,58 @@ def sprints():
     st.markdown("""
         ### Quarta-feira (26/01)
         - **No computador**:
-            - Avisar a Camila sobre o problema para resolver com uma escada
-            - Avisar também sobre o possível adiamento do processo de carbonização
             - **Publicações**:
-                - **Artigo mestrado**: seguir a lista de tarefas do artigo
-                - **Capítulos de livro**: Organizar o processo de produção do capítulo sobre agregação
         
 
         - **No laboratório**:
-            - Organizar as salas de trabalho
-            - Apoiar o Renato no curso de biocarvão
             
             
         - **No computador**:
-            - Realizar os ajustes de tarefas da semana e futuras
-            - comunicar aos bolsistas meus horários no laboratório e tarefas a serem realizadas
+            - ~~Realizar os ajustes de tarefas da semana e futuras~~
+            - ~~Comunicar aos bolsista meus horários no laboratório e tarefas a serem realizadas~~
 
         """, unsafe_allow_html=True)
 
     st.markdown("""
         ### Quinta-feira (27/01)
         - **No computador**:
-            - Finalizar a determinação de frações óxidáveis do carbono para o Bruno
-            - enviar resultados ao Bruno e comunicado ao Professor Otacílio
-            - Verificar disponibilidade e requisitos para uso dos recursos das diárias (R$1000,00)
-            - **Limpeza da área do IFES**
-                - Solicitar ao Renato orientação para uso dos recursos da FAPES para limpeza da área
-                - Entrar em contato com os interessados
-            - **Publicações**:
-                - **Artigo mestrado**: seguir a lista de tarefas do artigo
-                - **Capítulos de livro**: seguir a lista de tarefas do capítulo
-                
+                        
 
         - **Na área experimental**:
-            - Primeira fornada de biocarvão
-            - Organização do galpão
             
             
         - **No laboratório**:
-            - Organizar a salinha química
-            - Verificar funcionamento do extrator de Richards 
-            - Orientação ao pessoal sobre procedimentos com os agregados
+            
             
             
         - **No computador**:
-            - Realizar os ajustes de tarefas da semana e futuras
-            - comunicar aos bolsistas meus horários no laboratório e tarefas a serem realizadas  
+            - ~~Realizar os ajustes de tarefas da semana e futuras~~
+            - ~~Comunicar aos bolsista meus horários no laboratório e tarefas a serem realizadas~~ 
 
         """, unsafe_allow_html=True)
 
     st.markdown("""
         ### Sexta-feira (28/01)
         - **No computador**:
+            - **Limpeza da área do IFES**
+                - Solicitar ao Renato orientação para uso dos recursos da FAPES para limpeza da área
+                - Entrar em contato com os interessados
+            - Verificar disponibilidade e requisitos para uso dos recursos das diárias (R$1000,00)
+            - Avisar a Camila sobre o problema para resolver com uma escada
             - **Publicações**:
                 - **Artigo mestrado**: seguir a lista de tarefas do artigo
-                - **Capítulos de livro**: seguir a lista de tarefas do capítulo
+                - **Capítulos de livro**: Organizar o processo de produção do capítulo sobre agregação
             
 
         - **No laboratório**:
+            - Seguir as tarefas das frações oxidáveis
             - Organizar as salas de trabalho
             - Orientar o Aurélio e a Duda na organização dos matériais de agregados
+            - Organizar a salinha química
+            - Verificar funcionamento do extrator de Richards
+            - **Biocarvões e pH do Solo**:
+                - Organizar o processo de lavagem dos biocarvões
+                - Iniciar o processo de lavagem 
             
             
         - **No computador**:

@@ -98,8 +98,9 @@ def sprints():
         - **No laboratório**:
             - Seguir as tarefas das frações oxidáveis
             - Organizar as salas de trabalho
-            - Orientar o Aurélio e a Duda na organização dos matériais de agregados
-            - Organizar a salinha química
+            - Orientar o Aurélio e a Duda na organização dos matériais de agregado
+            - realizar um prova de R com eles
+            - deixar cópia da chave com o Mateus
             - Verificar funcionamento do extrator de Richards
             - **Biocarvões e pH do Solo**:
                 - Organizar o processo de lavagem dos biocarvões

@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 def Projeto02():
@@ -25,4 +28,14 @@ def Projeto02():
 
     st.markdown(text02, unsafe_allow_html=True)
 
-    st.latex('y = ax + b')
+    data = {'CE 350ºC': 5.5, 'CE 600ºC': 6.5, 'PC 350ºC': 6.3, 'PC 600ºC': 7.0}
+    courses = list(data.keys())
+    values = list(data.values())
+
+    fig = plt.figure(figsize=(10, 5))
+
+    plt.bar(courses, values)
+    plt.xlabel("Biocarvões")
+    plt.ylabel("pH dos biocarvões")
+    plt.title("pH dos biocarvões em diferentes temperaturas")
+    st.pyplot(fig)

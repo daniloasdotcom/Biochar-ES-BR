@@ -36,19 +36,27 @@ def papers():
              "R. W. Carbono orgânico e atributos físicos de um latossolo vermelho-amarelo sob aplicação de " \
              "biocarvão cultivado com <i>Eucalyptus Urograndis</i>. In: Fabricio Gomes Gonçalves; Marcos Vinicius Winckler " \
              "Caldeira; Gilson Fernandes da Silva; Gustavo Soares de Souza. (Org.). <strong>Sistemas Integrados de " \
-             "Produção " \
-             "pesquisa e desenvolvimento de tecnologias</strong>. 1ed.Guarujá - SP: Editora Científica Digital, 2021, " \
+             "Produção" \
+             ": pesquisa e desenvolvimento de tecnologias</strong>. 1ed.Guarujá - SP: Editora Científica Digital, 2021, " \
              "v. I, " \
              "p. 106-127. https://doi.org/10.37885/210605170 </p> "
 
     st.markdown(text04, unsafe_allow_html=True)
 
+    text05 = "<p style='text-align: justify;'> SANTOS, D. A.; SILVA, A. G. ; PASSOS, R. R. ; RANGEL, O. J. P. . " \
+             "Agregados do solo e dinâmica do P: uma relação ainda pouco compreendida. In: Rangel, O. J. P.; Berilli, " \
+             "A. P. C. G.; Oliveira, A. de F. M. de; Alves, D. I.; Alves, J. de A.; Ferrari, J. L.;  Novaes, " \
+             "M. S.; Moulin, M. M.; Mendonça, P. P. (Org.). <strong>Tópicos em Agroecologia - Volume III.</strong> 1 ed. Vitória: " \
+             "Edifes, 2022, v. III, p. 336-349. </p> "
+
+    st.markdown(text05, unsafe_allow_html=True)
+
     st.write("""
         ## Artigos
         """)
 
-    text05 = "<p style='text-align: justify;'> FONSECA, A.A.; SANTOS, D. A.; Moura Junior, C.D.; PASSOS, " \
+    text06 = "<p style='text-align: justify;'> FONSECA, A.A.; SANTOS, D. A.; Moura Junior, C.D.; PASSOS, " \
              "R. R.; Rangel, O.J.P. Phosphorus and potassium in aggregates of degraded soils: changes caused by " \
              "biochar application. <strong>CLEAN</strong> (WEINHEIM. INTERNET), p. 2000366, 2021. </p> "
 
-    st.markdown(text05, unsafe_allow_html=True)
+    st.markdown(text06, unsafe_allow_html=True)

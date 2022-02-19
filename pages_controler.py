@@ -41,6 +41,6 @@ def Choice():
         papers.papers()
 
     elif page_projeto == pj4:
-        sprints.sprints()
+        publica.publica()
 
 Choice()

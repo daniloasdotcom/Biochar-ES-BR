@@ -6,12 +6,12 @@ import pages.projetos.papers as papers
 import pages.projetos.sprints as sprints
 import pages.projetos.publica as publica
 
-pj0 = "Inicio"
-pj1 = "Experimento 01"
-pj2 = "Experimento 02"
-pj3 = "Artigos Publicados"
+pj0 = "Home"
+pj1 = "Experiment 01"
+pj2 = "Experiment 02"
+pj3 = "Publications"
 pj4 = "Tarefas da semana"
-pj5 = "Publicação em produção"
+pj5 = "Publication in production"
 
 
 st.sidebar.title('Menu')

@@ -10,13 +10,12 @@ pj0 = "Home"
 pj1 = "Experiment 01"
 pj2 = "Experiment 02"
 pj3 = "Publications"
-pj4 = "Tarefas da semana"
-pj5 = "Publication in production"
+pj4 = "Publication in production"
 
 
 st.sidebar.title('Menu')
 page_projeto = st.sidebar.selectbox('Escolha um página de interesse',
-                                    [pj0, pj1, pj2, pj3, pj4, pj5])
+                                    [pj0, pj1, pj2, pj3, pj4])
 
 st.sidebar.markdown('')
 st.sidebar.markdown('')
@@ -43,8 +42,5 @@ def Choice():
 
     elif page_projeto == pj4:
         sprints.sprints()
-
-    elif page_projeto == pj5:
-        publica.publica()
 
 Choice()

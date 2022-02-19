@@ -20,12 +20,12 @@ page_projeto = st.sidebar.selectbox('Escolha um página de interesse',
 
 st.sidebar.markdown('')
 st.sidebar.markdown('')
-st.sidebar.markdown('**Coordenação**: [Danilo Andrade](https://daniloas.com/)')
-st.sidebar.markdown('**Supervisão**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
-st.sidebar.markdown('**Iniciação científica**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
-st.sidebar.markdown('**Iniciação científica**: Mateus Hastenreiter')
-st.sidebar.markdown('**Iniciação científica**: Maria Eduarda')
-st.sidebar.markdown('**Iniciação científica**: Aurélio Martins')
+st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
+st.sidebar.markdown('**supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
+st.sidebar.markdown('**Junior Researcher**: Mateus Hastenreiter')
+st.sidebar.markdown('**Junior Researcher**: Maria Eduarda')
+st.sidebar.markdown('**Junior Researcher**: Aurélio Martins')
 
 
 def Choice():

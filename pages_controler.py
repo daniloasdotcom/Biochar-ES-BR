@@ -21,7 +21,7 @@ page_projeto = st.sidebar.selectbox('Escolha um página de interesse',
 st.sidebar.markdown('')
 st.sidebar.markdown('')
 st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
-st.sidebar.markdown('**supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
 st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
 st.sidebar.markdown('**Junior Researcher**: Mateus Hastenreiter')
 st.sidebar.markdown('**Junior Researcher**: Maria Eduarda')

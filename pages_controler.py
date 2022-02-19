@@ -14,7 +14,7 @@ pj4 = "Publication in production"
 
 
 st.sidebar.title('Menu')
-page_projeto = st.sidebar.selectbox('Escolha um página de interesse',
+page_projeto = st.sidebar.selectbox('Choose a page of interest',
                                     [pj0, pj1, pj2, pj3, pj4])
 
 st.sidebar.markdown('')

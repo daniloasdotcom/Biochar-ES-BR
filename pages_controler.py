@@ -2,6 +2,7 @@ import streamlit as st
 import pages.projetos.home as home
 import pages.projetos.projeto01 as PageProjetos01
 import pages.projetos.projeto02 as PageProjetos02
+import pages.projetos.projeto03 as PageProjetos03
 import pages.projetos.papers as papers
 import pages.projetos.sprints as sprints
 import pages.projetos.publica as publica
@@ -9,13 +10,14 @@ import pages.projetos.publica as publica
 pj0 = "Home"
 pj1 = "Experiment 01"
 pj2 = "Experiment 02"
-pj3 = "Publications"
-pj4 = "Publication in production"
+pj3 = "Experiment 03"
+pj4 = "Publications"
+pj5 = "Publication in production"
 
 
 st.sidebar.title('Menu')
 page_projeto = st.sidebar.selectbox('Choose a page of interest',
-                                    [pj0, pj1, pj2, pj3, pj4])
+                                    [pj0, pj1, pj2, pj3, pj4, pj5])
 
 st.sidebar.markdown('')
 st.sidebar.markdown('')
@@ -38,9 +40,12 @@ def Choice():
         PageProjetos02.Projeto02()
 
     elif page_projeto == pj3:
-        papers.papers()
+        PageProjetos03.Projeto03()
 
     elif page_projeto == pj4:
+        papers.papers()
+
+    elif page_projeto == pj5:
         publica.publica()
 
 Choice()

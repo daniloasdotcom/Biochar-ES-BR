@@ -24,5 +24,3 @@ def Projeto01():
 
     st.markdown(text02, unsafe_allow_html=True)
 
-    st.latex('y = ax + b')
-

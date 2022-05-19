@@ -55,8 +55,14 @@ def papers():
         ## Artigos
         """)
 
-    text06 = "<p style='text-align: justify;'> FONSECA, A.A.; SANTOS, D. A.; Moura Junior, C.D.; PASSOS, " \
+    text06 = "<p style='text-align: justify;'> FONSECA, A. A.; SANTOS, D. A.; Moura Junior, C.D.; PASSOS, " \
              "R. R.; Rangel, O.J.P. Phosphorus and potassium in aggregates of degraded soils: changes caused by " \
              "biochar application. <strong>CLEAN</strong> (WEINHEIM. INTERNET), p. 2000366, 2021. </p> "
 
     st.markdown(text06, unsafe_allow_html=True)
+
+    text07 = "<p style='text-align: justify;'> FONSECA, A. A.; SANTOS, D. A.; PASSOS, R. R.; ANDRADE, F. V.; RANGEL, " \
+             "O. J. P. Phosphorus availability and grass growth in biochar-modified acid soil: A study excluding the " \
+             "effects of soil pH. <strong>Soil Use and Management</strong>. v. 36, p. 714-714, 2020. </p> "
+
+    st.markdown(text07, unsafe_allow_html=True)

@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 import pages.projetos.projeto01 as PageProjetos01
 import pages.projetos.projeto02 as PageProjetos02
 import pages.projetos.papers as papers
@@ -16,7 +17,11 @@ def home():
 
     st.markdown(text02, unsafe_allow_html=True)
 
-    text03 = "<p style='text-align: justify; line-height: 1.15'>Os biocarvões têm chamado a atenção da Ciência do " \
+    st.write("""
+        ###  
+        """)
+
+    text03 = "<p style='text-align: justify; line-height: 2'>Os biocarvões têm chamado a atenção da Ciência do " \
              "Solo para a compreensão dos seus efeitos sobre os atributos químicos, físicos e biologicos dos solos. O " \
              "Estado do Espírito Santo " \
              "possui, dentro das áreas de produção agricola, materiais que são gerados em grande volume e com " \
@@ -28,3 +33,11 @@ def home():
              "uso eficiente de fertilizantes em solos altamente intemperizados.</p> "
 
     st.markdown(text03, unsafe_allow_html=True)
+
+    # criando 3 colunas
+    col1, col2, col3 = st.columns([1, 6, 1])
+
+    img_biochar01 = Image.open("images/biochar.png")
+
+    col2.image(img_biochar01, width=1920, use_column_width=True)
+

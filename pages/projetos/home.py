@@ -7,6 +7,13 @@ import pages.projetos.sprints as sprints
 
 
 def home():
+    # criando 3 colunas
+    col1, col2, col3 = st.columns([1, 6, 1])
+
+    img_biochar01 = Image.open("images/sulcoBiochar.png")
+
+    col2.image(img_biochar01, width=1920, use_column_width=True)
+
     text01 = "<h1 style='text-align: center; line-height: 1.15'> Potential for the use of biochars as soil " \
              "conditioners and eucalyptus production</h1> "
 
@@ -33,10 +40,5 @@ def home():
 
     st.markdown(text03, unsafe_allow_html=True)
 
-    # criando 3 colunas
-    col1, col2, col3 = st.columns([1, 6, 1])
 
-    img_biochar01 = Image.open("images/sulcoBiochar.png")
-
-    col2.image(img_biochar01, width=1920, use_column_width=True)
 

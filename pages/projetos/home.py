@@ -9,11 +9,6 @@ import pages.projetos.sprints as sprints
 
 
 def home():
-    today = st.date_input("Today is", datetime.datetime.now())
-
-    st.text("Tempo para o final do projeto")
-    st.progress(50)
-
     # criando 3 colunas
     col1, col2, col3 = st.columns([1, 6, 1])
 

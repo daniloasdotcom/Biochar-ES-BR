@@ -14,12 +14,13 @@ pj2 = "Experiment 02"
 pj3 = "Experiment 03"
 pj4 = "Publications"
 pj5 = "Publication in production"
-pj6 = "Galeria de fotos"
+pj6 = "Photo gallery"
+pj7 = "Sprint"
 
 
 st.sidebar.title('Menu')
 page_projeto = st.sidebar.selectbox('Choose a page of interest',
-                                    [pj0, pj1, pj2, pj3, pj4, pj5, pj6])
+                                    [pj0, pj1, pj2, pj3, pj4, pj5, pj6, pj7])
 
 st.sidebar.markdown('')
 st.sidebar.markdown('')
@@ -52,5 +53,8 @@ def Choice():
 
     elif page_projeto == pj6:
         GaleriaPhotos.Galeria_photos()
+
+    elif page_projeto == pj7:
+        sprints.sprints()
 
 Choice()

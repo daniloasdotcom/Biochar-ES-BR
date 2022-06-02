@@ -5,7 +5,7 @@ import pages.projetos.projeto02 as PageProjetos02
 import pages.projetos.projeto03 as PageProjetos03
 import pages.projetos.papers as papers
 import pages.projetos.sprints as sprints
-import pages.projetos.atributosBiocar as atributos
+#import pages.projetos.atributosBiocar as atributos
 import pages.projetos.publica as publica
 import pages.projetos.pg06galeriaPhotos as GaleriaPhotos
 
@@ -57,7 +57,7 @@ def Choice():
     elif page_projeto == pj7:
         sprints.sprints()
 
-    elif page_projeto == pj8:
-        atributos.atributos()
+ #   elif page_projeto == pj8:
+   #     atributos.atributos()
 
 Choice()

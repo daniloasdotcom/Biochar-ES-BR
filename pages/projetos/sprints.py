@@ -8,7 +8,7 @@ def sprints():
     st.text("Tempo para o final do projeto")
     st.progress(50)
 
-    text01 = "<h1 style='text-align: center; line-height: 1.15'>Monitoramento do Progresso das Atividades</h1> "
+    text01 = "<h1 style='text-align: center; line-height: 1.15'>Monitoramento do Progresso das Atividades da Sprint</h1> "
 
     st.markdown(text01, unsafe_allow_html=True)
 

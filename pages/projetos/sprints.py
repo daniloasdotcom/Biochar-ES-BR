@@ -2,6 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import datetime
 
+
 def sprints():
     today = st.date_input("Today is", datetime.datetime.now())
 
@@ -15,7 +16,7 @@ def sprints():
     time = ["02/06", "03/06", "04/06", "05/06", "06/06", "07/06", "08/06",
             "09/06", "10/06", "11/06", "12/06", "13/06", "14/06", "15/06"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-    real_progress =    [1, 1, 1, 1, 1, 1, 1, 1, 1,  1,  1,  1,  1,  1]
+    real_progress = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -29,7 +30,6 @@ def sprints():
     plt.show()
 
     st.pyplot(fig02)
-
 
     st.markdown("""
     # Product backlog
@@ -109,3 +109,5 @@ def sprints():
     - Atualizar as atividades e o gráfico
             
     """, unsafe_allow_html=True)
+
+

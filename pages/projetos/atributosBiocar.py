@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 def atributos():
     st.title("Caracterização dos biocarvões")
-    st.markdown("Os gráficos abaixo ajudam a visualizar os atributos dos biocarvões")
+    st.markdown("Os gráficos abaixo ajudam a visualizar as atributos dos biocarvões")
 
     col1, col2 = st.columns([1, 1])
 

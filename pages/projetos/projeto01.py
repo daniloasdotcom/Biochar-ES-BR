@@ -1,5 +1,7 @@
 import streamlit as st
 from PIL import Image
+import pandas as pd
+import numpy as np
 
 
 def Projeto01():
@@ -26,8 +28,18 @@ def Projeto01():
              "FAPES/SEAG Nº 06/2015, in the experimental area of IFES - Campus de Alegre - Brazil. In this assay, " \
              "eucalyptus bark biochars are tested in treatments distributed in a randomized block design in a 5 x 2 " \
              "factorial scheme, with five doses of biochars (0; 0.25%; 0.5%; 1.0% and 2 % by volume of biochars by " \
-             "volume of furrow) produced under two temperatures (350ºC and 600ºC). The trial is now maintained with " \
+             "volume of furrow) produced under two temperatures (350 ºc and 600 ºc). The trial is now maintained with " \
              "resources from Fapes/Cnpq Nº 11/2019 - Regional technological and scientific development program - " \
              "PDCTR 2019.</p> "
 
     st.markdown(text02, unsafe_allow_html=True)
+
+    """
+    chart_data = pd.DataFrame({
+        'Desejado': [0, 1, 2, 3, 4],
+        'Real': [0, 1, 3, 4, 4]
+    }, index=["01/06", "02/06", "03/06", "04/06", "05/06"])
+
+    st.line_chart(chart_data)
+    """
+

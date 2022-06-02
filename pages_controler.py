@@ -6,6 +6,7 @@ import pages.projetos.projeto03 as PageProjetos03
 import pages.projetos.papers as papers
 import pages.projetos.sprints as sprints
 import pages.projetos.publica as publica
+import pages.projetos.pg06galeriaPhotos as GaleriaPhotos
 
 pj0 = "Home"
 pj1 = "Experiment 01"
@@ -13,11 +14,12 @@ pj2 = "Experiment 02"
 pj3 = "Experiment 03"
 pj4 = "Publications"
 pj5 = "Publication in production"
+pj6 = "Galeria de fotos"
 
 
 st.sidebar.title('Menu')
 page_projeto = st.sidebar.selectbox('Choose a page of interest',
-                                    [pj0, pj1, pj2, pj3, pj4, pj5])
+                                    [pj0, pj1, pj2, pj3, pj4, pj5, pj6])
 
 st.sidebar.markdown('')
 st.sidebar.markdown('')
@@ -47,5 +49,8 @@ def Choice():
 
     elif page_projeto == pj5:
         publica.publica()
+
+    elif page_projeto == pj6:
+        GaleriaPhotos.Galeria_photos()
 
 Choice()

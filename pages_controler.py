@@ -15,7 +15,7 @@ pj3 = "Experiment 03"
 pj4 = "Publications"
 pj5 = "Publication in production"
 pj6 = "Photo gallery"
-pj7 = "Sprint"
+pj7 = "Progress"
 
 
 st.sidebar.title('Menu')

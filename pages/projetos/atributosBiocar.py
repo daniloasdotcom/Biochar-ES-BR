@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects as go
+import matplotlib.pyplot as plt
 
 
 def atributos():
@@ -19,15 +19,20 @@ def atributos():
                                                     'Fósforo'])
 
     data = pd.read_csv("dados.csv")
-    fig = go.Figure()
+
+    fig02 = plt.figure(figsize=(10, 5))
 
     if chart_visual == 'Bar Chart':
         if selected_status == 'pH':
-            fig.add_trace(go.Bar(x=data.biocar,
-                                 y=data.pH))
-            fig.update_xaxes(showline=True, linewidth=2, linecolor='black')
-            fig.update_yaxes(showline=True, linewidth=2, linecolor='black', ticks="outside", tickwidth=2)
-            fig.update_layout(xaxis_title="Biocarvões", yaxis_title="pH")
+            plt.bar(data.biocar, data.pH)
+            plt.title('Gráfico de Progresso das Atividades da Sprint')
+            plt.xlabel('Tempo')
+            plt.ylabel('Progresso')
+            plt.grid(True)
+            plt.legend(loc="upper left")
+            plt.show()
+
+            st.pyplot(fig02)
 
         if selected_status == 'Cálcio':
             fig.add_trace(go.Bar(x=data.biocar,

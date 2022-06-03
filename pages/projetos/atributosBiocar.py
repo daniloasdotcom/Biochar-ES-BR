@@ -25,20 +25,21 @@ def atributos():
 
     elif selected_status == 'Cálcio':
         plt.bar(data.biocar, data.Ca)
-        plt.xlabel('Biocarvão')
-        plt.ylabel('Cálcio (dag/kg)')
+        plt.xlabel('Biocavão', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
+        plt.ylabel('Cálcio (dag/kg)', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.show()
 
     elif selected_status == 'Magnésio':
         plt.bar(data.biocar, data.Mg)
-        plt.xlabel('Biocarvão')
-        plt.ylabel('Magnésio (dag/kg)')
+        plt.xlabel('Biocavão', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
+        plt.ylabel('Magnésio (dag/kg)', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.show()
 
     elif selected_status == 'Fósforo':
         plt.bar(data.biocar, data.P)
-        plt.xlabel('Biocarvão')
-        plt.ylabel('Fósforo (dag/kg)')
+        plt.xlabel('Biocavão', fontweight='bold', color = 'black', fontsize='14', horizontalalignment='center')
+        plt.ylabel('Fósforo (dag/kg)', fontweight='bold', color = 'black', fontsize='14', horizontalalignment='center')
+
         plt.show()
 
     st.pyplot(fig02)

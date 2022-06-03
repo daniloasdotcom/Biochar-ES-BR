@@ -17,7 +17,7 @@ def sprints():
     time = ["02/06", "03/06", "04/06", "05/06", "06/06", "07/06", "08/06",
             "09/06", "10/06", "11/06", "12/06", "13/06", "14/06", "15/06"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-    real_progress = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    real_progress = [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -51,40 +51,48 @@ def sprints():
     - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 03/06 - Sexta-feira
-    - Completar o plano da sprint
-    - Organizar amostras para iniciar a determinações química na semana que vem
-    - Organizar todos os dados (química e física)
+    - ~~Completar o plano da sprint~~
+    - ~~Organizar todos os dados (Química e Física)~~
+    - ~~Organizar amostras para iniciar a determinações química na semana que vem~~
     - Atualizar as atividades e o gráfico
     
     ### Day 04/06 - Sábado
-    - Separar agregados para iniciar a análise por via úmida
-    - Atualizar as atividades e o gráfico 
+    - Descanso 
     
     ### Day 05/06 - Domingo
     - Descanso
     
     ### Day 06/06 - Segunda-feira
+    - Separar agregados para iniciar a análise por via úmida
     - Agenda com o Carlos análise de Ca e Mg para 15/06
     - Determinação do pH do solo dos 3 anos
     - Cachimbagem e extração para análise de K, Na e P
     - Avaliar os cálculos realizados pelo Mateus
     - Atualizar as atividades e o gráfico
+    - Preparar Argila Dispersa Água
     
     ### Day 07/06 - Terça-feira
     - Determinação para análise de K, Na e P
     - Atualizar as atividades e o gráfico
+    - Preparar Argila Dispersa Água
+    - Separar e Coletar Argila Dispersa Água
     
     ### Day 08/06 - Quarta-feira
     - Cachimbagem e extração para análise de H+Al
     - Atualizar as atividades e o gráfico
+    - Preparar Argila Dispersa Água
+    - Separar e Coletar Argila Dispersa Água
     
     ### Day 09/06 - Quinta-feira
     - Determinação de H + Al
     - Atualizar as atividades e o gráfico
+    - Preparar Argila Dispersa Água
+    - Separar e Coletar Argila Dispersa Água
     
     ### Day 10/06 - Sexta-feira
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
+    - Separar e Coletar Argila Dispersa Água
     
     ### Day 11/06 - Sábado
     - Descanso 
@@ -110,5 +118,3 @@ def sprints():
     - Atualizar as atividades e o gráfico
             
     """, unsafe_allow_html=True)
-
-

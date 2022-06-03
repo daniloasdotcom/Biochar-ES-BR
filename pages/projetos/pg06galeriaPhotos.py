@@ -1,8 +1,5 @@
 import streamlit as st
 from PIL import Image
-import pandas as pd
-import numpy as np
-
 
 def Galeria_photos():
     col1, col2 = st.columns([1, 1])

@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 def papers():
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Publicações produzidas durante a vigência do " \
              "projeto</h1> "

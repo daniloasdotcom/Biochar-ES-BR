@@ -1,8 +1,5 @@
 import streamlit as st
 from PIL import Image
-import pandas as pd
-import numpy as np
-
 
 def Projeto01():
     col1, col2, col3 = st.columns([1, 6, 1])
@@ -33,13 +30,4 @@ def Projeto01():
              "PDCTR 2019.</p> "
 
     st.markdown(text02, unsafe_allow_html=True)
-
-    """
-    chart_data = pd.DataFrame({
-        'Desejado': [0, 1, 2, 3, 4],
-        'Real': [0, 1, 3, 4, 4]
-    }, index=["01/06", "02/06", "03/06", "04/06", "05/06"])
-
-    st.line_chart(chart_data)
-    """
 

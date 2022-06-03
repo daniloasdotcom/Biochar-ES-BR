@@ -1,7 +1,5 @@
 import streamlit as st
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 def Projeto03():
@@ -49,20 +47,3 @@ def Projeto03():
     plt.ylabel("pH dos biocarvões")
     plt.title("pH dos biocarvões em diferentes temperaturas")
     st.pyplot(fig)
-
-    """
-    Year = ["01/06", "02/06", "03/06", "04/06", "05/06"]
-    progress_desired = [0, 1, 2, 3, 4]
-    real_progress = [0, 1, 3, 3, 4]
-
-    fig02 = plt.figure(figsize=(10, 5))
-
-    plt.plot(Year, progress_desired)
-    plt.plot(Year, real_progress)
-    plt.title('Unemployment Rate Vs Year')
-    plt.xlabel('Year')
-    plt.ylabel('Unemployment Rate')
-    plt.show()
-
-    st.pyplot(fig02)
-    """

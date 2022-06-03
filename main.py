@@ -17,7 +17,7 @@ pj4 = "Publications"
 pj5 = "Publication in production"
 pj6 = "Photo gallery"
 pj7 = "Progress"
-pj8 = "Atributos dos Biocarvões"
+pj8 = "Biochar's atributes"
 
 st.sidebar.title('Menu')
 page_projeto = st.sidebar.selectbox('Choose a page of interest',
@@ -31,6 +31,7 @@ st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.
 st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
 st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
 st.sidebar.markdown('**Junior Researcher**: [Aurélio Martins](http://lattes.cnpq.br/2155060458456586)')
+st.sidebar.markdown('**Junior Researcher**: [Ueslei Machado]')
 
 def Choice():
     if page_projeto == pj0:

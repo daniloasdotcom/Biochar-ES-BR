@@ -1,8 +1,4 @@
 import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-
 
 def Projeto02():
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Disponibilidade de fósforo em agregados de diferentes " \

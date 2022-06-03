@@ -19,8 +19,8 @@ def atributos():
 
     if selected_status == 'pH':
         plt.bar(data.biocar, data.pH)
-        plt.xlabel('Biocarvão')
-        plt.ylabel('pH')
+        plt.xlabel('Biocarvão', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
+        plt.ylabel('pH', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.show()
 
     elif selected_status == 'Cálcio':

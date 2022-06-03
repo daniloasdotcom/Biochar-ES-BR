@@ -1,12 +1,5 @@
 import streamlit as st
 from PIL import Image
-import datetime
-import time
-import pages.projetos.projeto01 as PageProjetos01
-import pages.projetos.projeto02 as PageProjetos02
-import pages.projetos.papers as papers
-import pages.projetos.sprints as sprints
-
 
 def home():
     # criando 3 colunas

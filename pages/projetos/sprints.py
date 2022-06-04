@@ -17,7 +17,7 @@ def sprints():
     time = ["02/06", "03/06", "04/06", "05/06", "06/06", "07/06", "08/06",
             "09/06", "10/06", "11/06", "12/06", "13/06", "14/06", "15/06"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-    real_progress = [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+    real_progress =    [1, 1, 3, 3, 3, 3, 3, 3, 3,  3,  3,  3,  3,  3]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -42,6 +42,8 @@ def sprints():
     - Determinação da CC e PMP
     - Produção dos textos de PIIC
     - Avaliação dos dados da Duda
+    - Determinação da estabilidade de agregados após 4 anos
+    
     
     # To do
     
@@ -51,48 +53,59 @@ def sprints():
     - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 03/06 - Sexta-feira
+    - ~~Aguardar a agenda de compromissos dos IC's~~
     - ~~Completar o plano da sprint~~
     - ~~Organizar todos os dados (Química e Física)~~
     - ~~Organizar amostras para iniciar a determinações química na semana que vem~~
-    - Atualizar as atividades e o gráfico
+    - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 04/06 - Sábado
-    - Descanso 
+    - ~~Enviar o cronograma de laboratório para os IC's~~
+    - ~~Aguardar o parecer da Duda com relação ao cronograma de laboratório~~
+    - ~~Aguardar o parecer do Aurélio com relação ao cronograma de laboratório~~
+    - ~~Aguardar o parecer do Mateus com relação ao cronograma de laboratório~~
+    - ~~Ajustar com as atividades da Maria Amélia~~
+    - ~~Enviar o plano de trabalho para a Maria Amélia~~
+    - ~~Retirar erlemeyers da estufa~~
+    - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 05/06 - Domingo
-    - Descanso
-    
-    ### Day 06/06 - Segunda-feira
-    - Separar agregados para iniciar a análise por via úmida
-    - Agenda com o Carlos análise de Ca e Mg para 15/06
-    - Determinação do pH do solo dos 3 anos
-    - Cachimbagem e extração para análise de K, Na e P
-    - Avaliar os cálculos realizados pelo Mateus
+    - Aguardar o parecer do Ueslei com relação ao cronograma de laboratório
+    - Avaliar os dados já obtidos da coleta de 3 anos
+    - Planejar atividades necessárias para as amostras de 3 anos
     - Atualizar as atividades e o gráfico
-    - Preparar Argila Dispersa Água
+        
+    ### Day 06/06 - Segunda-feira
+    - Organização do ambiente para as determinações da semana
+    - Cachimbagem e extração para análise de Ca, Mg e Al
+    - Cachimbagem e extração para análise de H+Al (Preparar Fenolftaleina)
+    - Enviar para os IC's o plano de trabalho da sprint
+    - Agenda com o Carlos análise de Ca e Mg para 14/06
+    - Cachimbagem  do pH do solo da coleta de 3 anos, agora com novos padrões
+    - Avaliar os cálculos realizados pelo Mateus com os dados de 4 anos
+    - Decidir onde alocar o Ueslei, a Thaís e o Caio
+    - Pedir para o Renato fazer a soliticação para a estufa de 105ºC
+    - Atualizar as atividades e o gráfico
     
     ### Day 07/06 - Terça-feira
-    - Determinação para análise de K, Na e P
+    - Determinação de H + Al
+    - Determinação de Al
+    - Cachimbagem do pH do solo da coleta de 3 anos, agora com novos padrões
+    - Pipetagem de Ca e Mg
     - Atualizar as atividades e o gráfico
-    - Preparar Argila Dispersa Água
-    - Separar e Coletar Argila Dispersa Água
     
     ### Day 08/06 - Quarta-feira
-    - Cachimbagem e extração para análise de H+Al
     - Atualizar as atividades e o gráfico
-    - Preparar Argila Dispersa Água
-    - Separar e Coletar Argila Dispersa Água
     
     ### Day 09/06 - Quinta-feira
-    - Determinação de H + Al
     - Atualizar as atividades e o gráfico
-    - Preparar Argila Dispersa Água
-    - Separar e Coletar Argila Dispersa Água
     
     ### Day 10/06 - Sexta-feira
+    - Enviar textos dos projetos
+    - Enviar proposta de trabalho para o próximo ciclo da iniciação
+    - Solicitar aos IC's o cronograma para o periódo de 20 de junho a 01 de agosto
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
-    - Separar e Coletar Argila Dispersa Água
     
     ### Day 11/06 - Sábado
     - Descanso 
@@ -102,18 +115,20 @@ def sprints():
     - Descanso
     
     ### Day 13/06 - Segunda-feira
-    - Cachimbagem e extração para análise de Ca e Mg
+    - Extração de K, Na e P
+    - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
     
     ### Day 14/06 - Terça-feira
-    - Pipetagem de Ca e Mg
-    - Determinação de Al
+    - Determinação de Ca e Mg
+    - Determinação de K, Na e P
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
     
     ### Day 15/06 - Quarta-feira
-    - Determinação de Ca e Mg
+    - Aniversário do Ueslei
+    - Enviar avaliação de desenpenho aos IC's
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
             

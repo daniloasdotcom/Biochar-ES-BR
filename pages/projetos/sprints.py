@@ -4,10 +4,7 @@ import datetime
 
 
 def sprints():
-    today = st.date_input("Today is", datetime.datetime.now())
-
-    st.text("Tempo para o final do projeto")
-    st.progress(50)
+    st.date_input("Today is", datetime.datetime.now())
 
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Monitoramento do Progresso das Atividades da " \
              "Sprint</h1> "
@@ -104,7 +101,7 @@ def sprints():
     - Enviar textos dos projetos
     - Enviar proposta de trabalho para o próximo ciclo da iniciação
     - Solicitar aos IC's o cronograma para o periódo de 20 de junho a 01 de agosto
-    - Alocar as atividades da sprint
+    - Alocar as reuniões da sprint
     - Atualizar as atividades e o gráfico
     
     ### Day 11/06 - Sábado

@@ -36,8 +36,6 @@ def team():
         st.write("Você saberá mais sobre ela em breve aqui")
 
     # Segunda linha de imagens
-
-    # Primeira linha de imagens
     equipe04 = Image.open("images/mateus.png")
     equipe05 = Image.open("images/duda.png")
     equipe06 = Image.open("images/aurelio.png")
@@ -52,9 +50,18 @@ def team():
         st.write("Você saberá mais sobre ele em breve aqui")
 
     with col2.expander("More about Maria Eduarda"):
-        st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi"
-                 "/streamlit_app.py) e continua aqui")
+        st.write("Você saberá mais sobre ela em breve aqui")
 
     with col3.expander("More about Aurélio"):
+        st.write("Você saberá mais sobre ele em breve aqui")
+
+    # Terceira linha de imagens
+    equipe07 = Image.open("images/ueslei.png")
+
+    # Inserção das imagens
+    col1.image(equipe07, caption="Ueslei - Development Team")
+
+    # Inserção da descrição
+    with col1.expander("More about Ueslei"):
         st.write("Você saberá mais sobre ele em breve aqui")
 

@@ -4,6 +4,7 @@ import datetime
 
 
 def sprints():
+
     st.date_input("Today is", datetime.datetime.now())
 
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Monitoramento do Progresso das Atividades da " \
@@ -30,18 +31,29 @@ def sprints():
     st.pyplot(fig02)
 
     st.markdown("""
-    # Product backlog
+        # Product backlog
+        """)
+
+    col1, col2 = st.columns([1, 1])
+
+    col1.markdown("""
     - Coleta de folhas
     - Digestão foliar
     - Análises foliares
     - Medição das plantas
     - Masseração do solo para análise de COT e NT
-    - Determinação da CC e PMP
-    - Produção dos textos de PIIC
-    - Avaliação dos dados da Duda
-    - Determinação da estabilidade de agregados após 4 anos
+    """)
+
+    col2.markdown("""
+        - Determinação da CC e PMP
+        - Produção dos textos de PIIC
+        - Avaliação dos dados da Duda
+        - Determinação da estabilidade de agregados após 4 anos
+        """)
+
+
     
-    
+    st.markdown("""
     # To do
     
     ### Day 02/06 - Quinta-feira

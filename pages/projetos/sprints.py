@@ -116,13 +116,13 @@ def sprints():
     - Atualizar as atividades e o gráfico
     
     ### Day 11/06 - Sábado
-    - Descanso 
-    - Atualizar as atividades e o gráfico
+    - Descanso
      
     ### Day 12/06 - Domingo
     - Descanso
     
     ### Day 13/06 - Segunda-feira
+    - leitura de Ca e Mg com o Carlos
     - Extração de K, Na e P
     - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
     - Alocar as atividades da sprint

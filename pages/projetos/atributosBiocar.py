@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 
 def atributos():
+    
+    
     st.title("Caracterização dos biocarvões")
     st.markdown("Os gráficos abaixo ajudam a visualizar as atributos dos biocarvões")
 

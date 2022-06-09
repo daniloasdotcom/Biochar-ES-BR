@@ -15,7 +15,7 @@ def sprints():
     time = ["02/06", "03/06", "04/06", "05/06", "06/06", "07/06", "08/06",
             "09/06", "10/06", "11/06", "12/06", "13/06", "14/06", "15/06"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-    real_progress =    [1, 1, 3, 3, 5, 6, 6, 6, 6,  6,  6,  6,  6,  6]
+    real_progress =    [1, 1, 3, 3, 5, 6, 7, 7, 7,  7,  7,  7,  7,  7]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -98,14 +98,12 @@ def sprints():
     - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 08/06 - Quarta-feira
-    - Cachimbagem do pH do solo da coleta de 3 anos, agora com novos padrões
-    - Cachimbagem e extração para análise de H+Al (Preparar Fenolftaleina) 10-30 cm
-    - Atualizar as atividades e o gráfico
+    - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 09/06 - Quinta-feira
-    - Determinação de H + Al
-    - Avaliar os cálculos realizados pelo Mateus com os dados de 4 anos
+    - ~~Cachimbagem do pH do solo da coleta de 3 anos, agora com novos padrões~~
     - Determinação do pH
+    - Avaliar os cálculos realizados pelo Mateus com os dados de 4 anos
     - Atualizar as atividades e o gráfico
     
     ### Day 10/06 - Sexta-feira
@@ -124,12 +122,12 @@ def sprints():
     ### Day 13/06 - Segunda-feira
     - leitura de Ca e Mg com o Carlos
     - Extração de K, Na e P
+    - Cachimbagem e extração para análise de H+Al (Preparar Fenolftaleina) 10-30 cm
     - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
     
     ### Day 14/06 - Terça-feira
-    - Determinação de Ca e Mg
     - Determinação de K, Na e P
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico

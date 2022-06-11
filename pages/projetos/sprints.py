@@ -122,12 +122,15 @@ def sprints():
     - Enviar proposta de trabalho para o próximo ciclo da iniciação
     - leitura de Ca e Mg com o Carlos
     - Extração de K, Na e P
+    - Organizar os dados de Física do Solo da Duda
+    - Trabalhar no extrator de Richards
     - Cachimbagem e extração para análise de H+Al (Preparar Fenolftaleina) 10-30 cm
-    - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
+    
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
     
     ### Day 14/06 - Terça-feira
+    - Envio do Cronograma solicitado aos IC's
     - Determinação de K, Na e P
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
@@ -135,6 +138,7 @@ def sprints():
     ### Day 15/06 - Quarta-feira
     - Aniversário do Ueslei
     - Enviar avaliação de desenpenho aos IC's
+    - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
             

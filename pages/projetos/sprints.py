@@ -15,7 +15,7 @@ def sprints():
     time = ["02/06", "03/06", "04/06", "05/06", "06/06", "07/06", "08/06",
             "09/06", "10/06", "11/06", "12/06", "13/06", "14/06", "15/06"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-    real_progress =    [1, 1, 3, 3, 5, 6, 7, 8, 9,  9,  9,  9,  9,  9]
+    real_progress =    [1, 1, 3, 3, 5, 6, 7, 8, 9, 10, 11, 12, 12, 12]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -111,31 +111,32 @@ def sprints():
     - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 11/06 - Sábado
-    - Alocar as reuniões da sprint
-    - Trabalhar nos textos dos projetos
-    - Descanso
+    - ~~Descanso~~
      
     ### Day 12/06 - Domingo
-    - Descanso
+    - ~~Descanso~~
     
     ### Day 13/06 - Segunda-feira
-    - Enviar proposta de trabalho para o próximo ciclo da iniciação
-    - leitura de Ca e Mg com o Carlos
-    - Extração de K, Na e P
-    - Organizar os dados de Física do Solo da Duda
-    - Trabalhar no extrator de Richards
-    - Cachimbagem e extração para análise de H+Al (Preparar Fenolftaleina) 10-30 cm
-    
-    - Alocar as atividades da sprint
-    - Atualizar as atividades e o gráfico
+    - ~~Leitura de Ca e Mg com o Carlos~~
+    - ~~Extração de K, Na e P~~
+    - ~~Limpeza dos materiais~~
+    - ~~Atualizar as atividades e o gráfico~~
     
     ### Day 14/06 - Terça-feira
+    - Trabalhar no extrator de Richards
+    - Cachimbagem e extração para análise de H+Al (Preparar Fenolftaleina) 10-30 cm
+    - Alocar as atividades da sprint
+    - Alocar as reuniões da sprint
+    - Trabalhar nos textos dos projetos
     - Envio do Cronograma solicitado aos IC's
     - Determinação de K, Na e P
     - Alocar as atividades da sprint
     - Atualizar as atividades e o gráfico
     
     ### Day 15/06 - Quarta-feira
+    - Organizar os dados de Física do Solo da Duda
+    - Criar uma lista de evetnos de divulgação
+    - Enviar proposta de trabalho para o próximo ciclo da iniciação
     - Aniversário do Ueslei
     - Enviar avaliação de desenpenho aos IC's
     - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto

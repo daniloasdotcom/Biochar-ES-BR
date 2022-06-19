@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import datetime
-
+import calendar
 
 def sprints():
 
@@ -12,10 +12,14 @@ def sprints():
 
     st.markdown(text01, unsafe_allow_html=True)
 
-    time = ["02/06", "03/06", "04/06", "05/06", "06/06", "07/06", "08/06",
-            "09/06", "10/06", "11/06", "12/06", "13/06", "14/06", "15/06"]
-    progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-    real_progress =    [1, 1, 3, 3, 5, 6, 7, 8, 9, 10, 11, 11, 11, 14]
+    year = 2022
+    month = 6
+    print(calendar.month(year, month))
+
+    time = ["20/06", "21/06", "22/06", "23/06", "24/06",
+            "27/06", "28/06", "29/06", "30/06", "01/06"]
+    progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -36,109 +40,106 @@ def sprints():
 
     col1, col2 = st.columns([1, 1])
 
-    col1.markdown("""
-    - Coleta de folhas
-    - Digestão foliar
-    - Análises foliares
-    - Medição das plantas
-    - Masseração do solo para análise de COT e NT
-    """)
+    with col1.expander("Prioridades"):
+        st.markdown("""
+        # Prioridades
+        - Coleta de folhas
+        - Digestão foliar
+        - Análises foliares
+        - Medição das plantas
+        - Masseração do solo para análise de COT e NT
+        - Trabalhar no extrator de Richards
+        - Criar uma lista de eventos de divulgação dos nossos trabalhos
+        - Enviar para o Renato a proposta de trabalho para o próximo ciclo da iniciação
+        - Aniversário do Ueslei
+        - Alocar as reuniões da sprint
+        - Atualizar as atividades e o gráfico
+        """)
 
-    col2.markdown("""
+    with col2.expander("Demais"):
+        st.markdown("""
         - Determinação da CC e PMP
         - Produção dos textos de PIIC
         - Avaliação dos dados da Duda
         - Determinação da estabilidade de agregados após 4 anos
         - Cachimbagem e extração para análise de H+Al (Preparar Fenolftaleina) 10-30 cm
+        - Organizar os dados de Física do Solo da Duda
+        - Enviar avaliação de desenpenho aos IC's
+        - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
+        - Alocar as atividades da sprint
+        
         """)
 
-
-    
     st.markdown("""
-    # To do
-    
-    ### Day 02/06 - Quinta-feira
-    - ~~Planejar as atividades da sprint~~
-    - ~~Solicitar aos IC's que envie uma previsão de disponibilidade para as próximas duas semanas~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 03/06 - Sexta-feira
-    - ~~Aguardar a agenda de compromissos dos IC's~~
-    - ~~Completar o plano da sprint~~
-    - ~~Organizar todos os dados (Química e Física)~~
-    - ~~Organizar amostras para iniciar a determinações química na semana que vem~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 04/06 - Sábado
-    - ~~Enviar o cronograma de laboratório para os IC's~~
-    - ~~Aguardar o parecer da Duda com relação ao cronograma de laboratório~~
-    - ~~Aguardar o parecer do Aurélio com relação ao cronograma de laboratório~~
-    - ~~Aguardar o parecer do Mateus com relação ao cronograma de laboratório~~
-    - ~~Ajustar com as atividades da Maria Amélia~~
-    - ~~Enviar o plano de trabalho para a Maria Amélia~~
-    - ~~Retirar erlemeyers da estufa~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 05/06 - Domingo
-    - ~~Aguardar o parecer do Ueslei com relação ao cronograma de laboratório~~
-    - ~~Avaliar os dados já obtidos da coleta de 3 anos~~
-    - ~~Planejar atividades necessárias para as amostras de 3 anos~~
-    - ~~Atualizar as atividades e o gráfico~~
-        
-    ### Day 06/06 - Segunda-feira
-    - ~~Organização do ambiente para as determinações da semana~~
-    - ~~Cachimbagem e extração para análise de Ca, Mg e Al~~
-    - ~~Enviar para os IC's o plano de trabalho da sprint~~
-    - ~~Pedir para o Renato fazer a soliticação para a estufa de 105ºC~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 07/06 - Terça-feira
-    - ~~Determinação de Al~~
-    - ~~Agenda com o Carlos análise de Ca e Mg para 14/06~~
-    - ~~Pipetagem de Ca e Mg~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 08/06 - Quarta-feira
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 09/06 - Quinta-feira
-    - ~~Cachimbagem do pH do solo da coleta de 3 anos, agora com novos padrões~~
-    - ~~Determinação do pH~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 10/06 - Sexta-feira
-    - ~~Avaliar os cálculos realizados pelo Mateus com os dados de 4 anos~~
-    - ~~Solicitar aos IC's o cronograma para o periódo de 20 de junho a 01 de agosto~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 11/06 - Sábado
-    - ~~Descanso~~
-     
-    ### Day 12/06 - Domingo
-    - ~~Descanso~~
-    
-    ### Day 13/06 - Segunda-feira
-    - ~~Leitura de Ca e Mg com o Carlos~~
-    - ~~Extração de K, Na e P~~
-    - Envio do Cronograma solicitado aos IC's
-    - ~~Limpeza dos materiais~~
-    - ~~Atualizar as atividades e o gráfico~~
-    
-    ### Day 14/06 - Terça-feira
-    - ~~Determinação de K, Na e P~~
-    - ~~Trabalhar nos textos dos projetos~~
-    - Atualizar as atividades e o gráfico
-    
-    ### Day 15/06 - Quarta-feira
-    - Trabalhar no extrator de Richards
-    - Criar uma lista de eventos de divulgação dos nossos trabalhos
-    - Enviar para o Renato a proposta de trabalho para o próximo ciclo da iniciação
-    - Aniversário do Ueslei
-    - Organizar os dados de Física do Solo da Duda
-    - Enviar avaliação de desenpenho aos IC's
-    - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
-    - Alocar as atividades da sprint
-    - Alocar as reuniões da sprint
-    - Atualizar as atividades e o gráfico
+                # To do
+    """)
+
+    with st.expander("Day 20/06"):
+
+        st.markdown("""    
             
-    """, unsafe_allow_html=True)
+        - Atualizar as atividades e o gráfico
+            
+        """)
+    with st.expander("Day 21/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 22/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 23/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 24/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 27/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 28/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 29/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 30/06"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 01/07"):
+        st.markdown("""    
+
+        - Atualizar as atividades e o gráfico
+
+        """, unsafe_allow_html=True)

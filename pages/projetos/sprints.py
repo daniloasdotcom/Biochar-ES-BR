@@ -79,6 +79,7 @@ def sprints():
         - Fazer anotações de desempenho dos IC's
         - Cachimbagem e para análise de H+Al (Preparar Fenolftaleina) 10-30 cm de 3 anos
         - Organização da salinha de estudos
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
@@ -87,6 +88,7 @@ def sprints():
         st.markdown("""    
 
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
@@ -95,6 +97,7 @@ def sprints():
         st.markdown("""    
 
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
@@ -103,6 +106,7 @@ def sprints():
         st.markdown("""    
 
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
@@ -113,6 +117,7 @@ def sprints():
         - Determinação da CC e PMP
         - Separar agregados do solo de 4 anos
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
@@ -122,6 +127,7 @@ def sprints():
 
         - Atualizar as atividades e o gráfico
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Determinação da estabilidade de agregados após 4 anos
 
         """)
@@ -130,6 +136,7 @@ def sprints():
         st.markdown("""    
 
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
@@ -138,6 +145,7 @@ def sprints():
         st.markdown("""    
 
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
@@ -147,6 +155,7 @@ def sprints():
 
         - Enviar avaliação de desenpenho aos IC's
         - Fazer anotações de desempenho dos IC's
+        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """, unsafe_allow_html=True)

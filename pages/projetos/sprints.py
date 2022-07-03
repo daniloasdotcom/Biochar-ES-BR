@@ -11,10 +11,10 @@ def sprints():
 
     st.markdown(text01, unsafe_allow_html=True)
 
-    time = ["20/06", "21/06", "22/06", "23/06", "24/06",
-            "27/06", "28/06", "29/06", "30/06", "01/06"]
+    time = ["04/07", "05/07", "06/07", "07/07", "08/07",
+            "11/07", "12/07", "13/07", "14/07", "15/07"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress =    [1, 1, 1, 1, 1, 1, 1, 1, 1,  1]
+    real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0,  0]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -38,21 +38,16 @@ def sprints():
     with col1.expander("Prioridades"):
         st.markdown("""
         # Prioridades
-        - Coleta de folhas
-        - Digestão foliar
-        - Análises foliares
-        - Medição das plantas
-        - Masseração do solo para análise de COT e NT
         - Alocar as reuniões da sprint
+        - Realizar o treinamento em agregados e ADA
+        - Avaliar e organizar os dados da Duda e do Mateus
+        - Solicitar a agenda deles para o período entre 18 e 29 de julho
         
         """)
 
     with col2.expander("Demais"):
         st.markdown("""
-        
         - Criar uma lista de eventos de divulgação dos nossos trabalhos
-        - Preparar e enviar o cronograma para cada um dos IC's o periódo de 20 de junho a 01 de agosto
-        - Alocar as atividades da sprint
         
         """)
 
@@ -60,102 +55,114 @@ def sprints():
                 # To do
     """)
 
-    with st.expander("Day 20/06 - Concluído"):
-
+    with st.expander("Day 04/07 - Segunda-feira - Em Progresso"):
         st.markdown("""
         
-        - ~~Alocar atividades da sprint~~
-        - ~~Finalizar a proposta de trabalho para o próximo ciclo da iniciação~~       
-        - ~~Atualizar as atividades e o gráfico~~
+        - Agendar para sábado a medição das plantas na área experimental
+        - Solicitar o podão à professsora e agendar para sabádo a coletar foliar
+        - Agendar para sexta-feria o uso da estufa para secagem do material
+        - Agendar para domingo/segunda-feira que vem a digestão
+        - Verificar solução nitroperclórica
+        - Iniciar a separação do agregados (atrás da quadra)
+        - Iniciar a masseração do solo do 4º ano (NT e COT)
+        
+        - Alocar as atividades da Sprint
+        - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
+        - Atualizar as atividades e o gráfico
             
         """)
-    with st.expander("Day 21/06"):
+    with st.expander("Day 05/07 - Terça-feira"):
         st.markdown("""    
 
-        - Aniversário do Ueslei
-        - Avaliação dos dados da Duda
-        - Organizar um quadro de horários para o Ueslei
-        - Trabalhar no extrator de Richards
-        - Fazer anotações de desempenho dos IC's
-        - Cachimbagem e para análise de H+Al (Preparar Fenolftaleina) 10-30 cm de 3 anos
-        - Organização da salinha de estudos
+        - Testar o aparelho de Nitrogênio Total
+        - Avaliar o extrator de Richards e a Mudança de posição dele
+        - Bem como planejar as determinações de CC e PMP
+        
+        - Alocar as atividades da Sprint
         - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
         - Atualizar as atividades e o gráfico
 
         """)
 
-    with st.expander("Day 22/06"):
+    with st.expander("Day 06/07 - Quarta-feira"):
         st.markdown("""    
 
-        - Fazer anotações de desempenho dos IC's
+        - Alocar as atividades da Sprint
         - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
         - Atualizar as atividades e o gráfico
 
         """)
 
-    with st.expander("Day 23/06"):
+    with st.expander("Day 07/07 - Quinta-feira"):
         st.markdown("""    
 
-        - Fazer anotações de desempenho dos IC's
+        - Planejar a digestão foliar e as determinações para o Aurélio
+        - Alocar as atividades da Sprint
         - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
         - Atualizar as atividades e o gráfico
 
         """)
 
-    with st.expander("Day 24/06"):
+    with st.expander("Day 08/07 - Sexta-feira"):
         st.markdown("""    
 
-        - Fazer anotações de desempenho dos IC's
+        - Alocar as atividades da Sprint
         - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
         - Atualizar as atividades e o gráfico
 
         """)
 
-    with st.expander("Day 27/06"):
+    with st.expander("Day 11/07 - Segunda-feira"):
         st.markdown("""    
 
-        - Determinação da CC e PMP
-        - Separar agregados do solo de 4 anos
-        - Fazer anotações de desempenho dos IC's
+        - Alocar as atividades da Sprint
         - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
         - Atualizar as atividades e o gráfico
 
         """)
 
-    with st.expander("Day 28/06"):
+    with st.expander("Day 12/07 - Terça-feira"):
         st.markdown("""    
 
-        - Atualizar as atividades e o gráfico
-        - Fazer anotações de desempenho dos IC's
+        - Alocar as atividades da Sprint
         - Atualizar o trello
-        - Determinação da estabilidade de agregados após 4 anos
-
-        """)
-
-    with st.expander("Day 29/06"):
-        st.markdown("""    
-
         - Fazer anotações de desempenho dos IC's
-        - Atualizar o trello
         - Atualizar as atividades e o gráfico
 
         """)
 
-    with st.expander("Day 30/06"):
+    with st.expander("Day 13/07 - Quarta-feira"):
         st.markdown("""    
 
-        - Fazer anotações de desempenho dos IC's
+        - Alocar as atividades da Sprint
         - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
         - Atualizar as atividades e o gráfico
 
         """)
 
-    with st.expander("Day 01/07"):
+    with st.expander("Day 14/07 - Quinta-feira"):
         st.markdown("""    
 
-        - Enviar avaliação de desenpenho aos IC's
-        - Fazer anotações de desempenho dos IC's
+        - Alocar as atividades da Sprint
         - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
+        - Atualizar as atividades e o gráfico
+
+        """)
+
+    with st.expander("Day 15/07 - Sexta-feira"):
+        st.markdown("""    
+
+        - Alocar as atividades da Sprint
+        - Atualizar o trello
+        - Fazer anotações de desempenho dos IC's
         - Atualizar as atividades e o gráfico
 
         """, unsafe_allow_html=True)

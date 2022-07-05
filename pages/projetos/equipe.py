@@ -24,8 +24,8 @@ def team():
     # Inserção da descrição
     with col1.expander("More about Danilo"):
         st.write("""
-            Danilo é Agrônomo, apaixonado por quebra-cabeças, nos tempos livres gosta de programar, 
-            treinar jiu-jitsu, ler livros, assistir filmes, e dormir. Você pode conhecer mais sobre 
+            Danilo é Agrônomo, apaixonado por quebra-cabeças, gosta de programar, 
+            treinar jiu-jitsu, ler livros, assistir filmes, e aprender novos idiomas. Você pode conhecer mais sobre 
             ele nesse [link](https://daniloas.com)."
         """)
 

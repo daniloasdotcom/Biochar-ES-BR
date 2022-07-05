@@ -59,12 +59,11 @@ def sprints():
         st.markdown("""
         
         - Agendar para sábado a medição das plantas na área experimental
-        - Solicitar o podão à professsora e agendar para sabádo a coletar foliar
+        - ~~Solicitar o podão à professsora e agendar para sabádo a coletar foliar~~
         - Agendar para sexta-feria o uso da estufa para secagem do material
         - Agendar para domingo/segunda-feira que vem a digestão
         - Verificar solução nitroperclórica
-        - Iniciar a separação do agregados (atrás da quadra)
-        - Iniciar a masseração do solo do 4º ano (NT e COT)
+        - ~~Iniciar a masseração do solo do 4º ano (NT e COT)~~
         
         - Alocar as atividades da Sprint
         - Atualizar o trello
@@ -78,6 +77,7 @@ def sprints():
         - Testar o aparelho de Nitrogênio Total
         - Avaliar o extrator de Richards e a Mudança de posição dele
         - Bem como planejar as determinações de CC e PMP
+        - Iniciar a separação do agregados (atrás da quadra)
         
         - Alocar as atividades da Sprint
         - Atualizar o trello

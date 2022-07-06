@@ -4,8 +4,4 @@ Biochars have drawn the attention of Soil Science to the understanding of their 
 
 My name is Danilo, Regional Scholarship Researcher and coordinator of the present set of studies on biochars as soil conditioners under the supervision of Professor Renato Ribeiro Passos and funding from the Fundação de Amparo à Pesquisa e Inovação do Espírito Santo and the National Council for Scientific and Technological Development.
 
-<<<<<<< HEAD
 And this is the website created to publicize the progress of research approved and developed from the FAPES/CNPq No. of Espírito Santo with the objective of obtaining insights into the effectiveness of the use of carbonized organic waste and presenting solutions for its use as soil conditioners.
-=======
-And this is the website created to publicize the progress of research approved and developed from the FAPES/CNPq No. of Espírito Santo with the objective of obtaining insights into the effectiveness of the use of carbonized organic waste and presenting solutions for its use as soil conditioners.
->>>>>>> c7f579bcc9ee5e6bc8b3cfe67a27fbf451aab61f

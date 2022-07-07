@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 
+
 def home():
     # criando 3 colunas
     col1, col2, col3 = st.columns([1, 6, 1])
@@ -31,9 +32,12 @@ def home():
 
     st.markdown(text03, unsafe_allow_html=True)
 
-    text04 = "<p style='text-align: justify; line-height: 2'>My name is <b>Danilo</b>, Regional Scholarship Researcher and " \
+    text04 = "<p style='text-align: justify; line-height: 2'>My name is <a href='https://daniloas.com'>Danilo</a>, " \
+             "Regional Scholarship Researcher and " \
              "coordinator of the present set of studies on biochars as soil conditioners under the supervision of " \
-             "Professor Renato Ribeiro Passos and funding from the Fundação de Amparo à Pesquisa e Inovação do " \
+             "Professor <a href='http://lattes.cnpq.br/3882320619443256'>Renato Ribeiro Passos</a> and funding from " \
+             "the Fundação de " \
+             "Amparo à Pesquisa e Inovação do " \
              "Espírito Santo and the National Council for Scientific and Technological Development.</p> "
 
     st.markdown(text04, unsafe_allow_html=True)

@@ -2,8 +2,7 @@ import streamlit as st
 from PIL import Image
 
 st.set_page_config(
-    page_title="Ex-stream-ly Cool App",
-    page_icon="🧊",
+    page_title="home",
     layout="wide",
     initial_sidebar_state="expanded",
 )

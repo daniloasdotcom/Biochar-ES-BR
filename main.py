@@ -10,6 +10,8 @@ import pages.projetos.atributosBiocar as atributos
 import pages.projetos.publica as publica
 import pages.projetos.pg06galeriaPhotos as GaleriaPhotos
 
+st.set_page_config(page_title='Biochar Project')
+
 pj0 = "Home"
 pj1 = "Experiment 01"
 pj2 = "Experiment 02"
@@ -20,6 +22,8 @@ pj6 = "Photo gallery"
 pj7 = "Progress"
 pj8 = "Biochar's atributes"
 pj9 = "Team"
+
+st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
 st.sidebar.title('Menu')
 page_projeto = st.sidebar.selectbox('Choose a page of interest',
@@ -34,6 +38,10 @@ st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.
 st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
 st.sidebar.markdown('**Junior Researcher**: [Aurélio Martins](http://lattes.cnpq.br/2155060458456586)')
 st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
+
+
+st.sidebar.write("##")
+st.sidebar.write("##")
 
 def Choice():
     if page_projeto == pj0:

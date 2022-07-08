@@ -1,12 +1,11 @@
 import streamlit as st
 from PIL import Image
+from pages.projetos.load_css import local_css
 
-st.set_page_config(
-    page_title="home",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
+
 def home():
+    local_css("pages/projetos/style.css")
+
     # criando 3 colunas
     col1, col2, col3 = st.columns([1, 6, 1])
 
@@ -36,10 +35,12 @@ def home():
 
     st.markdown(text03, unsafe_allow_html=True)
 
-    text04 = "<p style='text-align: justify; line-height: 2'>My name is <a href='https://daniloas.com'>Danilo</a>, " \
+    text04 = "<p style='text-align: justify; line-height: 2'>My name is <a " \
+             "href='https://daniloas.com'><span class='highlight blue'>Danilo</span></a>, " \
              "Regional Scholarship Researcher and " \
-             "coordinator of the present set of studies on biochars as soil conditioners under the supervision of " \
-             "Professor <a href='http://lattes.cnpq.br/3882320619443256'>Renato Ribeiro Passos</a> and funding from " \
+             "coordinator of the present set of studies on biochars as soil " \
+             "conditioners under the supervision of " \
+             "Professor <a href='http://lattes.cnpq.br/3882320619443256'><span class='highlight blue'>Renato Ribeiro Passos</span></a> and funding from " \
              "the Fundação de " \
              "Amparo à Pesquisa e Inovação do " \
              "Espírito Santo and the National Council for Scientific and Technological Development.</p> "

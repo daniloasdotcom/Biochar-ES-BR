@@ -1,6 +1,9 @@
 import streamlit as st
 from PIL import Image
 
+st.set_page_config(
+    page_title="home",
+)
 def home():
     # criando 3 colunas
     col1, col2, col3 = st.columns([1, 6, 1])

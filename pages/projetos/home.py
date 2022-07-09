@@ -1,3 +1,5 @@
+import base64
+
 import streamlit as st
 from PIL import Image
 from pages.projetos.load_css import local_css
@@ -11,6 +13,9 @@ def home():
 
     img_biochar01 = Image.open("images/biochar.png")
 
+    st.markdown("""<hr style="height:1px; border:none; color:#333; background-color:#333;" /> """,
+                unsafe_allow_html=True)
+
     col2.image(img_biochar01, width=1920, use_column_width=True)
 
     text01 = "<h1 style='text-align: center; line-height: 1.15'> Potential for the use of biochars as soil " \
@@ -22,6 +27,9 @@ def home():
              "Technological Development Program  – PDCTR 2019</h5> "
 
     st.markdown(text02, unsafe_allow_html=True)
+
+    st.markdown("""<hr style="height:1px; border:none; color:#333; background-color:#333;" /> """,
+                unsafe_allow_html=True)
 
     st.write("""
         ###  

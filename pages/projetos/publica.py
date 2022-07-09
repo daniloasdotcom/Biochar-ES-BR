@@ -1,13 +1,15 @@
+import base64
+from PIL import Image
 import streamlit as st
+
+
 
 def publica():
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Publications in production</h1> "
 
     st.markdown(text01, unsafe_allow_html=True)
 
-    st.write("""
-    ## Book chapters
-    """)
+    st.write("""### Books Chapters""")
 
     text02 = "<p style='text-align: justify;'> Effects of biochars on soil aggregation</p> "
 
@@ -25,9 +27,7 @@ def publica():
 
     st.markdown(text05, unsafe_allow_html=True)
 
-    st.write("""
-        ## Artigos
-        """)
+    st.write("""### Papers""")
 
     text06 = "<p style='text-align: justify;'> Biochar: Soil Aggregation from Degraded Pastures </p> "
 

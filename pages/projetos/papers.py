@@ -30,15 +30,15 @@ def papers():
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button('Read PDF', key='1'):
-            show_pdf('files/documento.pdf')
+            show_pdf('files/Silva_et_al_2021.pdf')
     with col2:
         st.button('Close PDF', key='2')
     with col3:
-        with open("files/documento.pdf", "rb") as pdf_file:
+        with open("files/Silva_et_al_2021.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
         st.download_button(label="Download PDF", key='3',
                            data=PDFbyte,
-                           file_name="pandas-clean-id-column.pdf",
+                           file_name="Silva_et_al_2021.pdf",
                            mime='application/octet-stream')
 
     # Segundo paper

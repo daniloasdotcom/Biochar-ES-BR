@@ -1,11 +1,24 @@
-import base64
-
 import streamlit as st
 from PIL import Image
 from pages.projetos.load_css import local_css
 
-
 def home():
+    st.sidebar.image("images/projectLogo.png", use_column_width=True)
+
+    st.sidebar.markdown('')
+    st.sidebar.markdown('')
+    st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
+    st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
+    st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
+    st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
+    st.sidebar.markdown('**Junior Researcher**: [Aurélio Martins](http://lattes.cnpq.br/2155060458456586)')
+    st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
+
+    st.sidebar.write("##")
+    st.sidebar.write("##")
+
+    # Usando nosso recursos css
     local_css("pages/projetos/style.css")
 
     # criando 3 colunas
@@ -61,3 +74,5 @@ def home():
              "presenting solutions for its use as soil conditioners.</p> "
 
     st.markdown(text05, unsafe_allow_html=True)
+
+home()

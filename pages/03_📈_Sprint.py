@@ -3,6 +3,20 @@ import matplotlib.pyplot as plt
 import datetime
 
 def sprints():
+    st.sidebar.image("images/projectLogo.png", use_column_width=True)
+
+    st.sidebar.markdown('')
+    st.sidebar.markdown('')
+    st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
+    st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
+    st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
+    st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
+    st.sidebar.markdown('**Junior Researcher**: [Aurélio Martins](http://lattes.cnpq.br/2155060458456586)')
+    st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
+
+    st.sidebar.write("##")
+    st.sidebar.write("##")
 
     st.date_input("Today is", datetime.datetime.now())
 
@@ -166,3 +180,5 @@ def sprints():
         - Atualizar as atividades e o gráfico
 
         """, unsafe_allow_html=True)
+
+sprints()

@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from pages.projetos.load_css import local_css
+from pages.others.load_css import local_css
 
 def home():
     st.sidebar.image("images/projectLogo.png", use_column_width=True)
@@ -19,7 +19,7 @@ def home():
     st.sidebar.write("##")
 
     # Usando nosso recursos css
-    local_css("pages/projetos/style.css")
+    local_css("pages/others/style.css")
 
     # criando 3 colunas
     col1, col2, col3 = st.columns([1, 6, 1])

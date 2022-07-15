@@ -1,5 +1,9 @@
 import streamlit as st
 from PIL import Image
+from pages.others.load_css import local_css
+
+# Usando nosso recursos css
+local_css("pages/others/style.css")
 
 st.sidebar.image("images/projectLogo.png", use_column_width=True)
 

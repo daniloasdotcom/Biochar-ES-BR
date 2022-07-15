@@ -1,6 +1,10 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import datetime
+from pages.others.load_css import local_css
+
+# Usando nosso recursos css
+local_css("pages/others/style.css")
 
 def sprints():
     st.sidebar.image("images/projectLogo.png", use_column_width=True)
@@ -28,7 +32,7 @@ def sprints():
     time = ["04/07", "05/07", "06/07", "07/07", "08/07",
             "11/07", "12/07", "13/07", "14/07", "15/07"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0,  0]
+    real_progress =    [1, 2, 3, 4, 5, 6, 7, 8, 8,  8]
 
     fig02 = plt.figure(figsize=(10, 5))
 

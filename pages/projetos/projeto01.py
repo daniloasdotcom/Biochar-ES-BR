@@ -1,5 +1,9 @@
 import streamlit as st
 from PIL import Image
+from pages.others.load_css import local_css
+
+# Usando nosso recursos css
+local_css("pages/others/style.css")
 
 def Projeto01():
     col1, col2, col3 = st.columns([1, 6, 1])

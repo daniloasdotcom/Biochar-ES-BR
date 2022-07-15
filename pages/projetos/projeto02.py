@@ -1,4 +1,8 @@
 import streamlit as st
+from pages.others.load_css import local_css
+
+# Usando nosso recursos css
+local_css("pages/others/style.css")
 
 def Projeto02():
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Disponibilidade de fósforo em agregados de diferentes " \

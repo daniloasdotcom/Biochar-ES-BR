@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 
 def atributos():
     
-    
     st.title("Caracterização dos biocarvões")
     st.markdown("Os gráficos abaixo ajudam a visualizar as atributos dos biocarvões")
 
@@ -16,7 +15,7 @@ def atributos():
                                             'Fósforo',
                                             'Potássio'])
 
-    data = pd.read_csv("dados.csv")
+    data = pd.read_csv("files/dados.csv")
 
     fig02 = plt.figure(figsize=(10, 5))
 

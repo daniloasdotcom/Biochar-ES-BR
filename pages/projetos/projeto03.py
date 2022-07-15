@@ -1,6 +1,9 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+from pages.others.load_css import local_css
 
+# Usando nosso recursos css
+local_css("pages/others/style.css")
 
 def Projeto03():
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Fontes de Alcalinidade em Biocarvões </h1> "
@@ -35,7 +38,10 @@ def Projeto03():
 
 
     # Gráfico de pH de biocarvões
-    data = {'CE 350ºC': 5.5, 'CE 600ºC': 6.5, 'PC 350ºC': 6.3, 'PC 600ºC': 7.0}
+    data = {'CE 350ºC': 5.5,
+            'CE 600ºC': 6.5,
+            'PC 350ºC': 6.3,
+            'PC 600ºC': 7.0}
 
     courses = list(data.keys())
     values = list(data.values())

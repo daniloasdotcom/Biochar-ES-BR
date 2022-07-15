@@ -1,10 +1,11 @@
 import streamlit as st
-
 import pages.projetos.projeto01 as PageProjetos01
 import pages.projetos.projeto02 as PageProjetos02
 import pages.projetos.projeto03 as PageProjetos03
+from pages.others.load_css import local_css
 
-st.set_page_config(page_title='Biochar Project')
+# Usando nosso recursos css
+local_css("pages/others/style.css")
 
 pj1 = "Experiment 01"
 pj2 = "Experiment 02"

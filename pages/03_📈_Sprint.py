@@ -13,6 +13,9 @@ def sprints():
     st.sidebar.markdown('')
     st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
     st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+
+    st.sidebar.markdown('**----- Volunteer team -----**')
+
     st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
     st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
     st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
@@ -29,8 +32,8 @@ def sprints():
 
     st.markdown(text01, unsafe_allow_html=True)
 
-    time = ["04/07", "05/07", "06/07", "07/07", "08/07",
-            "11/07", "12/07", "13/07", "14/07", "15/07"]
+    time = ["01/08", "02/08", "03/08", "04/08", "05/08",
+            "01/08", "01/08", "10/08", "11/08", "12/08"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     real_progress =    [1, 2, 3, 4, 5, 6, 7, 8, 8,  8]
 

@@ -15,6 +15,9 @@ st.sidebar.markdown('')
 st.sidebar.markdown('')
 st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
 st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+
+st.sidebar.markdown('**----- Volunteer team -----**')
+
 st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
 st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
 st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')

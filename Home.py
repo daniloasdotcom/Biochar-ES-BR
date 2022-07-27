@@ -9,6 +9,9 @@ def home():
     st.sidebar.markdown('')
     st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
     st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+
+    st.sidebar.markdown('**----- Volunteer team -----**')
+
     st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
     st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
     st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
@@ -57,7 +60,7 @@ def home():
     st.markdown(text03, unsafe_allow_html=True)
 
     text04 = "<p style='text-align: justify; line-height: 2'>My name is <a " \
-             "href='https://daniloas.com'><span class='highlight blue'>Danilo</span></a>, " \
+             "href='https://daniloas.com'><span class='highlight blue'>Danilo Andrade Santos</span></a>, " \
              "Regional Scholarship Researcher and " \
              "coordinator of the present set of studies on biochars as soil " \
              "conditioners under the supervision of " \

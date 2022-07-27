@@ -33,9 +33,9 @@ def sprints():
     st.markdown(text01, unsafe_allow_html=True)
 
     time = ["01/08", "02/08", "03/08", "04/08", "05/08",
-            "01/08", "01/08", "10/08", "11/08", "12/08"]
+            "08/08", "09/08", "10/08", "11/08", "12/08"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress =    [1, 2, 3, 4, 5, 6, 7, 8, 8,  8]
+    real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0,  0]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -76,7 +76,7 @@ def sprints():
                 # To do
     """)
 
-    with st.expander("Day 04/07 - Segunda-feira - Em Progresso"):
+    with st.expander("Day 01/08 - Segunda-feira - Em Progresso"):
         st.markdown("""
         
         - Agendar para sábado a medição das plantas na área experimental
@@ -92,7 +92,7 @@ def sprints():
         - Atualizar as atividades e o gráfico
             
         """)
-    with st.expander("Day 05/07 - Terça-feira"):
+    with st.expander("Day 02/08 - Terça-feira"):
         st.markdown("""    
 
         - Testar o aparelho de Nitrogênio Total
@@ -107,7 +107,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 06/07 - Quarta-feira"):
+    with st.expander("Day 03/08 - Quarta-feira"):
         st.markdown("""    
 
         - Alocar as atividades da Sprint
@@ -117,7 +117,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 07/07 - Quinta-feira"):
+    with st.expander("Day 04/08 - Quinta-feira"):
         st.markdown("""    
 
         - Planejar a digestão foliar e as determinações para o Aurélio
@@ -128,7 +128,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 08/07 - Sexta-feira"):
+    with st.expander("Day 05/08 - Sexta-feira"):
         st.markdown("""    
 
         - Alocar as atividades da Sprint
@@ -138,7 +138,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 11/07 - Segunda-feira"):
+    with st.expander("Day 08/08 - Segunda-feira"):
         st.markdown("""    
 
         - Alocar as atividades da Sprint
@@ -148,7 +148,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 12/07 - Terça-feira"):
+    with st.expander("Day 09/08 - Terça-feira"):
         st.markdown("""    
 
         - Alocar as atividades da Sprint
@@ -158,7 +158,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 13/07 - Quarta-feira"):
+    with st.expander("Day 10/08 - Quarta-feira"):
         st.markdown("""    
 
         - Alocar as atividades da Sprint
@@ -168,7 +168,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 14/07 - Quinta-feira"):
+    with st.expander("Day 11/08 - Quinta-feira"):
         st.markdown("""    
 
         - Alocar as atividades da Sprint
@@ -178,7 +178,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 15/07 - Sexta-feira"):
+    with st.expander("Day 12/08 - Sexta-feira"):
         st.markdown("""    
 
         - Alocar as atividades da Sprint

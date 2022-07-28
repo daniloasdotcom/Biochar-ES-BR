@@ -27,8 +27,7 @@ def sprints():
 
     st.date_input("Today is", datetime.datetime.now())
 
-    text01 = "<h1 style='text-align: center; line-height: 1.15'>Monitoramento do Progresso das Atividades da " \
-             "Sprint</h1> "
+    text01 = "<h1 style='text-align: center; line-height: 1.15'>Monitoring the Progress of Sprint Activities</h1> "
 
     st.markdown(text01, unsafe_allow_html=True)
 
@@ -39,11 +38,11 @@ def sprints():
 
     fig02 = plt.figure(figsize=(10, 5))
 
-    plt.plot(time, progress_desired, marker='o', label="Planejado")
-    plt.plot(time, real_progress, marker='o', label="Entregue")
-    plt.title('Gráfico de Progresso das Atividades da Sprint')
-    plt.xlabel('Tempo')
-    plt.ylabel('Progresso')
+    plt.plot(time, progress_desired, marker='o', label="Planned")
+    plt.plot(time, real_progress, marker='o', label="Delivered")
+    plt.title('Sprint Activity Progress Chart')
+    plt.xlabel('Time')
+    plt.ylabel('Progress')
     plt.grid(True)
     plt.legend(loc="upper left")
     plt.show()
@@ -56,17 +55,17 @@ def sprints():
 
     col1, col2 = st.columns([1, 1])
 
-    with col1.expander("Prioridades"):
+    with col1.expander("Priorities"):
         st.markdown("""
-        # Prioridades
-        - Alocar as reuniões da sprint
-        - Realizar o treinamento em agregados e ADA
-        - Avaliar e organizar os dados da Duda e do Mateus
-        - Solicitar a agenda deles para o período entre 18 e 29 de julho
+        # Priorities
+        - Allocate sprint meetings
+        - Conduct training on aggregates and ADA
+        - Evaluate and organize Duda and Mateus data
+        - Request their schedule for the period July 18-29
         
         """)
 
-    with col2.expander("Demais"):
+    with col2.expander("Others"):
         st.markdown("""
         - Criar uma lista de eventos de divulgação dos nossos trabalhos
         

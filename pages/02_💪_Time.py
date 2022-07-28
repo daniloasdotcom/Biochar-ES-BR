@@ -39,15 +39,15 @@ def team():
     equipe03 = Image.open("images/amanda.png")
 
     # Inserção das imagens
-    col1.image(equipe01, caption="Danilo - PO and Scrum Master")
-    col2.image(equipe02, caption="Renato R. Passos -  Stakeholder")
-    col3.image(equipe03, caption="Amanda Gomes -  Development Team")
+    col1.image(equipe01, caption="Danilo - Coordinator, PO and Scrum Master")
+    col2.image(equipe02, caption="Renato R. Passos -  Supervisor, Stakeholder")
+    col3.image(equipe03, caption="Amanda Gomes -  Volunteer Technical Support and Development Team")
 
     # Inserção da descrição
     with col1.expander("More about Danilo"):
         st.write("""
             Danilo é Agrônomo, apaixonado por quebra-cabeças, gosta de programar, 
-            treinar jiu-jitsu, ler livros, assistir filmes, e aprender novos idiomas. Você pode conhecer mais sobre 
+            praticar jiu-jitsu, ler livros, assistir filmes, e aprender novos idiomas. Você pode conhecer mais sobre 
             ele nesse [link](https://daniloas.com)."
         """)
 
@@ -63,9 +63,9 @@ def team():
     equipe06 = Image.open("images/aurelio.png")
 
     # Inserção das imagens
-    col1.image(equipe04, caption="Mateus - Development Team")
-    col2.image(equipe05, caption="Maria Eduarda - Development Team")
-    col3.image(equipe06, caption="Aurélio - Development Team")
+    col1.image(equipe04, caption="Mateus - Junior Researcher ans Development Team")
+    col2.image(equipe05, caption="Maria Eduarda - Junior Researcher and Development Team")
+    col3.image(equipe06, caption="Aurélio - Junior Researcher and Development Team")
 
     # Inserção da descrição
     with col1.expander("More about Mateus"):
@@ -81,7 +81,7 @@ def team():
     equipe07 = Image.open("images/ueslei.png")
 
     # Inserção das imagens
-    col1.image(equipe07, caption="Ueslei - Development Team")
+    col1.image(equipe07, caption="Ueslei - Junior Researcher and Development Team")
 
     # Inserção da descrição
     with col1.expander("More about Ueslei"):

@@ -34,11 +34,11 @@ def Galeria_photos():
     img_biochar04 = Image.open("images/campo04anos.jpg").rotate(270)
     img_biochar05 = Image.open("images/areaEucalipto.jpg").rotate(270)
 
-    col1.image(img_biochar01, caption="Aplicação de Biocarvões em Sulco")
-    col1.image(img_biochar05, caption="Visão interna da área - 4 anos")
-    col1.image(img_biochar02, caption="Área de estudo - 12 meses após plantio")
+    col1.image(img_biochar01, caption="Application of Biochars in Furrows")
+    col1.image(img_biochar05, caption="Eucalyptus Bark Biochars")
+    col1.image(img_biochar02, caption="Internal view of the area - 4 years")
 
-    col2.image(img_biochar03, caption="Biocarvões de Casca de Eucalipto")
-    col2.image(img_biochar04, caption="Coleta de solo - 4 anos")
+    col2.image(img_biochar03, caption="Soil collection - 4 years")
+    col2.image(img_biochar04, caption="Study area - 12 months after planting")
 
 Galeria_photos()

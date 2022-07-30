@@ -31,8 +31,8 @@ def show_pdf(file_path):
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 def papers():
-    text01 = "<h1 style='text-align: center; line-height: 1.15'>Publicações produzidas durante a vigência do " \
-             "projeto</h1> "
+    text01 = "<h1 style='text-align: center; line-height: 1.15'>Publications produced during the duration of the " \
+             "project</h1> "
 
     st.markdown(text01, unsafe_allow_html=True)
 

@@ -22,7 +22,7 @@ def Projeto01():
     """)
 
     st.write("""
-    ## Resumo
+    ## Abstract
     """)
 
     text02 = "<p style='text-align: justify;'> In March 2018, a field trial was started using resources from EDITAL " \

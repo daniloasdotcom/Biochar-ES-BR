@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 from pages.others.load_css import local_css
 
+st.set_page_config(layout="wide")
+
 def home():
     st.sidebar.image("images/projectLogo.png", use_column_width=True)
 

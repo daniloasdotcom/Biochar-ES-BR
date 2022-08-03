@@ -34,7 +34,7 @@ def sprints():
     time = ["01/08", "02/08", "03/08", "04/08", "05/08",
             "08/08", "09/08", "10/08", "11/08", "12/08"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0,  0]
+    real_progress =    [1, 2, 3, 3, 3, 3, 3, 3, 3,  3]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -59,9 +59,9 @@ def sprints():
         st.markdown("""
         # Priorities
         - Allocate sprint meetings
-        - Conduct training on aggregates and ADA
-        - Evaluate and organize Duda and Mateus data
-        - Request their schedule for the period July 18-29
+        - Testar o aparelho de Nitrogênio Total
+        - Avaliar o extrator de Richards e a Mudança de posição dele
+        - Bem como planejar as determinações de CC e PMP
         
         """)
 
@@ -75,54 +75,39 @@ def sprints():
                 # To do
     """)
 
-    with st.expander("Day 01/08 - Segunda-feira - Em Progresso"):
+    with st.expander("Day 01/08 - Segunda-feira - Concluído"):
         st.markdown("""
         
-        - Agendar para sábado a medição das plantas na área experimental
-        - ~~Solicitar o podão à professsora e agendar para sabádo a coletar foliar~~
-        - Agendar para sexta-feria o uso da estufa para secagem do material
-        - Agendar para domingo/segunda-feira que vem a digestão
-        - Verificar solução nitroperclórica
-        - ~~Iniciar a masseração do solo do 4º ano (NT e COT)~~
-        
-        - Alocar as atividades da Sprint
-        - Atualizar o trello
-        - Fazer anotações de desempenho dos IC's
-        - Atualizar as atividades e o gráfico
+        - ~Iniciar a separação do agregados~   
+        - ~Alocar as atividades da Sprint~
+        - ~Atualizar o trello~
+        - ~Fazer anotações de desempenho dos IC's~
+        - ~Atualizar as atividades e o gráfico~
             
         """)
-    with st.expander("Day 02/08 - Terça-feira"):
+    with st.expander("Day 02/08 - Terça-feira - Concluído"):
         st.markdown("""    
-
-        - Testar o aparelho de Nitrogênio Total
-        - Avaliar o extrator de Richards e a Mudança de posição dele
-        - Bem como planejar as determinações de CC e PMP
-        - Iniciar a separação do agregados (atrás da quadra)
         
-        - Alocar as atividades da Sprint
-        - Atualizar o trello
-        - Fazer anotações de desempenho dos IC's
-        - Atualizar as atividades e o gráfico
+        - ~Continuar a separação do agregados (atrás da quadra)~
+        - ~Alocar as atividades da Sprint~
+        - ~Atualizar o trello~
+        - ~Fazer anotações de desempenho dos IC's~
+        - ~Atualizar as atividades e o gráfico~
 
         """)
 
-    with st.expander("Day 03/08 - Quarta-feira"):
+    with st.expander("Day 03/08 - Quarta-feira - Concluído"):
         st.markdown("""    
 
-        - Alocar as atividades da Sprint
-        - Atualizar o trello
-        - Fazer anotações de desempenho dos IC's
-        - Atualizar as atividades e o gráfico
+        - ~Seminário da FAPES~
+        - ~Atualizar as atividades e o gráfico~
 
         """)
 
     with st.expander("Day 04/08 - Quinta-feira"):
         st.markdown("""    
 
-        - Planejar a digestão foliar e as determinações para o Aurélio
-        - Alocar as atividades da Sprint
-        - Atualizar o trello
-        - Fazer anotações de desempenho dos IC's
+        - Seminário da FAPES
         - Atualizar as atividades e o gráfico
 
         """)
@@ -130,9 +115,8 @@ def sprints():
     with st.expander("Day 05/08 - Sexta-feira"):
         st.markdown("""    
 
-        - Alocar as atividades da Sprint
-        - Atualizar o trello
-        - Fazer anotações de desempenho dos IC's
+        - Finalizar a separação de agregados
+        - Preparo da Argila Dispersa em Água
         - Atualizar as atividades e o gráfico
 
         """)
@@ -140,6 +124,9 @@ def sprints():
     with st.expander("Day 08/08 - Segunda-feira"):
         st.markdown("""    
 
+        - Análise de Estabilidade de Agregados
+        - Análise de Argila Dispersa em Água
+        - Pesar materiais para Carbono Orgânico Total
         - Alocar as atividades da Sprint
         - Atualizar o trello
         - Fazer anotações de desempenho dos IC's
@@ -150,6 +137,9 @@ def sprints():
     with st.expander("Day 09/08 - Terça-feira"):
         st.markdown("""    
 
+        - Análise de Estabilidade de Agregados
+        - Análise de Argila Dispersa em Água
+        - Determinação do Carbono Orgânico Total
         - Alocar as atividades da Sprint
         - Atualizar o trello
         - Fazer anotações de desempenho dos IC's
@@ -160,6 +150,8 @@ def sprints():
     with st.expander("Day 10/08 - Quarta-feira"):
         st.markdown("""    
 
+        - Análise de Estabilidade de Agregados
+        - Análise de Argila Dispersa em Água
         - Alocar as atividades da Sprint
         - Atualizar o trello
         - Fazer anotações de desempenho dos IC's
@@ -170,6 +162,8 @@ def sprints():
     with st.expander("Day 11/08 - Quinta-feira"):
         st.markdown("""    
 
+        - Análise de Estabilidade de Agregados
+        - Análise de Argila Dispersa em Água
         - Alocar as atividades da Sprint
         - Atualizar o trello
         - Fazer anotações de desempenho dos IC's
@@ -180,6 +174,8 @@ def sprints():
     with st.expander("Day 12/08 - Sexta-feira"):
         st.markdown("""    
 
+        - Análise de Estabilidade de Agregados
+        - Análise de Argila Dispersa em Água
         - Alocar as atividades da Sprint
         - Atualizar o trello
         - Fazer anotações de desempenho dos IC's

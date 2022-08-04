@@ -63,7 +63,7 @@ def papers():
 
     # Segundo paper
     with st.container():
-        text03 = "<p style='text-align: justify;'> SANTOS, D. A.; PASSOS, R.R.; SARTORI, A. F.; ZACARIAS, A. J.; SILVA, " \
+        text03 = "<p style='text-align: justify;'> PASSOS, R.R.; SANTOS, D. A.; SARTORI, A. F.; ZACARIAS, A. J.; SILVA, " \
                  "C. C.; RANGEL, O. J. P.; MOSA, L. L.; PROFETI, D.; PROFETI, L. P. R.; SILVA, R. W. Biocarvão de " \
                  "casca de eucalipto efeito sobre atributos químicos de um latossolo vermelho-amarelo cultivado com " \
                  "<i>Eucaliptus urograndis</i>. In: Fabricio Gomes Gonçalves; Marcos Vinicius Winckler Caldeira; Gilson " \
@@ -78,15 +78,15 @@ def papers():
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button('Read PDF', key='7'):
-            show_pdf('files/documento.pdf')
+            show_pdf('files/Passos_et_al_2021b.pdf')
     with col2:
         st.button('Close PDF', key='8')
     with col3:
-        with open("files/documento.pdf", "rb") as pdf_file:
+        with open("files/Passos_et_al_2021b.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
         st.download_button(label="Download PDF", key='9',
                            data=PDFbyte,
-                           file_name="pandas-clean-id-column.pdf",
+                           file_name="Passos_et_al_2021b.pdf",
                            mime='application/octet-stream')
 
     # Terceiro paper
@@ -102,15 +102,15 @@ def papers():
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button('Read PDF', key='10'):
-            show_pdf('files/documento.pdf')
+            show_pdf('files/Santos_et_al_2022.pdf')
     with col2:
         st.button('Close PDF', key='11')
     with col3:
-        with open("files/documento.pdf", "rb") as pdf_file:
+        with open("files/Santos_et_al_2022.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
         st.download_button(label="Download PDF", key='12',
                            data=PDFbyte,
-                           file_name="pandas-clean-id-column.pdf",
+                           file_name="Santos_et_al_2022.pdf",
                            mime='application/octet-stream')
 
     st.write("""# Papers""")

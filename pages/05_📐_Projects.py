@@ -4,6 +4,7 @@ import pages.projetos.projeto02 as PageProjetos02
 import pages.projetos.projeto03 as PageProjetos03
 from pages.others.load_css import local_css
 
+
 # Usando nosso recursos css
 local_css("pages/others/style.css")
 

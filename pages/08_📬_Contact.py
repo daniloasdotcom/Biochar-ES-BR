@@ -1,11 +1,6 @@
 import streamlit as st
-import pandas as pd
-from PIL import Image
-import matplotlib.pyplot as plt
 from pages.others.load_css import local_css
 
-# Usando nosso recursos css
-local_css("pages/others/style.css")
 
 st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
@@ -22,25 +17,22 @@ st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.b
 st.sidebar.markdown('**Junior Researcher**: [Aurélio Martins](http://lattes.cnpq.br/2155060458456586)')
 st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
 
-
 st.sidebar.write("##")
 st.sidebar.write("##")
 
-def Galeria_photos():
-    col1, col2 = st.columns([1, 1])
+# Usando nosso recursos css
+local_css("pages/others/style.css")
 
-    img_biochar01 = Image.open("images/sulcoBiochar.png")
-    img_biochar02 = Image.open("images/plantioEucalipto.png")
+st.header("Get In Touch With Us")
 
-    img_biochar03 = Image.open("images/biocharBandeja.jpg")
-    img_biochar04 = Image.open("images/campo04anos.jpg").rotate(270)
-    img_biochar05 = Image.open("images/areaEucalipto.jpg").rotate(270)
+contact_form = """
+<form action="https://formsubmit.co/danilo_as@live.com" method="POST">
+     <input type="hidden" name="_captcha" value="false">
+     <input type="text" name="name" placeholder="Your name" required>
+     <input type="email" name="email" placeholder="Your email" required>
+     <textarea name="message" placeholder="Your message here"></textarea>
+     <button type="submit">Send</button>
+</form>
+"""
 
-    col1.image(img_biochar01, caption="Application of Biochars in Furrows")
-    col1.image(img_biochar05, caption="Eucalyptus Bark Biochars")
-    col1.image(img_biochar02, caption="Internal view of the area - 4 years")
-
-    col2.image(img_biochar03, caption="Soil collection - 4 years")
-    col2.image(img_biochar04, caption="Study area - 12 months after planting")
-
-Galeria_photos()
+st.markdown(contact_form, unsafe_allow_html=True)

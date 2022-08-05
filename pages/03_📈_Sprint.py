@@ -34,7 +34,7 @@ def sprints():
     time = ["01/08", "02/08", "03/08", "04/08", "05/08",
             "08/08", "09/08", "10/08", "11/08", "12/08"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress =    [1, 2, 3, 3, 3, 3, 3, 3, 3,  3]
+    real_progress =    [1, 2, 3, 4, 4, 4, 4, 4, 4,  4]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -107,8 +107,8 @@ def sprints():
     with st.expander("Day 04/08 - Quinta-feira"):
         st.markdown("""    
 
-        - Seminário da FAPES
-        - Atualizar as atividades e o gráfico
+        - ~Seminário da FAPES~
+        - ~Atualizar as atividades e o gráfico~
 
         """)
 

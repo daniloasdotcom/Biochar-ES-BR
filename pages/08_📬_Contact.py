@@ -1,7 +1,6 @@
 import streamlit as st
 from pages.others.load_css import local_css
 
-
 st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
 st.sidebar.markdown('')

@@ -3,8 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pages.others.load_css import local_css
 
-
-
 # Usando nosso recursos css
 local_css("pages/others/style.css")
 

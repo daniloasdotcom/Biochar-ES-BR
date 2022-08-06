@@ -3,7 +3,6 @@ import pages.projetos.projeto01 as PageProjetos01
 import pages.projetos.projeto02 as PageProjetos02
 import pages.projetos.projeto03 as PageProjetos03
 from pages.others.load_css import local_css
-
 from streamlit_option_menu import option_menu
 
 # Usando nosso recursos css
@@ -36,20 +35,24 @@ st.sidebar.write("##")
 st.sidebar.write("##")
 
 # 2. horizontal menu
-selected = option_menu(None, ["Experimento 01", "Experimento 02", "Experimento 03", 'Settings'],
-                       icons=['house', 'cloud-upload', "list-task", 'gear'],
+selected = option_menu(menu_title="Menu de Experimentos",
+                       options=["Experimento 01", "Experimento 02", "Experimento 03"],
+                       icons=['house', 'cloud-upload', "list-task"],
                        menu_icon="cast", default_index=0, orientation="horizontal")
 
 
-if selected == "Experimento 01":
-    PageProjetos01.Projeto01()
+def novo():
+    if selected == "Experimento 01":
+        PageProjetos01.Projeto01()
 
-elif selected == "Experimento 02":
-    PageProjetos02.Projeto02()
+    elif selected == "Experimento 02":
+        PageProjetos02.Projeto02()
 
-elif selected == "Experimento 03":
-    PageProjetos03.Projeto03()
+    elif selected == "Experimento 03":
+        PageProjetos03.Projeto03()
 
+
+novo()
 
 
 def Choice():

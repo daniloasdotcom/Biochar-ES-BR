@@ -35,6 +35,18 @@ st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
 st.sidebar.write("##")
 st.sidebar.write("##")
 
+def Choice():
+    if page_projeto == pj1:
+        PageProjetos01.Projeto01()
+
+    elif page_projeto == pj2:
+        PageProjetos02.Projeto02()
+
+    elif page_projeto == pj3:
+        PageProjetos03.Projeto03()
+
+Choice()
+
 # 2. horizontal menu
 selected = option_menu(menu_title="Menu de Experimentos",
                        options=["Experimento 01", "Experimento 02"],
@@ -110,15 +122,4 @@ def novo():
         st.markdown(text02, unsafe_allow_html=True)
 
 
-novo()
 
-
-def Choice():
-    if page_projeto == pj1:
-        PageProjetos01.Projeto01()
-
-    elif page_projeto == pj2:
-        PageProjetos02.Projeto02()
-
-    elif page_projeto == pj3:
-        PageProjetos03.Projeto03()

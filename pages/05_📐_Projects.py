@@ -4,6 +4,7 @@ import pages.projetos.projeto02 as PageProjetos02
 import pages.projetos.projeto03 as PageProjetos03
 from pages.others.load_css import local_css
 
+from streamlit_option_menu import option_menu
 
 # Usando nosso recursos css
 local_css("pages/others/style.css")
@@ -31,9 +32,25 @@ st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.b
 st.sidebar.markdown('**Junior Researcher**: [Aurélio Martins](http://lattes.cnpq.br/2155060458456586)')
 st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
 
+st.sidebar.write("##")
+st.sidebar.write("##")
 
-st.sidebar.write("##")
-st.sidebar.write("##")
+# 2. horizontal menu
+selected = option_menu(None, ["Experimento 01", "Experimento 02", "Experimento 03", 'Settings'],
+                       icons=['house', 'cloud-upload', "list-task", 'gear'],
+                       menu_icon="cast", default_index=0, orientation="horizontal")
+
+
+if selected == "Experimento 01":
+    PageProjetos01.Projeto01()
+
+elif selected == "Experimento 02":
+    PageProjetos02.Projeto02()
+
+elif selected == "Experimento 03":
+    PageProjetos03.Projeto03()
+
+
 
 def Choice():
     if page_projeto == pj1:
@@ -44,5 +61,3 @@ def Choice():
 
     elif page_projeto == pj3:
         PageProjetos03.Projeto03()
-
-Choice()

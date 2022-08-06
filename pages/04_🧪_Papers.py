@@ -77,19 +77,45 @@ def papers():
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button('Read PDF', key='7'):
+        if st.button('Read PDF', key='4'):
             show_pdf('files/Passos_et_al_2021b.pdf')
     with col2:
-        st.button('Close PDF', key='8')
+        st.button('Close PDF', key='5')
     with col3:
         with open("files/Passos_et_al_2021b.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
-        st.download_button(label="Download PDF", key='9',
+        st.download_button(label="Download PDF", key='6',
                            data=PDFbyte,
                            file_name="Passos_et_al_2021b.pdf",
                            mime='application/octet-stream')
 
     # Terceiro paper
+    with st.container():
+        text03 = "PASSOS, R. R. ; SANTOS, D. A. ; SARTORI, A. F. ; ZACARIAS, A. J. ; MENDONCA, I. W. ; RANGEL, " \
+                 "O. J. P. ; MOSA, L. L. ; PROFETI, D. ; PROFETI, L. P. R. ; SILVA, R. W. . Carbono orgânico e " \
+                 "atributos físicos de um latossolo vermelho-amarelo sob aplicação de biocarvão cultivado com " \
+                 "Eucalyptus Urograndis. In: Fabricio Gomes Gonçalves; Marcos Vinicius Winckler Caldeira; Gilson " \
+                 "Fernandes da Silva; Gustavo Soares de Souza. (Org.). Sistemas Integrados de Produção pesquisa e " \
+                 "desenvolvimento de tecnologias. 1ed.Guarujá - SP: Editora Científica Digital, 2021, v. I, " \
+                 "p. 106-127. </p> "
+
+        st.markdown(text03, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button('Read PDF', key='7'):
+            show_pdf('files/Passos_et_al_2021a.pdf')
+    with col2:
+        st.button('Close PDF', key='8')
+    with col3:
+        with open("files/Passos_et_al_2021a.pdf", "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        st.download_button(label="Download PDF", key='9',
+                           data=PDFbyte,
+                           file_name="Passos_et_al_2021a.pdf",
+                           mime='application/octet-stream')
+
+    # Quarto paper
     with st.container():
         text05 = "<p style='text-align: justify;'> SANTOS, D. A.; SILVA, A. G. ; PASSOS, R. R. ; RANGEL, O. J. P. . " \
                  "Agregados do solo e dinâmica do P: uma relação ainda pouco compreendida. In: Rangel, O. J. P.; Berilli, " \

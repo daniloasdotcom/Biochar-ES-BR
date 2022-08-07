@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 import pandas as pd
 import matplotlib.pyplot as plt
 from pages.others.load_css import local_css
@@ -26,7 +27,13 @@ st.sidebar.write("##")
 st.sidebar.write("##")
 
 
-st.title("Atributos químicos dos biocarvões")
+selected = option_menu(menu_title="Atributos químicos dos biocarvões",
+                       options=["pH", "Cálcio"],
+                       icons=['house', 'cloud-upload'],
+                       menu_icon="cast",
+                       default_index=0,
+                       orientation="horizontal")
+
 st.markdown("Os gráficos abaixo ajudam a visualizar as atributos dos biocarvões")
 
 st.markdown("""<hr style="height:1px; border:none; color:#333; background-color:#333;" /> """,
@@ -38,47 +45,39 @@ with col1:
     st.markdown('Biocarvões são conhecido por alterarem o pH do solos')
 
 def atributos():
-
-    selected_status = st.selectbox('Select o atributo desejado',
-                                   options=['pH',
-                                            'Cálcio',
-                                            'Magnésio',
-                                            'Fósforo',
-                                            'Potássio'])
-
     data = pd.read_csv("files/dados.csv")
 
     fig02 = plt.figure(figsize=(10, 5))
 
-    if selected_status == 'pH':
+    if selected == 'pH':
         plt.bar(data.biocar, data.pH, color=("#3b3b3b", "#000000"), width=0.5)
         plt.title("pH of Biochars")
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.ylabel('pH', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.show()
 
-    elif selected_status == 'Cálcio':
+    elif selected == 'Cálcio':
         plt.bar(data.biocar, data.Ca, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.ylabel('Biochar total calcium (dag/kg)', fontweight='bold', color='black', fontsize='14',
                    horizontalalignment='center')
         plt.show()
 
-    elif selected_status == 'Magnésio':
+    elif selected == 'Magnésio':
         plt.bar(data.biocar, data.Mg, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.ylabel('Biochar total magnesium (dag/kg)', fontweight='bold', color='black', fontsize='14',
                    horizontalalignment='center')
         plt.show()
 
-    elif selected_status == 'Fósforo':
+    elif selected == 'Fósforo':
         plt.bar(data.biocar, data.P, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.ylabel('Biochar total phosphorus (dag/kg)', fontweight='bold', color='black', fontsize='14',
                    horizontalalignment='center')
         plt.show()
 
-    elif selected_status == 'Potássio':
+    elif selected == 'Potássio':
         plt.bar(data.biocar, data.K, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
         plt.ylabel('Biochar total potassium (dag/kg)', fontweight='bold', color='black', fontsize='14',

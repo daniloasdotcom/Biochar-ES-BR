@@ -35,3 +35,5 @@ contact_form = """
 """
 
 st.markdown(contact_form, unsafe_allow_html=True)
+
+st.image("images/projectLogo.png", use_column_width=True)

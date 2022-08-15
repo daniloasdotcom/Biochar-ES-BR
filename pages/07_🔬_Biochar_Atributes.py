@@ -4,6 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pages.others.load_css import local_css
 
+st.set_page_config(layout="wide")
+
 # Usando nosso recursos css
 local_css("pages/others/style.css")
 
@@ -47,39 +49,47 @@ def atributos():
     data = pd.read_csv("files/dados.csv")
 
     fig02 = plt.figure(figsize=(10, 5))
+    labels = ['350 ºC', '600 ºC']
 
     if selected == 'pH':
-        plt.bar(data.biocar, data.pH, color=("#3b3b3b", "#000000"), width=0.5)
-        plt.title("pH of Biochars")
-        plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('pH', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
+        plt.bar(data.biocar,
+                data.pH,
+                color=("#3b3b3b", "#000000"),
+                width=0.4)
+        plt.yticks(fontsize=12, fontweight='bold')
+        plt.xticks(data.biocar, labels, fontsize=12, fontweight='bold')
+        plt.ylabel('pH',
+                   fontweight='bold',
+                   color='black',
+                   fontsize='12',
+                   horizontalalignment='center')
         plt.show()
 
     elif selected == 'Cálcium':
         plt.bar(data.biocar, data.Ca, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total calcium (dag/kg)', fontweight='bold', color='black', fontsize='14',
+        plt.ylabel('Biochar total calcium (dag/kg)', fontweight='bold', color='black', fontsize='12',
                    horizontalalignment='center')
         plt.show()
 
     elif selected == 'Magnesium':
         plt.bar(data.biocar, data.Mg, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total magnesium (dag/kg)', fontweight='bold', color='black', fontsize='14',
+        plt.ylabel('Biochar total magnesium (dag/kg)', fontweight='bold', color='black', fontsize='12',
                    horizontalalignment='center')
         plt.show()
 
     elif selected == 'Phosphorus':
         plt.bar(data.biocar, data.P, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total phosphorus (dag/kg)', fontweight='bold', color='black', fontsize='14',
+        plt.ylabel('Biochar total phosphorus (dag/kg)', fontweight='bold', color='black', fontsize='12',
                    horizontalalignment='center')
         plt.show()
 
     elif selected == 'Potassium':
         plt.bar(data.biocar, data.K, color=("#3b3b3b", "#000000"), width=0.5)
         plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total potassium (dag/kg)', fontweight='bold', color='black', fontsize='14',
+        plt.ylabel('Biochar total potassium (dag/kg)', fontweight='bold', color='black', fontsize='12',
                    horizontalalignment='center')
         plt.show()
 

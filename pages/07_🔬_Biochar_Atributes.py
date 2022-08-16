@@ -2,13 +2,14 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib as mpl
 from pages.others.load_css import local_css
 
 st.set_page_config(layout="wide")
 
 # Usando nosso recursos css
 local_css("pages/others/style.css")
-
 
 st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
@@ -28,7 +29,6 @@ st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
 st.sidebar.write("##")
 st.sidebar.write("##")
 
-
 selected = option_menu(menu_title="Chemical attributes of biochars",
                        options=["pH", "Cálcium", "Magnesium", "Phosphorus", "Potassium"],
                        menu_icon="cast",
@@ -38,45 +38,99 @@ selected = option_menu(menu_title="Chemical attributes of biochars",
 st.markdown("The graphs below help to visualize the attributes of biochars")
 
 st.markdown("""<hr style="height:1px; border:none; color:#333; background-color:#333;" /> """,
-                unsafe_allow_html=True)
+            unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1.25, 0.05, 2])
 
 with col1:
     st.markdown('Biocarvões são conhecido por alterarem o pH do solos')
 
+
 def atributos():
     data = pd.read_csv("files/dados.csv")
 
-    fig02 = plt.figure(figsize=(10, 5))
+    fig02 = plt.figure(figsize=(12, 5))
+    ax = plt.axes()
     labels = ['350 ºC', '600 ºC']
 
     if selected == 'pH':
-        plt.bar(data.biocar,
-                data.pH,
-                color=("#3b3b3b", "#000000"),
-                width=0.4)
-        plt.yticks(fontsize=12, fontweight='bold')
-        plt.xticks(data.biocar, labels, fontsize=12, fontweight='bold')
-        plt.ylabel('pH',
+        plt.barh(data.biocar,
+                 data.pH,
+                 height=0.5,
+                 color=['gray', 'black'])
+
+        plt.yticks(data.biocar,
+                   labels,
+                   fontsize=14,
+                   fontweight='bold')
+
+        plt.xticks(fontsize=14,
+                   fontweight='bold')
+
+        plt.xlabel('pH',
                    fontweight='bold',
                    color='black',
-                   fontsize='12',
-                   horizontalalignment='center')
+                   fontsize=15,
+                   horizontalalignment='center',
+                   labelpad=15)
+
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['bottom'].set_linewidth(3)
+        ax.spines['left'].set_linewidth(3)
+
         plt.show()
 
     elif selected == 'Cálcium':
-        plt.bar(data.biocar, data.Ca, color=("#3b3b3b", "#000000"), width=0.5)
-        plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total calcium (dag/kg)', fontweight='bold', color='black', fontsize='12',
-                   horizontalalignment='center')
+        plt.barh(data.biocar,
+                 data.Ca,
+                 height=0.5)
+
+        plt.yticks(data.biocar,
+                   labels,
+                   fontsize=14,
+                   fontweight='bold')
+
+        plt.xticks(fontsize=14,
+                   fontweight='bold')
+
+        plt.xlabel('Calcium (dag/kg)',
+                   fontweight='bold',
+                   color='black',
+                   fontsize=15,
+                   horizontalalignment='center',
+                   labelpad=15)
+
+        for spine in ['top', 'right']:
+            ax.spines[spine].set_visible(False)
+
+        ax.spines['bottom'].set_linewidth(3)
+        ax.spines['left'].set_linewidth(3)
+
         plt.show()
 
     elif selected == 'Magnesium':
-        plt.bar(data.biocar, data.Mg, color=("#3b3b3b", "#000000"), width=0.5)
-        plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total magnesium (dag/kg)', fontweight='bold', color='black', fontsize='12',
-                   horizontalalignment='center')
+        plt.barh(data.biocar,
+                 data.Mg,
+                 height=0.5)
+
+        plt.yticks(data.biocar,
+                   labels,
+                   fontsize=14,
+                   fontweight='bold')
+
+        plt.xticks(fontsize=14,
+                   fontweight='bold')
+
+        plt.xlabel('Magnesium (dag/kg)',
+                   fontweight='bold',
+                   color='black',
+                   fontsize=15,
+                   horizontalalignment='center',
+                   labelpad=15)
+
+        sns.despine()
+
         plt.show()
 
     elif selected == 'Phosphorus':
@@ -95,6 +149,6 @@ def atributos():
 
     st.pyplot(fig02)
 
+
 with col3:
     atributos()
-

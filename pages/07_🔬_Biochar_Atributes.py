@@ -3,7 +3,6 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import matplotlib as mpl
 from pages.others.load_css import local_css
 
 st.set_page_config(layout="wide")
@@ -56,7 +55,7 @@ def atributos():
     if selected == 'pH':
         plt.barh(data.biocar,
                  data.pH,
-                 height=0.5,
+                 height=0.7,
                  color=['gray', 'black'])
 
         plt.yticks(data.biocar,

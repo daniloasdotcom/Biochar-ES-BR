@@ -83,7 +83,8 @@ def atributos():
     elif selected == 'Cálcium':
         plt.barh(data.biocar,
                  data.Ca,
-                 height=0.5)
+                 height=0.5,
+                 color=['gray', 'black'])
 
         plt.yticks(data.biocar,
                    labels,
@@ -111,7 +112,8 @@ def atributos():
     elif selected == 'Magnesium':
         plt.barh(data.biocar,
                  data.Mg,
-                 height=0.5)
+                 height=0.5,
+                 color=['gray', 'black'])
 
         plt.yticks(data.biocar,
                    labels,
@@ -130,20 +132,74 @@ def atributos():
 
         sns.despine()
 
+        for spine in ['top', 'right']:
+            ax.spines[spine].set_visible(False)
+
+        ax.spines['bottom'].set_linewidth(3)
+        ax.spines['left'].set_linewidth(3)
+
         plt.show()
 
     elif selected == 'Phosphorus':
-        plt.bar(data.biocar, data.P, color=("#3b3b3b", "#000000"), width=0.5)
-        plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total phosphorus (dag/kg)', fontweight='bold', color='black', fontsize='12',
-                   horizontalalignment='center')
+        plt.barh(data.biocar,
+                 data.P,
+                 height=0.5,
+                 color=['gray', 'black'])
+
+        plt.yticks(data.biocar,
+                   labels,
+                   fontsize=14,
+                   fontweight='bold')
+
+        plt.xticks(fontsize=14,
+                   fontweight='bold')
+
+        plt.xlabel('Phosphorus (dag/kg)',
+                   fontweight='bold',
+                   color='black',
+                   fontsize=15,
+                   horizontalalignment='center',
+                   labelpad=15)
+
+        sns.despine()
+
+        for spine in ['top', 'right']:
+            ax.spines[spine].set_visible(False)
+
+        ax.spines['bottom'].set_linewidth(3)
+        ax.spines['left'].set_linewidth(3)
+
         plt.show()
 
     elif selected == 'Potassium':
-        plt.bar(data.biocar, data.K, color=("#3b3b3b", "#000000"), width=0.5)
-        plt.xlabel('Biochar', fontweight='bold', color='black', fontsize='14', horizontalalignment='center')
-        plt.ylabel('Biochar total potassium (dag/kg)', fontweight='bold', color='black', fontsize='12',
-                   horizontalalignment='center')
+        plt.barh(data.biocar,
+                 data.K,
+                 height=0.5,
+                 color=['gray', 'black'])
+
+        plt.yticks(data.biocar,
+                   labels,
+                   fontsize=14,
+                   fontweight='bold')
+
+        plt.xticks(fontsize=14,
+                   fontweight='bold')
+
+        plt.xlabel('Potassium (dag/kg)',
+                   fontweight='bold',
+                   color='black',
+                   fontsize=15,
+                   horizontalalignment='center',
+                   labelpad=15)
+
+        sns.despine()
+
+        for spine in ['top', 'right']:
+            ax.spines[spine].set_visible(False)
+
+        ax.spines['bottom'].set_linewidth(3)
+        ax.spines['left'].set_linewidth(3)
+
         plt.show()
 
     st.pyplot(fig02)

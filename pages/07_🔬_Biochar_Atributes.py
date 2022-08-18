@@ -83,7 +83,7 @@ def atributos():
     elif selected == 'Cálcium':
         plt.barh(data.biocar,
                  data.Ca,
-                 height=0.5,
+                 height=0.7,
                  color=['gray', 'black'])
 
         plt.yticks(data.biocar,
@@ -112,7 +112,7 @@ def atributos():
     elif selected == 'Magnesium':
         plt.barh(data.biocar,
                  data.Mg,
-                 height=0.5,
+                 height=0.7,
                  color=['gray', 'black'])
 
         plt.yticks(data.biocar,
@@ -143,7 +143,7 @@ def atributos():
     elif selected == 'Phosphorus':
         plt.barh(data.biocar,
                  data.P,
-                 height=0.5,
+                 height=0.7,
                  color=['gray', 'black'])
 
         plt.yticks(data.biocar,
@@ -174,7 +174,7 @@ def atributos():
     elif selected == 'Potassium':
         plt.barh(data.biocar,
                  data.K,
-                 height=0.5,
+                 height=0.7,
                  color=['gray', 'black'])
 
         plt.yticks(data.biocar,

@@ -45,11 +45,9 @@ def team():
 
     # Inserção da descrição
     with col1.expander("More about Danilo"):
-        st.write("""
-            Danilo é Agrônomo, apaixonado por quebra-cabeças, gosta de programar, 
-            praticar jiu-jitsu, ler livros, assistir filmes, e aprender novos idiomas. Você pode conhecer mais sobre 
-            ele nesse [link](https://daniloas.com)."
-        """)
+        st.write("Danilo is an agronomist, passionate about puzzles, enjoys programming, practicing jiu-jitsu, "
+                 "reading books, watching movies, and learning new languages. You can find out more about him in this "
+                 "[link](https://daniloas.com)")
 
     with col2.expander("More about Renato"):
         st.write("Você saberá mais sobre ele em breve aqui")

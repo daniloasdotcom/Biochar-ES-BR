@@ -30,7 +30,6 @@ st.sidebar.write("##")
 
 selected = option_menu(menu_title="Chemical attributes of biochars",
                        options=["pH", "Cálcium", "Magnesium", "Phosphorus", "Potassium"],
-                       menu_icon="cast",
                        default_index=0,
                        orientation="horizontal")
 

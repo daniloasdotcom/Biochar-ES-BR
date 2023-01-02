@@ -184,27 +184,5 @@ def papers():
                            file_name="paper02.pdf",
                            mime='application/octet-stream')
 
-   # Sexto paper
-    with st.container():
-        text07 = "<p style='text-align: justify;'> FONSECA, A. A.; SANTOS, D. A.; PASSOS, R. R.; ANDRADE, F. V.; RANGEL, " \
-                 "O. J. P. Phosphorus availability and grass growth in biochar-modified acid soil: A study excluding the " \
-                 "effects of soil pH. <strong>Soil Use and Management</strong>. v. 36, p. 714-714, 2020. </p> "
-
-        st.markdown(text07, unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        if st.button('Read PDF', key='16'):
-            show_pdf('files/paper02.pdf')
-    with col2:
-        st.button('Close PDF', key='17')
-    with col3:
-        with open("files/paper02.pdf", "rb") as pdf_file:
-            PDFbyte = pdf_file.read()
-        st.download_button(label="Download PDF", key='18',
-                           data=PDFbyte,
-                           file_name="paper02.pdf",
-                           mime='application/octet-stream')
-
 
 papers()

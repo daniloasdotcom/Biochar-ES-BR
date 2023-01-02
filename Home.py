@@ -67,9 +67,8 @@ def home():
              "coordinator of the present set of studies on biochars as soil " \
              "conditioners under the supervision of " \
              "Professor <a href='http://lattes.cnpq.br/3882320619443256'><span class='highlight blue'>Renato Ribeiro Passos</span></a> and funding from " \
-             "the Fundação de " \
-             "Amparo à Pesquisa e Inovação do " \
-             "Espírito Santo and the National Council for Scientific and Technological Development.</p> "
+             "the FAPES (Espírito Santo Research and Innovation Support Foundation) and the CNPq (National Council for " \
+             "Scientific and Technological Development).</p> "
 
     st.markdown(text04, unsafe_allow_html=True)
 

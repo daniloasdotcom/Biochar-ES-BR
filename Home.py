@@ -72,10 +72,10 @@ def home():
 
     st.markdown(text04, unsafe_allow_html=True)
 
-    text05 = "<p style='text-align: justify; line-height: 2'>And this is the website created to publicize the " \
-             "progress of research approved and developed from the FAPES/CNPq No. of Espírito Santo with the " \
-             "objective of obtaining insights into the effectiveness of the use of carbonized organic waste and " \
-             "presenting solutions for its use as soil conditioners.</p> "
+    text05 = "<p style='text-align: justify; line-height: 2'>And this is the website created to disseminate the " \
+             "progress of research approved and developed from FAPES/CNPq resources in the State of Espírito " \
+             "Santo-Brazil with the objective of obtaining insights on the effectiveness of the use of carbonized " \
+             "organic waste and presenting solutions for its use as soil conditioners.</p> "
 
     st.markdown(text05, unsafe_allow_html=True)
 

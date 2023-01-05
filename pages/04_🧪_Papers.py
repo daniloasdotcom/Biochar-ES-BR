@@ -37,6 +37,31 @@ def papers():
     st.markdown(text01, unsafe_allow_html=True)
 
     st.write("""# Books Chapters""")
+
+    # Quarto paper
+    with st.container():
+        text09 = "<p style='text-align: justify;'> SILVA, R. W. ; PASSOS, R.R. ; Rangel, O.J.P. ; ANDRADE, " \
+                 "F. V. ; Sartori, A.F. . Dinâmica do fósforo em solos tropicais e manejo da adubação organomineral " \
+                 "fosfatada. Tópicos em Agroecologia. 1ed.Alegre: Instituto Federal de Educação, Ciência e Tecnologia " \
+                 "do Espírito Santo, 2020, v. 2, p. 337-355. </p> "
+
+        st.markdown(text09, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button('Read PDF', key='22'):
+            show_pdf('files/Silva_et_al_2020.pdf')
+    with col2:
+        st.button('Close PDF', key='23')
+    with col3:
+        with open("files/Silva_et_al_2020.pdf", "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        st.download_button(label="Download PDF", key='24',
+                           data=PDFbyte,
+                           file_name="Silva_et_al_2020.pdf",
+                           mime='application/octet-stream')
+
+
     # primeiro paper
     with st.container():
         text02 = "<p style='text-align: justify;'> SILVA, C. C.; SANTOS, D. A.; SILVA, A. G.; PASSOS, R. R.; RANGEL, " \
@@ -182,6 +207,30 @@ def papers():
         st.download_button(label="Download PDF", key='18',
                            data=PDFbyte,
                            file_name="paper02.pdf",
+                           mime='application/octet-stream')
+
+    st.write("""# Theses and dissertations""")
+
+    # Sexto paper
+    with st.container():
+        text08 = "<p style='text-align: justify;'> SILVA, Ronaldo Willian da. Dinâmica de fósforo e eficiência " \
+                 "agronômica de superfosfato triplo associado a biocarvões. 2021. Tese (Doutorado em Doutorado em " \
+                 "Produção Vegetal) - Universidade Federal do Espírito Santo, Alegre, 2021. </p> "
+
+        st.markdown(text08, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button('Read PDF', key='19'):
+            show_pdf('files/Tese_Ronaldo_2021.pdf')
+    with col2:
+        st.button('Close PDF', key='20')
+    with col3:
+        with open("files/Tese_Ronaldo_2021.pdf", "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        st.download_button(label="Download PDF", key='21',
+                           data=PDFbyte,
+                           file_name="Tese_Ronaldo_2021.pdf",
                            mime='application/octet-stream')
 
 

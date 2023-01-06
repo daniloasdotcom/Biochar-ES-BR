@@ -244,14 +244,14 @@ def papers():
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button('Read PDF', key='22'):
+        if st.button('Read PDF', key='23'):
             show_pdf('files/IC_Mateus_2020.pdf')
     with col2:
-        st.button('Close PDF', key='23')
+        st.button('Close PDF', key='24')
     with col3:
         with open("files/IC_Mateus_2020.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
-        st.download_button(label="Download PDF", key='24',
+        st.download_button(label="Download PDF", key='25',
                            data=PDFbyte,
                            file_name="IC_Mateus_2020.pdf",
                            mime='application/octet-stream')

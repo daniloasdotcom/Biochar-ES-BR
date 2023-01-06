@@ -256,4 +256,26 @@ def papers():
                            file_name="IC_Mateus_2020.pdf",
                            mime='application/octet-stream')
 
+    # Segundo Resumo
+    with st.container():
+        text09 = "<p style='text-align: justify;'>Produção de fertilizante organomineral fosfatado de eficiência " \
+                 "aumentada baseado em biocarvão. In: Anais de Iniciação Científica da UFES, 2021. Anais [...] " \
+                 "Vitória: UFES. 2021.</p> "
+
+        st.markdown(text09, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button('Read PDF', key='26'):
+            show_pdf('files/IC_Mateus_2021.pdf')
+    with col2:
+        st.button('Close PDF', key='27')
+    with col3:
+        with open("files/IC_Mateus_2021.pdf", "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        st.download_button(label="Download PDF", key='28',
+                           data=PDFbyte,
+                           file_name="IC_Mateus_2021.pdf",
+                           mime='application/octet-stream')
+
 papers()

@@ -37,14 +37,9 @@ def home():
     col2.image(img_biochar01, width=1920, use_column_width=True)
 
     text01 = "<h1 style='text-align: center; line-height: 1.15'> Potential for the use of biochars as soil " \
-             "conditioners and eucalyptus production</h1> "
+             "conditioners</h1> "
 
     st.markdown(text01, unsafe_allow_html=True)
-
-    text02 = "<h5 style='text-align: center; line-height: 1.15'>FAPES/CNPq Nº 11/2019 - Regional Scientific and " \
-             "Technological Development Program  – PDCTR 2019</h5> "
-
-    st.markdown(text02, unsafe_allow_html=True)
 
     st.markdown("""<hr style="height:1px; border:none; color:#333; background-color:#333;" /> """,
                 unsafe_allow_html=True)
@@ -53,30 +48,23 @@ def home():
         ###  
         """)
 
-    text03 = "<p style='text-align: justify; line-height: 2'>Biochars have drawn the attention of Soil Science to the " \
+    text03 = "<p style='text-align: justify; line-height: 2'>Biochars have drawn the attention of soil science to the " \
              "understanding of their effects on the chemical, physical and biological attributes of soils. In this " \
-             "context, the State of Espírito Santo has, within the areas of agricultural production, materials that " \
-             "are generated in large volume and with the potential to be used for energy conversion and consequent " \
-             "production and reuse of biochars to return to the field as soil conditioners.</p> "
+             "context, the State of Espírito Santo has, within agricultural production areas, materials with the " \
+             "potential to be converted into biochar for use as soil conditioners, many of which are generated in " \
+             "large volume.</p> "
 
     st.markdown(text03, unsafe_allow_html=True)
 
-    text04 = "<p style='text-align: justify; line-height: 2'>My name is <a " \
-             "href='https://daniloas.com'><span class='highlight blue'>Danilo Andrade Santos</span></a>, " \
-             "Regional Scholarship Researcher and " \
-             "coordinator of the present set of studies on biochars as soil " \
-             "conditioners under the supervision of " \
-             "Professor <a href='http://lattes.cnpq.br/3882320619443256'><span class='highlight blue'>Renato Ribeiro Passos</span></a> and funding from " \
-             "the FAPES (Espírito Santo Research and Innovation Support Foundation) and the CNPq (National Council for " \
-             "Scientific and Technological Development).</p> "
+    text04 = "<p style='text-align: justify; line-height: 2'>Biochars have drawn the attention of soil science to the " \
+             "understanding of their effects on the chemical, physical and biological attributes of soils. In this " \
+             "context, the State of Espírito Santo has, within agricultural production areas, materials with the " \
+             "potential to be converted into biochar for use as soil conditioners, many of which are generated in " \
+             "large volumes. This site was created to disseminate the progress of research carried out by the soil " \
+             "group at the Federal University of Espírito Santo under the supervision of Professor <a " \
+             "href='http://lattes.cnpq.br/3882320619443256'><span class='highlight blue'>Renato Ribeiro " \
+             "Passos</span></a>.</p> "
 
     st.markdown(text04, unsafe_allow_html=True)
-
-    text05 = "<p style='text-align: justify; line-height: 2'>And this is the website created to disseminate the " \
-             "progress of research approved and developed from FAPES/CNPq resources in the State of Espírito " \
-             "Santo-Brazil with the objective of obtaining insights on the effectiveness of the use of carbonized " \
-             "organic waste and presenting solutions for its use as soil conditioners.</p> "
-
-    st.markdown(text05, unsafe_allow_html=True)
 
 home()

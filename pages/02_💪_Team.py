@@ -10,8 +10,8 @@ def team():
 
     st.sidebar.markdown('')
     st.sidebar.markdown('')
-    st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
-    st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('**General coordinator**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('**Regional Researcher**: [Danilo Andrade](https://daniloas.com/)')
 
     st.sidebar.markdown('**----- Volunteer team -----**')
 

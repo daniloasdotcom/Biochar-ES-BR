@@ -11,8 +11,8 @@ def sprints():
 
     st.sidebar.markdown('')
     st.sidebar.markdown('')
-    st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
-    st.sidebar.markdown('**Supervisor**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('**General coordinator**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('**Regional Researcher**: [Danilo Andrade](https://daniloas.com/)')
 
     st.sidebar.markdown('**----- Volunteer team -----**')
 
@@ -31,8 +31,8 @@ def sprints():
 
     st.markdown(text01, unsafe_allow_html=True)
 
-    time = ["09/01", "10/01", "11/01", "12/01", "13/01",
-            "16/01", "17/01", "18/01", "19/01", "20/01"]
+    time = ["20/02", "21/02", "22/02", "23/02", "24/02",
+            "27/02", "28/02", "29/02", "01/03", "02/03"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0,  0]
 

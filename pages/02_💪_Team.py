@@ -18,6 +18,7 @@ def team():
     st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
     st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
     st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
+    st.sidebar.markdown('**Junior Researcher**: [Camila Barbieiro](http://lattes.cnpq.br/1801516731947159)')
     #st.sidebar.markdown('**Junior Researcher**: [Aurélio Martins](http://lattes.cnpq.br/2155060458456586)')
     st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
 

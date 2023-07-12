@@ -4,12 +4,13 @@ from pages.others.load_css import local_css
 
 st.set_page_config(layout="wide")
 
+
 def home():
     st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
     st.sidebar.markdown('')
     st.sidebar.markdown('')
-    st.sidebar.markdown('**General coordinator**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('**General Coordinator**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
     st.sidebar.markdown('**Regional Researcher**: [Danilo Andrade](https://daniloas.com/)')
 
     st.sidebar.markdown('**----- Team -----**')
@@ -49,20 +50,25 @@ def home():
         ###  
         """)
 
-    text03 = "<p style='text-align: justify; line-height: 2'>Biochars have drawn the attention of soil science to the " \
-             "understanding of their effects on the chemical, physical and biological attributes of soils. In this " \
-             "context, the State of Espírito Santo has, within agricultural production areas, materials with the " \
-             "potential to be converted into biochar for use as soil conditioners, many of which are generated in " \
-             "large volume.</p> "
+    text03 = "<p style='text-align: justify; line-height: 2'>Biochars have aroused great interest in the scientific " \
+             "community specialized in soil science due to their effects on the chemical, physical and biological " \
+             "attributes of soils. Within this context, the State of Espírito Santo-Brazil stands out as a region with vast " \
+             "potential for the production of materials that can be converted into biochar used as a soil " \
+             "conditioner.</p> "
 
     st.markdown(text03, unsafe_allow_html=True)
 
-    text04 = "<p style='text-align: justify; line-height: 2'>On this site we publish the results and progress of research carried out by the soil group of the Federal University of Espírito Santo under the guidance of Professor <a " \
+    text04 = "<p style='text-align: justify; line-height: 2'>In order to disseminate the results and progress of " \
+             "research conducted by the soil group of the Federal University of Espírito Santo-Brazil, under the " \
+             "guidance of " \
+             "Professor <a " \
              "href='https://lattes.cnpq.br/3882320619443256'><span class='highlight blue'>Renato Ribeiro " \
              "Passos</span></a> and supervision of Researcher <a " \
              "href='https://lattes.cnpq.br/7543705744207270'><span class='highlight blue'>Danilo Andrade Santos" \
-             "</span></a>.</p>"
+             "</span></a> , this website was created. Here, you will find information about the findings obtained and " \
+             "the progress of these innovative studies.</p> "
 
     st.markdown(text04, unsafe_allow_html=True)
+
 
 home()

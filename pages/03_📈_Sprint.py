@@ -32,8 +32,8 @@ def sprints():
 
     st.markdown(text01, unsafe_allow_html=True)
 
-    time = ["20/02", "21/02", "22/02", "23/02", "24/02",
-            "27/02", "28/02", "29/02", "01/03", "02/03"]
+    time = ["14/08", "15/08", "16/08", "17/08", "18/08",
+            "21/08", "22/08", "23/08", "24/08", "25/08"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0,  0]
 
@@ -76,7 +76,7 @@ def sprints():
                 # To do
     """)
 
-    with st.expander("Day 09/01 - Segunda-feira - Concluído"):
+    with st.expander("Day 14/08 - Segunda-feira"):
         st.markdown("""
         
         - ~Iniciar a separação do agregados~   
@@ -86,7 +86,7 @@ def sprints():
         - ~Atualizar as atividades e o gráfico~
             
         """)
-    with st.expander("Day 10/01 - Terça-feira - Concluído"):
+    with st.expander("Day 15/08 - Terça-feira"):
         st.markdown("""    
         
         - ~Continuar a separação do agregados (atrás da quadra)~
@@ -97,7 +97,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 11/01 - Quarta-feira - Concluído"):
+    with st.expander("Day 16/08 - Quarta-feira"):
         st.markdown("""    
 
         - ~Seminário da FAPES~
@@ -105,7 +105,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 12/01 - Quinta-feira"):
+    with st.expander("Day 17/08 - Quinta-feira"):
         st.markdown("""    
 
         - ~Seminário da FAPES~
@@ -113,7 +113,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 13/01 - Sexta-feira"):
+    with st.expander("Day 18/08 - Sexta-feira"):
         st.markdown("""    
 
         - Finalizar a separação de agregados
@@ -122,7 +122,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 16/01 - Segunda-feira"):
+    with st.expander("Day 21/08 - Segunda-feira"):
         st.markdown("""    
 
         - Análise de Estabilidade de Agregados
@@ -135,7 +135,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 17/01 - Terça-feira"):
+    with st.expander("Day 22/08 - Terça-feira"):
         st.markdown("""    
 
         - Análise de Estabilidade de Agregados
@@ -148,7 +148,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 18/01 - Quarta-feira"):
+    with st.expander("Day 23/08 - Quarta-feira"):
         st.markdown("""    
 
         - Análise de Estabilidade de Agregados
@@ -160,7 +160,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 19/01 - Quinta-feira"):
+    with st.expander("Day 24/08 - Quinta-feira"):
         st.markdown("""    
 
         - Análise de Estabilidade de Agregados
@@ -172,7 +172,7 @@ def sprints():
 
         """)
 
-    with st.expander("Day 20/01 - Sexta-feira"):
+    with st.expander("Day 25/08 - Sexta-feira"):
         st.markdown("""    
 
         - Análise de Estabilidade de Agregados

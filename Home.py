@@ -65,8 +65,7 @@ def home():
              "href='https://lattes.cnpq.br/3882320619443256'><span class='highlight blue'>Renato Ribeiro " \
              "Passos</span></a> and supervision of Researcher <a " \
              "href='https://lattes.cnpq.br/7543705744207270'><span class='highlight blue'>Danilo Andrade Santos" \
-             "</span></a> , this website was created. Here, you will find information about the findings obtained and " \
-             "the progress of these innovative studies.</p> "
+             "</span></a> , this website was created. Here you will find information about the progress of our research group's activities.</p> "
 
     st.markdown(text04, unsafe_allow_html=True)
 

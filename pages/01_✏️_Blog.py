@@ -8,25 +8,34 @@ def blog():
     st.sidebar.markdown('**Coordenador Geral**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
     st.sidebar.markdown('**Pesquisador Regional**: [Danilo Andrade](https://daniloas.com/)')
 
-    st.title("Blog")
-    st.header("Bem-vindo ao Nosso Blog Interativo!")
+    # Título do blog e mensagem de boas-vindas
+    st.title("🌿 Blog Interativo de Biocarvões")
+    st.header("Bem-vindo ao Nosso Blog de Pesquisas!")
 
+    # Descrição inicial
     st.write("""
-        Através de nossas postagens você poderá interagir com nossos gráficos e ter uma visão dinâmica
-        dos efeitos dos biocarvões em sistemas de produção agrícola
-    """)
+            Explore nossas postagens para entender como os biocarvões podem impactar sistemas agrícolas e a retenção de nutrientes no solo.
+            Nossos gráficos interativos proporcionam uma visão mais dinâmica sobre os efeitos dos biocarvões.
+        """)
 
-    st.subheader("Postagem mais recente")
+    # Postagem mais recente com subtítulo e conteúdo
+    st.subheader("📅 Postagem mais recente")
+    st.markdown("<h3><em>Biocarvões carregam nutrientes</em></h3>", unsafe_allow_html=True)
     st.write("""
-        **Título do Post:** Biocarvões carregão nutrientes  
-        **Data:** 01/10/2024  
-        À depender do material que deu origem ao biocarvão este pode conter maior ou menor quantidade de potássio
-        veja a segui como diferentes toneladas de biocarvões carregam quantidades diferentes de potássio....
-    """)
+            **Data:** 01/10/2024  
+            Dependendo do material de origem do biocarvão, ele pode carregar diferentes quantidades de potássio.  
+            Veja como diferentes toneladas de biocarvão influenciam a quantidade de potássio presente em cada aplicação...
+        """)
+
+    # Espaçamento antes do botão
+    st.markdown("<br>", unsafe_allow_html=True)
 
     # Botão para ver o gráfico de potássio
-    if st.button("Veja o gráfico de Potássio nos Biocarvões"):
+    if st.button("🔍 Ver post completo"):
         st.session_state['page'] = 'grafico'  # Alterar o estado da página para 'grafico'
+
+    # Separador entre postagens (se houver mais posts no futuro)
+    st.markdown("---")
 
 # Função principal para controlar a navegação
 def main():

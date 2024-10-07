@@ -19,7 +19,10 @@ def plot_k_levels(dose, k_levels):
     ax.bar(biocarvoes, values, color=['black', 'black', 'black', 'black'])
     ax.set_ylabel('Quantidade de Potássio (K) (kg)')
     ax.set_xlabel('Tipo de Biocarvão')
-    ax.set_ylim(0, y_lim_max)
+
+    # Fixar o eixo Y de 0 a 300
+    ax.set_ylim(0, 300)
+
     ax.set_title(f'Quantidade de Potássio (K) em cada biocarvão (Dose: {dose} t)')
 
     ax.spines['right'].set_visible(False)

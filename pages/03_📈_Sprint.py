@@ -6,6 +6,7 @@ from pages.others.load_css import local_css
 # Usando nosso recursos css
 local_css("pages/others/style.css")
 
+
 def sprints():
     st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
@@ -19,6 +20,11 @@ def sprints():
 
     st.date_input("Today is", datetime.datetime.now())
 
+    # Adding message about new project for funding
+    st.markdown(
+        "<p style='text-align: center; font-size: 1.2em; color: #FF6347;'><strong>We are currently preparing a new project for funding. Stay tuned for updates!</strong></p>",
+        unsafe_allow_html=True)
+
     text01 = "<h1 style='text-align: center; line-height: 1.15'>Monitoring the Progress of Sprint Activities</h1> "
 
     st.markdown(text01, unsafe_allow_html=True)
@@ -26,7 +32,7 @@ def sprints():
     time = ["07/10", "08/10", "09/10", "10/10", "11/10",
             "14/10", "15/10", "16/10", "17/10", "18/10"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress =    [0, 0, 0, 0, 0, 0, 0, 0, 0,  0]
+    real_progress = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -63,73 +69,74 @@ def sprints():
                 # To do
     """)
 
-    with st.expander("Day 14/08 - Segunda-feira"):
+    with st.expander("Day 07/10 - Monday"):
         st.markdown("""
-        
-        - 
-            
-        """)
-    with st.expander("Day 15/08 - Terça-feira"):
-        st.markdown("""    
-        
-        - 
+
+        - Day for reviewing the details of the FAPES Call for Proposals
 
         """)
-
-    with st.expander("Day 16/08 - Quarta-feira"):
+    with st.expander("Day 08/10 - Tuesday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 17/08 - Quinta-feira"):
+    with st.expander("Day 09/10 - Wednesday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 18/08 - Sexta-feira"):
+    with st.expander("Day 10/10 - Thursday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 21/08 - Segunda-feira"):
+    with st.expander("Day 11/10 - Friday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 22/08 - Terça-feira"):
+    with st.expander("Day 14/10 - Monday"):
+        st.markdown("""    
+
+        - Day Off
+
+        """)
+
+    with st.expander("Day 15/10 - Tuesday"):
+        st.markdown("""    
+
+        - Day Off
+
+        """)
+
+    with st.expander("Day 16/10 - Wednesday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 23/08 - Quarta-feira"):
+    with st.expander("Day 17/10 - Thursday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 24/08 - Quinta-feira"):
-        st.markdown("""    
-
-        - 
-
-        """)
-
-    with st.expander("Day 25/08 - Sexta-feira"):
+    with st.expander("Day 18/10 - Friday"):
         st.markdown("""    
 
         - 
 
         """, unsafe_allow_html=True)
+
 
 sprints()

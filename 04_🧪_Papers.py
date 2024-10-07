@@ -12,15 +12,6 @@ st.sidebar.markdown('')
 st.sidebar.markdown('**General coordinator**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
 st.sidebar.markdown('**Regional Researcher**: [Danilo Andrade](https://daniloas.com/)')
 
-st.sidebar.markdown('**----- Team -----**')
-
-st.sidebar.markdown('**Phd. Researcher**: [Lorena]()')
-st.sidebar.markdown('**Master Researcher**: [Camila Barbieiro]()')
-st.sidebar.markdown('**Technical support**: [Amanda Gomes](https://www.linkedin.com/in/amanda-g-3449349b/)')
-st.sidebar.markdown('**Junior Researcher**: [Mateus Hastenreiter](http://lattes.cnpq.br/4351826031776108)')
-st.sidebar.markdown('**Junior Researcher**: [Maria Eduarda](http://lattes.cnpq.br/1801516731947159)')
-st.sidebar.markdown('**Junior Researcher**: Ueslei Machado')
-
 st.sidebar.write("##")
 st.sidebar.write("##")
 
@@ -38,30 +29,6 @@ def papers():
     st.markdown(text01, unsafe_allow_html=True)
 
     st.write("""# Books Chapters""")
-
-    # Quarto paper
-    with st.container():
-        text09 = "<p style='text-align: justify;'> SILVA, R. W. ; PASSOS, R.R. ; Rangel, O.J.P. ; ANDRADE, " \
-                 "F. V. ; Sartori, A.F. . Dinâmica do fósforo em solos tropicais e manejo da adubação organomineral " \
-                 "fosfatada. Tópicos em Agroecologia. 1ed.Alegre: Instituto Federal de Educação, Ciência e Tecnologia " \
-                 "do Espírito Santo, 2020, v. 2, p. 337-355. </p> "
-
-        st.markdown(text09, unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        if st.button('Read PDF', key='22'):
-            show_pdf('files/Silva_et_al_2020.pdf')
-    with col2:
-        st.button('Close PDF', key='23')
-    with col3:
-        with open("files/Silva_et_al_2020.pdf", "rb") as pdf_file:
-            PDFbyte = pdf_file.read()
-        st.download_button(label="Download PDF", key='24',
-                           data=PDFbyte,
-                           file_name="Silva_et_al_2020.pdf",
-                           mime='application/octet-stream')
-
 
     # primeiro paper
     with st.container():

@@ -2,21 +2,14 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import datetime
 from pages.others.load_css import local_css
+from pages.others.sidebar_utils import configure_sidebar
 
 # Usando nosso recursos css
 local_css("pages/others/style.css")
 
 
 def sprints():
-    st.sidebar.image("images/projectLogo.png", use_column_width=True)
-
-    st.sidebar.markdown('')
-    st.sidebar.markdown('Chief Researchers')
-    st.sidebar.markdown('[Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
-    st.sidebar.markdown('[Danilo Andrade](https://daniloas.com/)')
-
-    st.sidebar.write("##")
-    st.sidebar.write("##")
+    configure_sidebar()  # Chama a função para configurar a barra lateral
 
     st.date_input("Today is", datetime.datetime.now())
 

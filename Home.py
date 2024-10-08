@@ -1,20 +1,16 @@
 import streamlit as st
 from PIL import Image
 from pages.others.load_css import local_css
+from pages.others.sidebar_utils import configure_sidebar
 
-st.set_page_config(layout="wide")
-
+st.set_page_config(
+    page_title="Biochar Website",
+    page_icon="🌱",
+    layout="wide"
+)
 
 def home():
-    st.sidebar.image("images/projectLogo.png", use_column_width=True)
-
-    st.sidebar.markdown('')
-    st.sidebar.markdown('')
-    st.sidebar.markdown('**General Coordinator**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
-    st.sidebar.markdown('**Regional Researcher**: [Danilo Andrade](https://daniloas.com/)')
-
-    st.sidebar.write("##")
-    st.sidebar.write("##")
+    configure_sidebar()  # Chama a função para configurar a barra lateral
 
     # Usando nosso recursos css
     local_css("pages/others/style.css")
@@ -48,10 +44,12 @@ def home():
 
     st.markdown(text03, unsafe_allow_html=True)
 
-    text04 = "<p style='text-align: justify; line-height: 2'>Through this website, you can follow my research activities " \
-             "with biochars developed at the Federal University of Espírito Santo (UFES) in collaboration with " \
-             "Professor <a href='https://lattes.cnpq.br/3882320619443256'><span class='highlight blue'>Renato Ribeiro " \
-             "Passos</span></a>.</p>"
+    text04 = "<p style='text-align: justify; line-height: 2'>In 2012, I, <a href='https://daniloas.com/' target='_blank'>" \
+             "<span class='highlight blue'>Danilo Andrade Santos</span></a>, accompanied Professor <a href='https://lattes.cnpq.br/3882320619443256'>" \
+             "<span class='highlight blue'>Renato Ribeiro Passos</span></a> during his postdoctoral research at the Federal " \
+             "University of Viçosa (UFV), where we initiated studies on biochars. These research activities were later continued " \
+             "at the Federal University of Espírito Santo (UFES). Through this website, you can follow my research activities " \
+             "with biochars developed at UFES in collaboration with Professor Renato Ribeiro Passos.</p>"
 
     st.markdown(text04, unsafe_allow_html=True)
 
@@ -63,5 +61,6 @@ def home():
 
     st.markdown(text05, unsafe_allow_html=True)
 
-
-home()
+# Tornar esta página a primeira a ser exibida no Streamlit
+if __name__ == "__main__":
+    home()

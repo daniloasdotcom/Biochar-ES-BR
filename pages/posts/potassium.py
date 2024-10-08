@@ -2,7 +2,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
 # Função para gerar o gráfico de K por tonelada de biocarvão
 def plot_k_levels(dose, k_levels):
     k_per_b1 = dose * k_levels[0]  # Para o biocarvão palha de Café 350º
@@ -16,20 +15,21 @@ def plot_k_levels(dose, k_levels):
     y_lim_max = max(values) * 1.1
 
     fig, ax = plt.subplots()
-    ax.bar(biocarvoes, values, color=['black', 'black', 'black', 'black'])
-    ax.set_ylabel('Quantidade de Potássio (K) (kg)')
-    ax.set_xlabel('Tipo de Biocarvão')
+    ax.bar(biocarvoes, values, color=['#2E86C1', '#28B463', '#F39C12', '#E74C3C'])
+    ax.set_ylabel('Quantidade de Potássio (K) (kg)', fontsize=14, weight='bold', color='#333333')
+    ax.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
 
     # Fixar o eixo Y de 0 a 300
     ax.set_ylim(0, 300)
 
-    ax.set_title(f'Quantidade de Potássio (K) em cada biocarvão (Dose: {dose} t)')
+    ax.set_title('Quantidade de Potássio\npara cada tonelada de biocarvão\n(Dose: {} t)'.format(dose), fontsize=16,
+                 weight='bold', color='#333333', pad=20)
 
     ax.spines['right'].set_visible(False)
     ax.spines['top'].set_visible(False)
 
     for i, v in enumerate(values):
-        ax.text(i, v + y_lim_max * 0.02, f'{v:.2f}', ha='center')
+        ax.text(i, v + y_lim_max * 0.02, f'{v:.2f}', ha='center', fontsize=12, color='#555555')
 
     return fig
 

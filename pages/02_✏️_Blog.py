@@ -1,12 +1,10 @@
 import streamlit as st
 import pages.posts.potassium as PostPotassium  # Importa o gráfico de potássio
+from pages.others.sidebar_utils import configure_sidebar
 
 # Função do blog
 def blog():
-    st.sidebar.image("images/projectLogo.png", use_column_width=True)
-
-    st.sidebar.markdown('**Coordenador Geral**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
-    st.sidebar.markdown('**Pesquisador Regional**: [Danilo Andrade](https://daniloas.com/)')
+    configure_sidebar()  # Chama a função para configurar a barra lateral
 
     # Título do blog e mensagem de boas-vindas
     st.title("🌿 Blog Interativo de Biocarvões")
@@ -14,16 +12,17 @@ def blog():
 
     # Descrição inicial
     st.write("""
-            Explore nossas postagens para entender como os biocarvões podem impactar sistemas agrícolas e a retenção de nutrientes no solo.
-            Nossos gráficos interativos proporcionam uma visão mais dinâmica sobre os efeitos dos biocarvões.
+            Explore nossas postagens para entender como os biocarvões podem impactar sistemas agrícolas.
+            Nossos gráficos interativos proporcionam uma visão dinâmica sobre os efeitos dos biocarvões.
         """)
 
     # Postagem mais recente com subtítulo e conteúdo
     st.subheader("📅 Postagem mais recente")
+    st.markdown("---")
     st.markdown("<h3><em>Biocarvões carregam nutrientes</em></h3>", unsafe_allow_html=True)
+    st.write("""**Data:** 01/10/2024""")
     st.write("""
-            **Data:** 01/10/2024  
-            Dependendo do material de origem do biocarvão, ele pode carregar diferentes quantidades de potássio.  
+            A depender do material orgânico do qual se produzirá o biocarvão haverá também diferentes quantidades de potássio.  
             Veja como diferentes toneladas de biocarvão influenciam a quantidade de potássio presente em cada aplicação...
         """)
 

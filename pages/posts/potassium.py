@@ -26,26 +26,26 @@ def plot_k_and_k2o_levels(dose, k_levels):
     ax_k.bar(biocarvoes, values_k, color='#3498DB', edgecolor='black', linewidth=1.2)
     ax_k.set_ylabel('Quantidade de Potássio (K) (kg)', fontsize=14, weight='bold', color='#333333')
     ax_k.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
-    ax_k.set_ylim(0, 300)  # Limite fixo de 300 para K
-    ax_k.set_title('Quantidade de Potássio (K)\n(Dose: {} t)'.format(dose), fontsize=16, weight='bold', color='#333333',
+    ax_k.set_ylim(0, 3000)  # Limite fixo de 3000 para K
+    ax_k.set_title('Quantidade de Potássio (K)\n(Dose: {} t de biocarvão)'.format(dose), fontsize=16, weight='bold', color='#333333',
                    pad=20)
     ax_k.spines['right'].set_visible(False)
     ax_k.spines['top'].set_visible(False)
     for i, v in enumerate(values_k):
-        ax_k.text(i, v + 5, f'{v:.2f}', ha='center', fontsize=12, color='#555555')
+        ax_k.text(i, v + 30, f'{v:.2f}', ha='center', fontsize=12, color='#555555')
 
     # Gráfico de K2O
     fig_k2o, ax_k2o = plt.subplots(figsize=(6, 4))
     ax_k2o.bar(biocarvoes, values_k2o, color='#1ABC9C', edgecolor='black', linewidth=1.2)
-    ax_k2o.set_ylabel('Quantidade de K₂O (kg)', fontsize=14, weight='bold', color='#333333')
+    ax_k2o.set_ylabel('Equivalente em K₂O (kg)', fontsize=14, weight='bold', color='#333333')
     ax_k2o.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
-    ax_k2o.set_ylim(0, 400)  # Limite fixo de 400 para K2O
-    ax_k2o.set_title('Quantidade de K₂O\n(Dose: {} t)'.format(dose), fontsize=16, weight='bold', color='#333333',
+    ax_k2o.set_ylim(0, 4000)  # Limite fixo de 4000 para K2O
+    ax_k2o.set_title('Equivalente em K₂O\n(Dose: {} t de biocarvão)'.format(dose), fontsize=16, weight='bold', color='#333333',
                      pad=20)
     ax_k2o.spines['right'].set_visible(False)
     ax_k2o.spines['top'].set_visible(False)
     for i, v in enumerate(values_k2o):
-        ax_k2o.text(i, v + 5, f'{v:.2f}', ha='center', fontsize=12, color='#555555')
+        ax_k2o.text(i, v + 30, f'{v:.2f}', ha='center', fontsize=12, color='#555555')
 
     return fig_k, fig_k2o
 
@@ -123,15 +123,18 @@ def grafico_potassio():
     st.title("Impacto do Biocarvão no Teor de Potássio (K) por Dose Aplicada")
 
     st.write("""
-        Aqui estão detalhes sobre a quantidade de potássio e K₂O nos diferentes tipos de biocarvão, 
-        com base na dose selecionada (em toneladas). Ajuste a dose e veja o impacto!
+        Biocarvões quando aplicado ao solo também levam consigo nutrientes essenciais para a nutrição de plantas. \
+        De forma geral, quanto maior o conteúdo de cinza maior é a quantidade de nutrientes presentes nos biocarvões. \
+         Além disso, a matéria prima acompanhada da temperatura é outro fator fundamental na definição do conteúdo de\
+          nutrientes e na forma como estes nutrientes estão presentes nos biocarvões. Podemos observar isto na tabela \
+          apresentada abaixo:
     """)
 
     # Dados de teores de potássio para os biocarvões
     biocarvoes_data = {
         "Biocarvão": ['Palha de Café', 'Palha de Café', 'Casca de Eucalipto', 'Casca de Eucalipto'],
         "Temperatura": ['350ºC', '600ºC', '350ºC', '600ºC'],
-        "Teor de K (g/kg)": [4.457, 5.657, 0.566, 0.701]
+        "Teor de K (g/kg)": [44.57, 56.57, 5.66, 7.01]
     }
 
     # Criar dataframe
@@ -140,11 +143,17 @@ def grafico_potassio():
     # Exibir a tabela centralizada com o CSS definido
     st.markdown(df.to_html(index=False, escape=False), unsafe_allow_html=True)
 
+    st.write("""
+               A tabela, aponta que cada tonelada de biocarvão de palha de café contém entre 40 e 60 kg de K. Mova o\
+                Slider (abaixo dos gráficos) para você ver quanto de K contém a cada tonelada de biocarvão e qual o \
+                equivalente \
+                em K2O observando as mudanças no gráfico.
+               """)
     # Exibir gráficos de K e K2O em colunas
     col_k, col_k2o = st.columns(2)
 
     dose = st.slider('Selecione a quantidade de biocarvão (t)', 0, 50, 1)
-    k_levels = [4.457, 5.657, 0.566, 0.701]  # Correspondente a B1, B2, B3, B4
+    k_levels = [44.57, 56.57, 5.66, 7.01]  # Correspondente a B1, B2, B3, B4
     fig_k, fig_k2o = plot_k_and_k2o_levels(dose, k_levels)
 
     # Exibir os gráficos 2D de K e K2O em colunas
@@ -152,6 +161,18 @@ def grafico_potassio():
         st.pyplot(fig_k)
     with col_k2o:
         st.pyplot(fig_k2o)
+
+
+    st.write("""
+                   A produção de biocarvões de palha de café é dependente da produtividade do café no campo. Lembrando \
+                   que o grão que é colhido no campo está exportando K para fora da lavoura. Sendo assim a palha de \
+                   café quando retornada ao campo contribui para a economia de fertilizantes.
+               """)
+
+    st.write("""
+                   No gráfico abaixo você pode verificar quanto de palha de café sob a forma de biocarvões são\
+                   necessários para as equivalente de toneladas de biocarvões que você mover no slider acima.
+               """)
 
     # Organizar entrada e saída dos gráficos 3D em três colunas
     col_input, col_volume, col_biocarvao = st.columns(3)
@@ -182,6 +203,8 @@ def grafico_potassio():
 
         # Adicionar texto centralizado informando a quantidade de biocarvão por cova
         st.markdown(f"<div style='text-align: center;'><strong>Quantidade de biocarvão por cova:</strong> {dose_por_cova:.2f} g</div>", unsafe_allow_html=True)
+
+
 
 
 # Executar a função de exibição

@@ -20,7 +20,7 @@ def blog():
     st.subheader("📅 Postagem mais recente")
     st.markdown("---")
     st.markdown("<h3><em>Biocarvões carregam nutrientes</em></h3>", unsafe_allow_html=True)
-    st.write("""**Data:** 01/10/2024""")
+    st.write("**Data:** 01/10/2024")
     st.write("""
             A depender do material orgânico do qual se produzirá o biocarvão haverá também diferentes quantidades de potássio.  
             Veja como diferentes toneladas de biocarvão influenciam a quantidade de potássio presente em cada aplicação...
@@ -36,6 +36,10 @@ def blog():
     # Separador entre postagens (se houver mais posts no futuro)
     st.markdown("---")
 
+# Função para o gráfico de potássio
+def grafico_potassio():
+    PostPotassium.grafico_potassio()
+
 # Função principal para controlar a navegação
 def main():
     # Inicializa a sessão se não estiver definida
@@ -46,7 +50,7 @@ def main():
     if st.session_state['page'] == 'blog':
         blog()  # Mostra o blog
     elif st.session_state['page'] == 'grafico':
-        PostPotassium.grafico_potassio()  # Mostra o gráfico de potássio
+        grafico_potassio()  # Mostra o gráfico de potássio
 
 # Executar o aplicativo
 if __name__ == "__main__":

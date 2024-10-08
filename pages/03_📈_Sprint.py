@@ -11,9 +11,9 @@ def sprints():
     st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
     st.sidebar.markdown('')
-    st.sidebar.markdown('')
-    st.sidebar.markdown('**General coordinator**: [Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
-    st.sidebar.markdown('**Regional Researcher**: [Danilo Andrade](https://daniloas.com/)')
+    st.sidebar.markdown('Chief Researchers')
+    st.sidebar.markdown('[Renato Ribeiro Passos](http://lattes.cnpq.br/3882320619443256)')
+    st.sidebar.markdown('[Danilo Andrade](https://daniloas.com/)')
 
     st.sidebar.write("##")
     st.sidebar.write("##")
@@ -32,7 +32,7 @@ def sprints():
     time = ["07/10", "08/10", "09/10", "10/10", "11/10",
             "14/10", "15/10", "16/10", "17/10", "18/10"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    real_progress = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -56,8 +56,8 @@ def sprints():
     with col1.expander("Priorities"):
         st.markdown("""
         # Priorities
-        - Read the Edital
-        - Set the task for each day        
+        - ~Read the Edital~
+        - ~Set the task for each day~        
         """)
 
     with col2.expander("Others"):
@@ -72,7 +72,7 @@ def sprints():
     with st.expander("Day 07/10 - Monday"):
         st.markdown("""
 
-        - Day for reviewing the details of the FAPES Call for Proposals
+        - ~Day for reviewing the details of the FAPES Call for Proposals~
 
         """)
     with st.expander("Day 08/10 - Tuesday"):

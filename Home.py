@@ -6,7 +6,7 @@ from pages.others.sidebar_utils import configure_sidebar
 st.set_page_config(
     page_title="Biochar Website",
     page_icon="🌱",
-    layout="wide"
+    layout="centered"
 )
 
 def home():

@@ -2,6 +2,12 @@ import streamlit as st
 import pages.posts.potassium as PostPotassium  # Importa o gráfico de potássio
 from pages.others.sidebar_utils import configure_sidebar
 
+st.set_page_config(
+    page_title="Blgo Interativo",
+    page_icon="✏️",
+    layout="centered"
+)
+
 # Função do blog
 def blog():
     configure_sidebar()  # Chama a função para configurar a barra lateral

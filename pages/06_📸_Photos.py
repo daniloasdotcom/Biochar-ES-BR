@@ -1,7 +1,5 @@
 import streamlit as st
-import pandas as pd
 from PIL import Image
-import matplotlib.pyplot as plt
 from pages.others.load_css import local_css
 from pages.others.sidebar_utils import configure_sidebar
 

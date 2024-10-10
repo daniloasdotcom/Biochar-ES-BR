@@ -183,15 +183,15 @@ def grafico_potassio():
     st.title("Biocarvões carregam nutrientes")
 
     st.write("""
-             <p class="justified-text">Biocarvões quando aplicados ao solo também transportam consigo nutrientes essenciais \
-             para a nutrição de plantas. De forma geral, quanto maior o conteúdo de cinza, maior é a quantidade de \
-             nutrientes minerais presentes nos biocarvões. </p>
+             <p class="justified-text">Biocarvões, quando aplicados ao solo, também transportam consigo nutrientes \
+             essenciais para a nutrição das plantas. De forma geral, quanto maior o conteúdo de cinzas, maior é a \
+             quantidade de nutrientes minerais presentes nos biocarvões.  </p>
         """, unsafe_allow_html=True)
 
     st.write("""
-                 <p class="justified-text">Além disso, a matéria prima e a temperatura final de produção dos biocarvões são outros dois fatores \
-                 fundamentais na definição do conteúdo de nutrientes inorgânicos presentes nos mesmos. Podemos observar isto na tabela \
-                 abaixo:</p>
+             <p class="justified-text">Além disso, a matéria-prima e a temperatura final de produção dos \
+             biocarvões são outros fatores fundamentais na definição do conteúdo de nutrientes inorgânicos \
+             presentes neles. Podemos observar isso na tabela abaixo:</p>
             """, unsafe_allow_html=True)
 
     # Dados de teores de potássio e cálcio para os biocarvões
@@ -209,29 +209,31 @@ def grafico_potassio():
     st.markdown(df.to_html(index=False, escape=False), unsafe_allow_html=True)
 
     st.write("""
-                    <p class="justified-text">Fica claro que biocarvões de palha de café possuem um expressivo maior conteúdo \
-                    de potássio quando comparados com os biocarvões de casca de eucalipto. Já a casca de Eucalipto \
-                    contém um pouco mais de cálcio comparado aos biocarvões de palha de café. Estas diferenças entre os teores \
-                    destes nutrientes nos dois materiais estão relacionada a aspectos bioquímicos que explico no \
-                    post em meu site sobre bioquimica.</p>
-                   """, unsafe_allow_html=True)
-    st.write("""
-                    <p class="justified-text">Olhando novamente para a tabela, podemos também observar diferenças quanto à temperatura. Onde \
-                    temperatura mais elevadas concentram mais nurientes que temperaturas mais baixas. Este \
-                    fenômeno esta relacionada com as perdas do conteúdo orgânico e preservação do conteúdo inorgânico \
-                    à medida que a temperatura de produção aumenta. Trataremos disto em outro post. Hoje eu gostaria observar com você a capacidade dos biocarvões \
-                    de palha de café em carregar consigo quantidade de K sóluvel para o solo.</p>
-                   """, unsafe_allow_html=True)
-
-    st.write("""
-                <p class="justified-text">A nossa tabela aponta que cada tonelada de biocarvão de palha \
-                de café contém entre 40 e 60 kg de potássio.</p>
+                <p class="justified-text">Fica claro que os biocarvões de palha de café possuem um expressivo \
+                conteúdo de potássio quando comparados aos biocarvões de casca de eucalipto. Já a casca de \
+                eucalipto contém um pouco mais de cálcio, se comparada aos biocarvões de palha de café. Essas \
+                diferenças entre os teores desses nutrientes nos dois materiais estão relacionadas a aspectos \
+                bioquímicos que explico no post em meu site sobre bioquímica.</p>
                """, unsafe_allow_html=True)
     st.write("""
-                <p class="justified-text">Mova o slider abaixo dos gráficos para ver \
-                quanto K cada tonelada de biocarvão de palha de café carrega. Coloquei ao lado um gráfico \
-                com os valores equivalentes em K<sub>2</sub>O como parâmetro de comparação já que as \
-                recomendações de fertilizantes potássicos são expressa em K<sub>2</sub>O.</p>
+                <p class="justified-text">Olhando novamente para a tabela, podemos também observar diferenças \
+                quanto à temperatura. Onde temperaturas mais elevadas concentram mais nutrientes, que \
+                temperaturas mais baixas. Esse fenômeno está relacionado com as perdas do conteúdo orgânico \
+                e a preservação do conteúdo inorgânico à medida que a temperatura de produção aumenta. Trataremos \
+                disso em outro post. Hoje, eu gostaria de observar com você a capacidade dos biocarvões de palha \
+                de café em carregar uma considerável quantidade de K solúvel para o solo.</p>
+               """, unsafe_allow_html=True)
+
+    st.write("""
+                <p class="justified-text">Nossa tabela aponta que cada tonelada de biocarvão de palha de café contém \
+                entre 40 e 60 kg de potássio.</p>
+               """, unsafe_allow_html=True)
+
+    st.write("""
+                <p class="justified-text">Mova o slider abaixo dos gráficos para ver quanto K cada tonelada de \
+                biocarvão de palha de café carrega. Coloquei ao lado um gráfico com os valores equivalentes em \
+                K₂O como parâmetro de comparação, já que as recomendações de fertilizantes potássicos são \
+                expressas em K₂O.</p>
                """, unsafe_allow_html=True)
 
     # Exibir gráficos de K, K2O e Ca em colunas
@@ -255,12 +257,12 @@ def grafico_potassio():
     #    st.pyplot(fig_ca)
 
     st.write("""
-                   <p class="justified-text">Para algumas pessoas, 1 tonelada de biocarvão de palha de café pode ser considerada uma \
-                   quantidade complicada para transportar e aplicar. Contudo estes valores reduzem já que \
-                   o produtor não irá aplicar em área total. Logo abaixo você poderá conferir quanto de biocarvão é \
-                   necessário para aplicação em cova, por exemplo. Sinta-se à vontade para alterar os valores e dimensão \
-                   da cova e do equivalente de biocarvão no Slider.</p>
-               """, unsafe_allow_html=True)
+               <p class="justified-text">Para algumas pessoas, 1 tonelada de biocarvão de palha de café pode ser \
+               considerada uma quantidade complicada para transportar e aplicar. Contudo, esses valores reduzem \
+               já que o produtor não irá aplicar em área total. Logo abaixo, você poderá conferir quanto de \
+               biocarvão é necessário para aplicação em cova, por exemplo. Sinta-se à vontade para alterar os \
+               valores e dimensões da cova e do equivalente de biocarvão no slider.</p>
+           """, unsafe_allow_html=True)
 
     # Organizar entrada e saída dos gráficos 3D em três colunas
     col_input, col_volume, col_biocarvao = st.columns(3)
@@ -293,17 +295,17 @@ def grafico_potassio():
         st.markdown(f"<div style='text-align: center;'><strong>Quantidade de biocarvão por cova:</strong> {dose_por_cova:.2f} g</div>", unsafe_allow_html=True)
 
     st.write("""
-                   <p class="justified-text"> Para fins de adubação, uma tonelada de \
-                   biocarvão pode adicionar o equivalente a 50 e 70 kg/ha de K<sub>2</sub>O e para isto são necessárias \
-                   32 gramas por plantas, misturados em uma cova de 40 cm x 40 cm x 40 cm. Logicamente, a quantidade \
-                   de biocarvão deverá ser multiplicada pelo número de plantas em 1 hectare para assim sabermos, qual \
-                   a quantidade de biocarvão para cada hectare.</p>
-               """, unsafe_allow_html=True)
+               <p class="justified-text">Para fins de adubação, uma tonelada de biocarvão pode adicionar o \
+               equivalente a 50 e 70 kg/ha de K₂O, e para isso são necessárias 32 gramas por planta, misturadas \
+               em uma cova de 40 cm x 40 cm x 40 cm. Logicamente, a quantidade de biocarvão deverá ser \
+               multiplicada pelo número de plantas em 1 hectare para, assim, sabermos qual a quantidade de \
+               biocarvão para cada hectare.</p>
+           """, unsafe_allow_html=True)
 
     st.write("""
-                   <p class="justified-text">Contudo é importante notar que biocarvão de palha de café pode, com isso, \
-                   servirem como fonte de nutrientes podendo assim substituir parte da adubação potássica e de outros \
-                   nutrientes além de servirem como fonte de matéria organica estável para o solo.</p>
+                   <p class="justified-text">Contudo, é importante notar que o biocarvão de palha de café pode, com \
+                   isso, servir como fonte de nutrientes, podendo assim substituir parte da adubação potássica e de \
+                   outros nutrientes, além de servir como fonte de matéria orgânica estável para o solo.</p>
                """, unsafe_allow_html=True)
 
 # Executar a função de exibição

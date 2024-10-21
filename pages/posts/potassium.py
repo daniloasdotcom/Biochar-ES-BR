@@ -54,7 +54,7 @@ def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):
     ax_k2o.set_ylabel('K₂O Equivalent (kg)', fontsize=14, weight='bold', color='#333333')
     ax_k2o.set_xlabel('Type of Biochar', fontsize=14, weight='bold', color='#333333')
     ax_k2o.set_ylim(0, 4000)  # Fixed limit of 4000 for K2O
-    ax_k2o.set_title('K₂O Equivalent\n(Dose: {} t of biochar)'.format(dose), fontsize=16, weight='bold', color='#333333', pad=20)
+    ax_k2o.set_title('K₂O Equivalent\nDose: {} t of biochar'.format(dose), fontsize=16, weight='bold', color='#333333', pad=20)
     ax_k2o.spines['right'].set_visible(False)
     ax_k2o.spines['top'].set_visible(False)
     for i, v in enumerate(values_k2o):

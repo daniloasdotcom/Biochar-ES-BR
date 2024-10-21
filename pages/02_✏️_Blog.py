@@ -3,7 +3,7 @@ import pages.posts.potassium as PostPotassium  # Importa o gráfico de potássio
 from pages.others.sidebar_utils import configure_sidebar
 
 st.set_page_config(
-    page_title="Blgo Interativo",
+    page_title="Blog Interativo",
     page_icon="✏️",
     layout="centered"
 )

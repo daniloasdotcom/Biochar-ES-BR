@@ -2,7 +2,7 @@
 showStreamlitBranding = false
 primaryColor = "#FF4B4B"         # Vermelho forte
 backgroundColor = "#F0F2F6"      # Cinza claro para o fundo
-secondaryBackgroundColor = "#9D9DA0"  # Fundo da barra lateral em azul claro
+secondaryBackgroundColor = "#cfcfd0"  # Fundo da barra lateral em azul claro
 textColor = "#262730"            # Cor do texto em preto escuro
 font = "monospace"               # Usar fonte monoespaçada
 

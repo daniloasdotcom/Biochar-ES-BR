@@ -226,7 +226,8 @@ def grafico_potassio():
 
     st.write("""
                 <p class="justified-text">Nossa tabela aponta que cada tonelada de biocarvão de palha de café contém \
-                entre 40 e 60 kg de potássio.</p>
+                entre 40 e 60 kg de potássio. Considere que cerca de 90%-95% desse contéudo é solúvel em água, \
+                portanto prontamente disponível para absorção por plantas.</p>
                """, unsafe_allow_html=True)
 
     st.write("""
@@ -284,7 +285,8 @@ def grafico_potassio():
         st.pyplot(fig_volume)
 
         # Adicionar texto centralizado informando o volume da cova
-        st.markdown(f"<div style='text-align: center;'><strong>Volume da cova:</strong> {volume_cova:.2f} dm³</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align: center;'><strong>Volume da cova:</strong> </div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align: center;'>{volume_cova:.2f} dm³</div>", unsafe_allow_html=True)
 
     with col_biocarvao:
         # Exibir gráfico 3D com pontos pretos representando biocarvão
@@ -295,17 +297,17 @@ def grafico_potassio():
         st.markdown(f"<div style='text-align: center;'><strong>Quantidade de biocarvão por cova:</strong> {dose_por_cova:.2f} g</div>", unsafe_allow_html=True)
 
     st.write("""
-               <p class="justified-text">Para fins de adubação, uma tonelada de biocarvão pode adicionar o \
+               <p class="justified-text">Para fins de adubação, cada tonelada de biocarvão de palha de café pode adicionar o \
                equivalente a 50 e 70 kg/ha de K₂O, e para isso são necessárias 32 gramas por planta, misturadas \
                em uma cova de 40 cm x 40 cm x 40 cm. Logicamente, a quantidade de biocarvão deverá ser \
                multiplicada pelo número de plantas em 1 hectare para, assim, sabermos qual a quantidade de \
-               biocarvão para cada hectare.</p>
+               biocarvão necessária para cada hectare.</p>
            """, unsafe_allow_html=True)
 
     st.write("""
-                   <p class="justified-text">Contudo, é importante notar que o biocarvão de palha de café pode, com \
-                   isso, servir como fonte de nutrientes, podendo assim substituir parte da adubação potássica e de \
-                   outros nutrientes, além de servir como fonte de matéria orgânica estável para o solo.</p>
+                   <p class="justified-text">Como isto nota-se que biocarvões de palha de café podem \
+                    servir como fonte de nutrientes, podendo assim substituir parte da adubação potássica e de \
+                   outros nutrientes, além de servir como fonte de matéria orgânica relativamente estável para o solo.</p>
                """, unsafe_allow_html=True)
 
 # Executar a função de exibição

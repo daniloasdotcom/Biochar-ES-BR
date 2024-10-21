@@ -26,5 +26,4 @@ def pagina_apoio():
             and data management presented on this site, as well as the development of experiments."
         )
 
-
 pagina_apoio()

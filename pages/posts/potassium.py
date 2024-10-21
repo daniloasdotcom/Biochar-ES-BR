@@ -312,4 +312,3 @@ def grafico_potassio():
 
 # Executar a função de exibição
 grafico_potassio()
-

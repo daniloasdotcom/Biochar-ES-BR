@@ -1,63 +1,63 @@
 import streamlit as st
-import pages.posts.potassium as PostPotassium  # Importa o gráfico de potássio
+import pages.posts.potassium as PostPotassium  # Import the potassium graph
 from pages.others.sidebar_utils import configure_sidebar
 
 st.set_page_config(
-    page_title="Blog Interativo",
+    page_title="Interactive Blog",
     page_icon="✏️",
     layout="centered"
 )
 
-# Função do blog
+# Blog function
 def blog():
-    configure_sidebar()  # Chama a função para configurar a barra lateral
+    configure_sidebar()  # Calls the function to configure the sidebar
 
-    # Título do blog e mensagem de boas-vindas
-    st.title("🌿 Blog Interativo de Biocarvões")
-    st.header("Bem-vindo ao Nosso Blog de Pesquisas!")
+    # Blog title and welcome message
+    st.title("🌿 Interactive Biochar Blog")
+    st.header("Welcome to Our Research Blog!")
 
-    # Descrição inicial
+    # Initial description
     st.write("""
-            Explore nossas postagens para entender como os biocarvões podem impactar sistemas agrícolas.
-            Nossos gráficos interativos proporcionam uma visão dinâmica sobre os efeitos dos biocarvões.
+            Explore our posts to understand how biochars can impact agricultural systems.
+            Our interactive graphs provide a dynamic view of the effects of biochars.
         """)
 
-    # Postagem mais recente com subtítulo e conteúdo
-    st.subheader("📅 Postagem mais recente")
+    # Latest post with subtitle and content
+    st.subheader("📅 Latest Post")
     st.markdown("---")
-    st.markdown("<h3><em>Biocarvões de Palha de Café: Fonte de K</em></h3>", unsafe_allow_html=True)
-    st.write("**Data:** 01/10/2024")
+    st.markdown("<h3><em>Coffee Husk Biochar: A Source of K</em></h3>", unsafe_allow_html=True)
+    st.write("**Date:** 01/10/2024")
     st.write("""
-            A depender do material orgânico do qual se produzirá o biocarvão haverá também diferentes quantidades de potássio.  
-            Veja como diferentes toneladas de biocarvão de palha de café influenciam a quantidade de potássio presente em cada aplicação.
+            Depending on the organic material used to produce biochar, there will also be different amounts of potassium.  
+            See how different tons of coffee husk biochar influence the amount of potassium present in each application.
         """)
 
-    # Espaçamento antes do botão
+    # Spacing before the button
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Botão para ver o gráfico de potássio
-    if st.button("🔍 Ver post completo"):
-        st.session_state['page'] = 'grafico'  # Alterar o estado da página para 'grafico'
+    # Button to view the full potassium graph
+    if st.button("🔍 View full post"):
+        st.session_state['page'] = 'grafico'  # Change the page state to 'grafico'
 
-    # Separador entre postagens (se houver mais posts no futuro)
+    # Separator between posts (if there are more posts in the future)
     st.markdown("---")
 
-# Função para o gráfico de potássio
-def grafico_potassio():
+# Function for the potassium graph
+def potassium_graph():
     PostPotassium.grafico_potassio()
 
-# Função principal para controlar a navegação
+# Main function to control navigation
 def main():
-    # Inicializa a sessão se não estiver definida
+    # Initialize session if not set
     if 'page' not in st.session_state:
-        st.session_state['page'] = 'blog'  # A página inicial é o blog
+        st.session_state['page'] = 'blog'  # The initial page is the blog
 
-    # Verifica qual página exibir com base no estado
+    # Check which page to display based on the state
     if st.session_state['page'] == 'blog':
-        blog()  # Mostra o blog
+        blog()  # Show the blog
     elif st.session_state['page'] == 'grafico':
-        grafico_potassio()  # Mostra o gráfico de potássio
+        potassium_graph()  # Show the potassium graph
 
-# Executar o aplicativo
+# Run the app
 if __name__ == "__main__":
     main()

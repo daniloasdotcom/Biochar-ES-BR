@@ -5,73 +5,70 @@ import numpy as np
 from pages.others.sidebar_utils import configure_sidebar
 
 
-# Função para gerar o gráfico de K e K2O por tonelada de biocarvão
+# Function to generate the K and K2O graph per ton of biochar
 def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):
-    # Cálculos para Potássio
-    k_per_b1 = dose * k_levels[0]  # Para o biocarvão palha de Café 350º
-    k_per_b2 = dose * k_levels[1]  # Para o biocarvão palha de Café 600º
-    k_per_b3 = dose * k_levels[2]  # Para o biocarvão Casca de Eucalipto 350º
-    k_per_b4 = dose * k_levels[3]  # Para o biocarvão Casca de Eucalipto 600º
+    # Potassium Calculations
+    k_per_b1 = dose * k_levels[0]  # For Coffee Husk Biochar 350º
+    k_per_b2 = dose * k_levels[1]  # For Coffee Husk Biochar 600º
+    k_per_b3 = dose * k_levels[2]  # For Eucalyptus Bark Biochar 350º
+    k_per_b4 = dose * k_levels[3]  # For Eucalyptus Bark Biochar 600º
 
-    # Conversão de K para K2O
+    # Conversion from K to K2O
     k2o_per_b1 = k_per_b1 * 1.205
     k2o_per_b2 = k_per_b2 * 1.205
     k2o_per_b3 = k_per_b3 * 1.205
     k2o_per_b4 = k_per_b4 * 1.205
 
-    # Cálculos para Cálcio
-    ca_per_b1 = dose * ca_levels[0]  # Para o biocarvão palha de Café 350º
-    ca_per_b2 = dose * ca_levels[1]  # Para o biocarvão palha de Café 600º
-    ca_per_b3 = dose * ca_levels[2]  # Para o biocarvão Casca de Eucalipto 350º
-    ca_per_b4 = dose * ca_levels[3]  # Para o biocarvão Casca de Eucalipto 600º
+    # Calcium Calculations
+    ca_per_b1 = dose * ca_levels[0]  # For Coffee Husk Biochar 350º
+    ca_per_b2 = dose * ca_levels[1]  # For Coffee Husk Biochar 600º
+    ca_per_b3 = dose * ca_levels[2]  # For Eucalyptus Bark Biochar 350º
+    ca_per_b4 = dose * ca_levels[3]  # For Eucalyptus Bark Biochar 600º
 
-    biocarvoes = ['PC350ºC', 'PC600ºC', 'CE350ºC', 'CE600ºC']
+    biochars = ['CH350ºC', 'CH600ºC', 'EB350ºC', 'EB600ºC']
     values_k = [k_per_b1, k_per_b2, k_per_b3, k_per_b4]
     values_k2o = [k2o_per_b1, k2o_per_b2, k2o_per_b3, k2o_per_b4]
     values_ca = [ca_per_b1, ca_per_b2, ca_per_b3, ca_per_b4]
 
-    background_color = "#F0F2F6"  # Cor de fundo do aplicativo
+    background_color = "#F0F2F6"  # Application background color
 
-    # Gráfico de K
+    # K graph
     fig_k, ax_k = plt.subplots(figsize=(6, 4))
-    fig_k.patch.set_facecolor(background_color)  # Definir a cor de fundo do gráfico
-    ax_k.set_facecolor(background_color)  # Definir a cor de fundo do eixo
-    ax_k.bar(biocarvoes, values_k, color='#3498DB', edgecolor='black', linewidth=1.2)
-    ax_k.set_ylabel('Quantidade de Potássio (K) (kg)', fontsize=14, weight='bold', color='#333333')
-    ax_k.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
-    ax_k.set_ylim(0, 3000)  # Limite fixo de 3000 para K
-    ax_k.set_title('Quantidade de Potássio (K)\nDose: {} t de biocarvão'.format(dose), fontsize=16, weight='bold', color='#333333',
-                   pad=20)
+    fig_k.patch.set_facecolor(background_color)  # Set the background color of the graph
+    ax_k.set_facecolor(background_color)  # Set the background color of the axis
+    ax_k.bar(biochars, values_k, color='#3498DB', edgecolor='black', linewidth=1.2)
+    ax_k.set_ylabel('Potassium (K) Quantity (kg)', fontsize=14, weight='bold', color='#333333')
+    ax_k.set_xlabel('Type of Biochar', fontsize=14, weight='bold', color='#333333')
+    ax_k.set_ylim(0, 3000)  # Fixed limit of 3000 for K
+    ax_k.set_title('Potassium (K) Quantity\nDose: {} t of biochar'.format(dose), fontsize=16, weight='bold', color='#333333', pad=20)
     ax_k.spines['right'].set_visible(False)
     ax_k.spines['top'].set_visible(False)
     for i, v in enumerate(values_k):
         ax_k.text(i, v + 30, f'{v:.2f}', ha='center', fontsize=12, color='#555555')
 
-    # Gráfico de K2O
+    # K2O graph
     fig_k2o, ax_k2o = plt.subplots(figsize=(6, 4))
-    fig_k2o.patch.set_facecolor(background_color)  # Definir a cor de fundo do gráfico
-    ax_k2o.set_facecolor(background_color)  # Definir a cor de fundo do eixo
-    ax_k2o.bar(biocarvoes, values_k2o, color='#1ABC9C', edgecolor='black', linewidth=1.2)
-    ax_k2o.set_ylabel('Equivalente em K₂O (kg)', fontsize=14, weight='bold', color='#333333')
-    ax_k2o.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
-    ax_k2o.set_ylim(0, 4000)  # Limite fixo de 4000 para K2O
-    ax_k2o.set_title('Equivalente em K₂O\n(Dose: {} t de biocarvão)'.format(dose), fontsize=16, weight='bold',
-                     color='#333333', pad=20)
+    fig_k2o.patch.set_facecolor(background_color)  # Set the background color of the graph
+    ax_k2o.set_facecolor(background_color)  # Set the background color of the axis
+    ax_k2o.bar(biochars, values_k2o, color='#1ABC9C', edgecolor='black', linewidth=1.2)
+    ax_k2o.set_ylabel('K₂O Equivalent (kg)', fontsize=14, weight='bold', color='#333333')
+    ax_k2o.set_xlabel('Type of Biochar', fontsize=14, weight='bold', color='#333333')
+    ax_k2o.set_ylim(0, 4000)  # Fixed limit of 4000 for K2O
+    ax_k2o.set_title('K₂O Equivalent\n(Dose: {} t of biochar)'.format(dose), fontsize=16, weight='bold', color='#333333', pad=20)
     ax_k2o.spines['right'].set_visible(False)
     ax_k2o.spines['top'].set_visible(False)
     for i, v in enumerate(values_k2o):
         ax_k2o.text(i, v + 30, f'{v:.2f}', ha='center', fontsize=12, color='#555555')
 
-    # Gráfico de Cálcio
+    # Calcium graph
     fig_ca, ax_ca = plt.subplots(figsize=(6, 4))
-    fig_ca.patch.set_facecolor(background_color)  # Definir a cor de fundo do gráfico
-    ax_ca.set_facecolor(background_color)  # Definir a cor de fundo do eixo
-    ax_ca.bar(biocarvoes, values_ca, color='#E74C3C', edgecolor='black', linewidth=1.2)
-    ax_ca.set_ylabel('Quantidade de Cálcio (Ca) (kg)', fontsize=14, weight='bold', color='#333333')
-    ax_ca.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
-    ax_ca.set_ylim(0, 2000)  # Limite fixo de 2000 para Ca
-    ax_ca.set_title('Quantidade de Cálcio (Ca)\nDose: {} t de biocarvão'.format(dose), fontsize=16, weight='bold',
-                    color='#333333', pad=20)
+    fig_ca.patch.set_facecolor(background_color)  # Set the background color of the graph
+    ax_ca.set_facecolor(background_color)  # Set the background color of the axis
+    ax_ca.bar(biochars, values_ca, color='#E74C3C', edgecolor='black', linewidth=1.2)
+    ax_ca.set_ylabel('Calcium (Ca) Quantity (kg)', fontsize=14, weight='bold', color='#333333')
+    ax_ca.set_xlabel('Type of Biochar', fontsize=14, weight='bold', color='#333333')
+    ax_ca.set_ylim(0, 2000)  # Fixed limit of 2000 for Ca
+    ax_ca.set_title('Calcium (Ca) Quantity\nDose: {} t of biochar'.format(dose), fontsize=16, weight='bold', color='#333333', pad=20)
     ax_ca.spines['right'].set_visible(False)
     ax_ca.spines['top'].set_visible(False)
     for i, v in enumerate(values_ca):
@@ -80,88 +77,86 @@ def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):
     return fig_k, fig_k2o, fig_ca
 
 
-# Função para gerar o gráfico 3D de colunas representando o volume da cova de plantio
-def plot_3d_volume(profundidade, largura, comprimento):
-    background_color = "#F0F2F6"  # Cor de fundo do aplicativo
+# Function to generate the 3D graph of planting hole volume
+def plot_3d_volume(depth, width, length):
+    background_color = "#F0F2F6"  # Application background color
 
     fig = plt.figure(figsize=(6, 6))
-    fig.patch.set_facecolor(background_color)  # Definir a cor de fundo da figura
+    fig.patch.set_facecolor(background_color)  # Set the background color of the figure
     ax = fig.add_subplot(111, projection='3d')
 
-    # Definir a posição da barra 3D
-    x = [0]  # Posição X inicial
-    y = [0]  # Posição Y inicial
-    z = [0]  # Posição Z inicial
-    dx = [largura]  # Largura da barra
-    dy = [comprimento]  # Comprimento da barra
-    dz = [profundidade]  # Altura da barra
+    # Set the position of the 3D bar
+    x = [0]  # Initial X position
+    y = [0]  # Initial Y position
+    z = [0]  # Initial Z position
+    dx = [width]  # Bar width
+    dy = [length]  # Bar length
+    dz = [depth]  # Bar height
 
-    # Criar a barra 3D com cor marrom
+    # Create the 3D bar with brown color
     ax.bar3d(x, y, z, dx, dy, dz, color='brown', alpha=0.7)
 
-    # Ajustar o fundo dos eixos para a mesma cor de fundo
+    # Set axis background to the same color as the background
     ax.set_facecolor(background_color)
 
-    # Ajustar os rótulos dos eixos com labelpad mais curto para aproximar
-    ax.set_xlabel('Largura (cm)', labelpad=5)
-    ax.set_ylabel('Comprimento (cm)', labelpad=5)
-    ax.set_zlabel('Profundidade (cm)', labelpad=5)
+    # Set axis labels with shorter labelpad to bring them closer
+    ax.set_xlabel('Width (cm)', labelpad=5)
+    ax.set_ylabel('Length (cm)', labelpad=5)
+    ax.set_zlabel('Depth (cm)', labelpad=5)
 
-    # Ajustar as margens do gráfico para garantir que os rótulos fiquem visíveis
+    # Adjust plot margins to ensure labels are visible
     plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
 
-    ax.set_title('Volume da Cova de Plantio', fontsize=14, weight='bold')
+    ax.set_title('Planting Hole Volume', fontsize=14, weight='bold')
 
     return fig
 
 
-# Função para gerar o gráfico 3D do volume com pontos representando biocarvão
-def plot_3d_biocarvao_with_points(profundidade, largura, comprimento, dose_por_cova):
-    background_color = "#F0F2F6"  # Cor de fundo do aplicativo
+# Function to generate the 3D graph of biochar volume with points
+def plot_3d_biochar_with_points(depth, width, length, dose_per_hole):
+    background_color = "#F0F2F6"  # Application background color
 
     fig = plt.figure(figsize=(6, 6))
-    fig.patch.set_facecolor(background_color)  # Definir a cor de fundo da figura
+    fig.patch.set_facecolor(background_color)  # Set the background color of the figure
     ax = fig.add_subplot(111, projection='3d')
 
-    # Cada ponto preto representa 1 grama de biocarvão com 2 cm³
-    volume_por_ponto = 2  # cm³ por ponto
-    num_points = int(dose_por_cova)  # Número de pontos (1 ponto = 1 grama de biocarvão)
+    # Each black dot represents 1 gram of biochar with 2 cm³
+    volume_per_point = 2  # cm³ per point
+    num_points = int(dose_per_hole)  # Number of points (1 point = 1 gram of biochar)
 
-    # Calcular número de pontos baseado no volume da cova e volume ocupado por ponto
-    total_volume_cova_cm3 = profundidade * largura * comprimento  # Volume total em cm³
-    pontos_por_cova = min(num_points, total_volume_cova_cm3 // volume_por_ponto)  # Limitar ao volume da cova
+    # Calculate the number of points based on the hole volume and the volume occupied by each point
+    total_hole_volume_cm3 = depth * width * length  # Total volume in cm³
+    points_per_hole = min(num_points, total_hole_volume_cm3 // volume_per_point)  # Limit to the hole volume
 
-    # Distribuir pontos uniformemente dentro da cova
-    x_points = np.random.uniform(0, largura, int(pontos_por_cova))
-    y_points = np.random.uniform(0, comprimento, int(pontos_por_cova))
-    z_points = np.random.uniform(0, profundidade, int(pontos_por_cova))
+    # Uniformly distribute points within the hole
+    x_points = np.random.uniform(0, width, int(points_per_hole))
+    y_points = np.random.uniform(0, length, int(points_per_hole))
+    z_points = np.random.uniform(0, depth, int(points_per_hole))
 
-    # Aumentar o tamanho dos pontos para 50 e aplicar arestas visíveis
-    ax.scatter(x_points, y_points, z_points, color='black', edgecolors='white',
-               s=50)  # s=50 aumenta o tamanho dos pontos
+    # Increase point size to 50 and apply visible edges
+    ax.scatter(x_points, y_points, z_points, color='black', edgecolors='white', s=50)  # s=50 increases point size
 
-    # Ajustar o fundo dos eixos para a mesma cor de fundo
+    # Set axis background to the same color as the background
     ax.set_facecolor(background_color)
 
-    # Ajustar os rótulos dos eixos com labelpad mais curto para aproximar
-    ax.set_xlabel('Largura (cm)', labelpad=5)
-    ax.set_ylabel('Comprimento (cm)', labelpad=5)
-    ax.set_zlabel('Profundidade (cm)', labelpad=5)
+    # Set axis labels with shorter labelpad to bring them closer
+    ax.set_xlabel('Width (cm)', labelpad=5)
+    ax.set_ylabel('Length (cm)', labelpad=5)
+    ax.set_zlabel('Depth (cm)', labelpad=5)
 
-    # Ajustar as margens do gráfico para garantir que os rótulos fiquem visíveis
+    # Adjust plot margins to ensure labels are visible
     plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
 
-    ax.set_title(f'Distribuição de biocarvões\nna Cova com {int(pontos_por_cova)}g de Biocarvão', fontsize=14,
-                 weight='bold')
+    ax.set_title(f'Distribution of Biochar\nin the Hole with {int(points_per_hole)}g of Biochar', fontsize=14, weight='bold')
 
     return fig
 
 
-# Função do gráfico de potássio
-def grafico_potassio():
-    configure_sidebar()  # Chama a função para configurar a barra lateral
+# Function for the potassium graph
+def potassium_graph():
+    configure_sidebar()  # Calls the function to configure the sidebar
 
-    # Adicionar CSS personalizado
+    # Add custom CSS
     st.markdown("""
             <style>
             .slider-label {
@@ -175,81 +170,75 @@ def grafico_potassio():
             </style>
             """, unsafe_allow_html=True)
 
-    # Adicionar um botão para voltar à página do blog
-    if st.button("Voltar para o Blog"):
-        # Alterar o estado da página para "blog"
+    # Add a button to return to the blog page
+    if st.button("Back to Blog"):
+        # Change the page state to "blog"
         st.session_state['page'] = 'blog'
 
-    st.title("Biocarvões carregam nutrientes")
+    st.title("Biochars carry nutrients")
 
     st.write("""
-             <p class="justified-text">Biocarvões, quando aplicados ao solo, também transportam consigo nutrientes \
-             essenciais para a nutrição das plantas. De forma geral, quanto maior o conteúdo de cinzas, maior é a \
-             quantidade de nutrientes minerais presentes nos biocarvões.  </p>
+             <p class="justified-text">Biochars, when applied to soil, also carry essential nutrients for plant nutrition. \
+             In general, the higher the ash content, the higher the amount of mineral nutrients present in biochars.</p>
         """, unsafe_allow_html=True)
 
     st.write("""
-             <p class="justified-text">Além disso, a matéria-prima e a temperatura final de produção dos \
-             biocarvões são outros fatores fundamentais na definição do conteúdo de nutrientes inorgânicos \
-             presentes neles. Podemos observar isso na tabela abaixo:</p>
+             <p class="justified-text">Furthermore, the raw material and the final production temperature of the biochars \
+             are other key factors in defining the inorganic nutrient content present in them. We can observe this in the table below:</p>
             """, unsafe_allow_html=True)
 
-    # Dados de teores de potássio e cálcio para os biocarvões
-    biocarvoes_data = {
-        "Biocarvão": ['Palha de Café', 'Palha de Café', 'Casca de Eucalipto', 'Casca de Eucalipto'],
-        "Temperatura": ['350ºC', '600ºC', '350ºC', '600ºC'],
-        "Teor de K (kg/t)": [44.57, 56.57, 5.66, 7.01],
-        "Teor de Ca (kg/t)": [16.70, 23.23, 26.36, 33.11]  # Adicionando o teor de cálcio
+    # Potassium and calcium levels data for biochars
+    biochar_data = {
+        "Biochar": ['Coffee Husk', 'Coffee Husk', 'Eucalyptus Bark', 'Eucalyptus Bark'],
+        "Temperature": ['350ºC', '600ºC', '350ºC', '600ºC'],
+        "K Content (kg/t)": [44.57, 56.57, 5.66, 7.01],
+        "Ca Content (kg/t)": [16.70, 23.23, 26.36, 33.11]  # Adding calcium content
     }
 
-    # Criar dataframe
-    df = pd.DataFrame(biocarvoes_data)
+    # Create dataframe
+    df = pd.DataFrame(biochar_data)
 
-    # Exibir a tabela centralizada com o CSS definido
+    # Display the table centered with the defined CSS
     st.markdown(df.to_html(index=False, escape=False), unsafe_allow_html=True)
 
     st.write("""
-                <p class="justified-text">Fica claro que os biocarvões de palha de café possuem um expressivo \
-                conteúdo de potássio quando comparados aos biocarvões de casca de eucalipto. Já a casca de \
-                eucalipto contém um pouco mais de cálcio, se comparada aos biocarvões de palha de café. Essas \
-                diferenças entre os teores desses nutrientes nos dois materiais estão relacionadas a aspectos \
-                bioquímicos que explico no post em meu site sobre bioquímica.</p>
+                <p class="justified-text">It is clear that coffee husk biochars have a significant potassium content compared \
+                to eucalyptus bark biochars. Eucalyptus bark, on the other hand, contains slightly more calcium \
+                than coffee husk biochars. These differences in nutrient levels between the two materials are \
+                related to biochemical aspects, which I explain in my blog post on biochemistry.</p>
                """, unsafe_allow_html=True)
     st.write("""
-                <p class="justified-text">Olhando novamente para a tabela, podemos também observar diferenças \
-                quanto à temperatura. Onde temperaturas mais elevadas concentram mais nutrientes, que \
-                temperaturas mais baixas. Esse fenômeno está relacionado com as perdas do conteúdo orgânico \
-                e a preservação do conteúdo inorgânico à medida que a temperatura de produção aumenta. Trataremos \
-                disso em outro post. Hoje, eu gostaria de observar com você a capacidade dos biocarvões de palha \
-                de café em carregar uma considerável quantidade de K solúvel para o solo.</p>
+                <p class="justified-text">Looking again at the table, we can also observe differences with temperature. Higher \
+                temperatures concentrate more nutrients than lower temperatures. This phenomenon is related to \
+                the loss of organic content and the preservation of inorganic content as production temperature increases. \
+                We will discuss this in another post. Today, I would like to focus on the ability of coffee husk biochars \
+                to carry a considerable amount of soluble K to the soil.</p>
                """, unsafe_allow_html=True)
 
     st.write("""
-                <p class="justified-text">Nossa tabela aponta que cada tonelada de biocarvão de palha de café contém \
-                entre 40 e 60 kg de potássio. Considere que cerca de 90%-95% desse contéudo é solúvel em água, \
-                portanto prontamente disponível para absorção por plantas.</p>
+                <p class="justified-text">Our table shows that each ton of coffee husk biochar contains between 40 and 60 kg \
+                of potassium. Consider that about 90%-95% of this content is water-soluble, therefore readily available for plant uptake.</p>
                """, unsafe_allow_html=True)
 
     st.write("""
-                <p class="justified-text">Mova o slider abaixo dos gráficos para ver quanto K cada tonelada de \
-                biocarvão de palha de café carrega. Coloquei ao lado um gráfico com os valores equivalentes em \
-                K₂O como parâmetro de comparação, já que as recomendações de fertilizantes potássicos são \
-                expressas em K₂O.</p>
+                <p class="justified-text">Move the slider below the graphs to see how much K each ton of coffee husk biochar \
+                carries. I have included a graph with equivalent values in K₂O for comparison, as potassium fertilizer recommendations \
+                are expressed in K₂O.</p>
                """, unsafe_allow_html=True)
 
-    # Exibir gráficos de K, K2O e Ca em colunas
+    # Display K, K2O, and Ca graphs in columns
     (col_k, col_k2o) = st.columns(2)
 
-    # Usar st.markdown para exibir um texto estilizado acima do slider
-    st.markdown('<p class="slider-label">Selecione a quantidade de biocarvão (t)</p>', unsafe_allow_html=True)
+    # Use st.markdown to display a styled text above the slider
+    st.markdown('<p class="slider-label">Select the amount of biochar (t)</p>', unsafe_allow_html=True)
 
     # Slider
-    dose = st.slider('', 0, 50, 1, format="%d t")  # Mantendo o texto vazio para evitar repetição
-    k_levels = [44.57, 56.57, 5.66, 7.01]  # Correspondente a B1, B2, B3, B4 (Potássio)
-    ca_levels = [16.70, 23.23, 26.36, 33.11]  # Correspondente a B1, B2, B3, B4 (Cálcio)
+    dose = st.slider('', 0, 50, 1, format="%d t")  # Keeping the text empty to avoid repetition
+    k_levels = [44.57, 56.57, 5.66, 7.01]  # Corresponding to B1, B2, B3, B4 (Potassium)
+    ca_levels = [16.70, 23.23, 26.36, 33.11]  # Corresponding to B1, B2, B3, B4 (Calcium)
     fig_k, fig_k2o, fig_ca = plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels)
 
-    # Exibir os gráficos 2D de K, K2O e Ca em colunas
+    # Display 2D graphs of K, K2O, and Ca in columns
     with col_k:
         st.pyplot(fig_k)
     with col_k2o:
@@ -258,65 +247,60 @@ def grafico_potassio():
     #    st.pyplot(fig_ca)
 
     st.write("""
-               <p class="justified-text">Para algumas pessoas, 1 tonelada de biocarvão de palha de café pode ser \
-               considerada uma quantidade complicada para transportar e aplicar. Contudo, esses valores reduzem \
-               já que o produtor não irá aplicar em área total. Logo abaixo, você poderá conferir quanto de \
-               biocarvão é necessário para aplicação em cova, por exemplo. Sinta-se à vontade para alterar os \
-               valores e dimensões da cova e do equivalente de biocarvão no slider.</p>
+               <p class="justified-text">For some people, 1 ton of coffee husk biochar may seem like a large amount to transport and apply. \
+               However, these values reduce since the producer will not apply it across the entire area. \
+               Below, you can check how much biochar is needed for application in a planting hole, for example. \
+               Feel free to change the values and dimensions of the hole and the equivalent biochar in the slider.</p>
            """, unsafe_allow_html=True)
 
-    # Organizar entrada e saída dos gráficos 3D em três colunas
-    col_input, col_volume, col_biocarvao = st.columns(3)
+    # Arrange input and output for the 3D graphs in three columns
+    col_input, col_volume, col_biochar = st.columns(3)
 
     with col_input:
-        # Caixa de entrada para Profundidade, Largura e Comprimento
-        st.subheader("Dimensões da cova de plantio")
-        profundidade = st.number_input("Profundidade (cm)", min_value=1, value=40)
-        largura = st.number_input("Largura (cm)", min_value=1, value=40)
-        comprimento = st.number_input("Comprimento (cm)", min_value=1, value=40)
+        # Input boxes for Depth, Width, and Length
+        st.subheader("Planting Hole Dimensions")
+        depth = st.number_input("Depth (cm)", min_value=1, value=40)
+        width = st.number_input("Width (cm)", min_value=1, value=40)
+        length = st.number_input("Length (cm)", min_value=1, value=40)
 
-    # Calcular volume da cova (P x L x C)
-    volume_cova = (profundidade * largura * comprimento) / 1000  # Convertido para dm³
-    dose_por_cova = ((dose * volume_cova) / 2_000_000) * 1000000  # Convertido para gramas
+    # Calculate hole volume (D x W x L)
+    hole_volume = (depth * width * length) / 1000  # Converted to dm³
+    dose_per_hole = ((dose * hole_volume) / 2_000_000) * 1000000  # Converted to grams
 
     with col_volume:
-        # Exibir gráfico 3D de colunas do volume da cova
-        fig_volume = plot_3d_volume(profundidade, largura, comprimento)
+        # Display 3D column graph of the hole volume
+        fig_volume = plot_3d_volume(depth, width, length)
         st.pyplot(fig_volume)
 
-        # Adicionar texto centralizado informando o volume da cova
-        st.markdown(f"<div style='text-align: center;'><strong>Volume da cova:</strong> </div>", unsafe_allow_html=True)
-        st.markdown(f"<div style='text-align: center;'>{volume_cova:.2f} dm³</div>", unsafe_allow_html=True)
+        # Add centered text indicating the hole volume
+        st.markdown(f"<div style='text-align: center;'><strong>Hole Volume:</strong> </div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align: center;'>{hole_volume:.2f} dm³</div>", unsafe_allow_html=True)
 
-    with col_biocarvao:
-        # Exibir gráfico 3D com pontos pretos representando biocarvão
-        fig_biocarvao = plot_3d_biocarvao_with_points(profundidade, largura, comprimento, dose_por_cova)
-        st.pyplot(fig_biocarvao)
+    with col_biochar:
+        # Display 3D graph with black points representing biochar
+        fig_biochar = plot_3d_biochar_with_points(depth, width, length, dose_per_hole)
+        st.pyplot(fig_biochar)
 
-        # Adicionar texto centralizado informando a quantidade de biocarvão por cova
-        st.markdown(f"<div style='text-align: center;'><strong>Quantidade de biocarvão por cova:</strong> {dose_por_cova:.2f} g</div>", unsafe_allow_html=True)
+        # Add centered text indicating the amount of biochar per hole
+        st.markdown(f"<div style='text-align: center;'><strong>Amount of biochar per hole:</strong> {dose_per_hole:.2f} g</div>", unsafe_allow_html=True)
 
     st.write("""
-               <p class="justified-text">Para fins de adubação, cada tonelada de biocarvão de palha de café pode adicionar o \
-               equivalente a 50 e 70 kg/ha de K₂O, e para isso são necessárias 32 gramas por planta, misturadas \
-               em uma cova de 40 cm x 40 cm x 40 cm. Logicamente, a quantidade de biocarvão deverá ser \
-               multiplicada pelo número de plantas em 1 hectare para, assim, sabermos qual a quantidade de \
-               biocarvão necessária para cada hectare.</p>
+               <p class="justified-text">For fertilization purposes, each ton of coffee husk biochar can add the equivalent of 50 to 70 kg/ha of K₂O. \
+               For this, 32 grams per plant are required, mixed in a hole measuring 40 cm x 40 cm x 40 cm. \
+               Of course, the amount of biochar should be multiplied by the number of plants per hectare to know the total biochar needed for each hectare.</p>
            """, unsafe_allow_html=True)
 
     st.write("""
-                   <p class="justified-text">Como isto nota-se que biocarvões de palha de café podem \
-                    servir como fonte de nutrientes, podendo assim substituir parte da adubação potássica e de \
-                   outros nutrientes, além de servir como fonte de matéria orgânica relativamente estável para \
-                   o solo contribuindo com reflexos positivos sobre outros atributos físicos e biológicos de \
-                   interessse agricola.</p>
+                   <p class="justified-text">In conclusion, it is clear that coffee husk biochars can serve as a nutrient source, \
+                   potentially replacing part of the potassium fertilization and other nutrients. \
+                   Additionally, they serve as a relatively stable source of organic matter for the soil, \
+                   contributing positively to other physical and biological attributes of agricultural interest.</p>
                """, unsafe_allow_html=True)
 
     st.write("""
-                   <p class="justified-text">Por fim, é importante ressalta que os efeitos benéficos são variáveis \
-                   sobretudo em função \
-                   do solo, do biocarvão e da dose de biocarvão, que trataremos em um post futuro.</p>
+                   <p class="justified-text">Finally, it is important to note that the beneficial effects vary significantly \
+                   depending on the soil, the biochar, and the biochar dose, which we will discuss in a future post.</p>
                """, unsafe_allow_html=True)
 
-# Executar a função de exibição
-grafico_potassio()
+# Run the display function
+potassium_graph()

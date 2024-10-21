@@ -44,7 +44,7 @@ def blog():
 
 # Function for the potassium graph
 def potassium_graph():
-    PostPotassium.grafico_potassio()
+    PostPotassium.potassium_graph()
 
 # Main function to control navigation
 def main():

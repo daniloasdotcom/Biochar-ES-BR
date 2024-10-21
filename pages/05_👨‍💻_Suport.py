@@ -12,7 +12,7 @@ def pagina_apoio():
 
     with col1:
         # Inserir logo da Código Agro e Dados Agro com largura padronizada
-        st.image("images/codigo_agro.png", width=170)
+        st.image("images/codigo_agro.png", width=150)
         st.image("images/dados_agro.png", width=200)
 
     with col2:

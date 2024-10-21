@@ -25,11 +25,11 @@ def blog():
     # Postagem mais recente com subtítulo e conteúdo
     st.subheader("📅 Postagem mais recente")
     st.markdown("---")
-    st.markdown("<h3><em>Biocarvões carregam nutrientes</em></h3>", unsafe_allow_html=True)
+    st.markdown("<h3><em>Biocarvões de Palha de Café: Fonte de K</em></h3>", unsafe_allow_html=True)
     st.write("**Data:** 01/10/2024")
     st.write("""
             A depender do material orgânico do qual se produzirá o biocarvão haverá também diferentes quantidades de potássio.  
-            Veja como diferentes toneladas de biocarvão influenciam a quantidade de potássio presente em cada aplicação...
+            Veja como diferentes toneladas de biocarvão de palha de café influenciam a quantidade de potássio presente em cada aplicação.
         """)
 
     # Espaçamento antes do botão

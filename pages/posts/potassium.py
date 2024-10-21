@@ -40,7 +40,7 @@ def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):
     ax_k.set_ylabel('Quantidade de Potássio (K) (kg)', fontsize=14, weight='bold', color='#333333')
     ax_k.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
     ax_k.set_ylim(0, 3000)  # Limite fixo de 3000 para K
-    ax_k.set_title('Quantidade de Potássio (K)\n(Dose: {} t de biocarvão)'.format(dose), fontsize=16, weight='bold', color='#333333',
+    ax_k.set_title('Quantidade de Potássio (K)\nDose: {} t de biocarvão'.format(dose), fontsize=16, weight='bold', color='#333333',
                    pad=20)
     ax_k.spines['right'].set_visible(False)
     ax_k.spines['top'].set_visible(False)
@@ -70,7 +70,7 @@ def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):
     ax_ca.set_ylabel('Quantidade de Cálcio (Ca) (kg)', fontsize=14, weight='bold', color='#333333')
     ax_ca.set_xlabel('Tipo de Biocarvão', fontsize=14, weight='bold', color='#333333')
     ax_ca.set_ylim(0, 2000)  # Limite fixo de 2000 para Ca
-    ax_ca.set_title('Quantidade de Cálcio (Ca)\n(Dose: {} t de biocarvão)'.format(dose), fontsize=16, weight='bold',
+    ax_ca.set_title('Quantidade de Cálcio (Ca)\nDose: {} t de biocarvão'.format(dose), fontsize=16, weight='bold',
                     color='#333333', pad=20)
     ax_ca.spines['right'].set_visible(False)
     ax_ca.spines['top'].set_visible(False)
@@ -307,7 +307,15 @@ def grafico_potassio():
     st.write("""
                    <p class="justified-text">Como isto nota-se que biocarvões de palha de café podem \
                     servir como fonte de nutrientes, podendo assim substituir parte da adubação potássica e de \
-                   outros nutrientes, além de servir como fonte de matéria orgânica relativamente estável para o solo.</p>
+                   outros nutrientes, além de servir como fonte de matéria orgânica relativamente estável para \
+                   o solo contribuindo com reflexos positivos sobre outros atributos físicos e biológicos de \
+                   interessse agricola.</p>
+               """, unsafe_allow_html=True)
+
+    st.write("""
+                   <p class="justified-text">Por fim, é importante ressalta que os efeitos benéficos são variáveis \
+                   sobretudo em função \
+                   do solo, do biocarvão e da dose de biocarvão, que trataremos em um post futuro.</p>
                """, unsafe_allow_html=True)
 
 # Executar a função de exibição

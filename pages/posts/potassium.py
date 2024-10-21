@@ -175,7 +175,7 @@ def potassium_graph():
         # Change the page state to "blog"
         st.session_state['page'] = 'blog'
 
-    st.title("Biochars carry nutrients")
+    st.title("Coffee Husk Biochar: A Source of K")
 
     st.write("""
              <p class="justified-text">Biochars, when applied to soil, also carry essential nutrients for plant nutrition. \
@@ -202,11 +202,13 @@ def potassium_graph():
     st.markdown(df.to_html(index=False, escape=False), unsafe_allow_html=True)
 
     st.write("""
-                <p class="justified-text">It is clear that coffee husk biochars have a significant potassium content compared \
-                to eucalyptus bark biochars. Eucalyptus bark, on the other hand, contains slightly more calcium \
-                than coffee husk biochars. These differences in nutrient levels between the two materials are \
-                related to biochemical aspects, which I explain in my blog post on biochemistry.</p>
-               """, unsafe_allow_html=True)
+        <p class="justified-text">It is clear that coffee husk biochars have a significant potassium content compared \
+        to eucalyptus bark biochars. Eucalyptus bark, on the other hand, contains slightly more calcium \
+        than coffee husk biochars. These differences in nutrient levels between the two materials are \
+        related to biochemical aspects, which I explain in my blog post on biochemistry \
+        <a href="https://bioquimicacomdanilo.com.br/2024/09/24/nutrientes-biocarvoes.html" target="_blank">here</a>.</p>
+    """, unsafe_allow_html=True)
+
     st.write("""
                 <p class="justified-text">Looking again at the table, we can also observe differences with temperature. Higher \
                 temperatures concentrate more nutrients than lower temperatures. This phenomenon is related to \

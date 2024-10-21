@@ -16,14 +16,15 @@ def pagina_apoio():
         st.image("images/dados_agro.png", width=200)
 
     with col2:
-        # Informações sobre os apoiadores
+        # Information about the supporters
         st.write(
-            "A [**Código Agro**](https://codigoagro.com/) dá suporte na manutenção deste site através do Projeto Dados Agro, \
-            fornecendo recursos e suporte necessários para manter a página ativa e em funcionamento."
+            "[**Código Agro**](https://codigoagro.com/) provides support in maintaining this website through the Dados Agro Project, \
+            offering the necessary resources and support to keep the page active and running."
         )
         st.write(
-            "O Projeto [**Dados Agro**](https://dadosagro.com/) é um projeto da Código Agro que dá suporte na produção de gráficos \
-            e gestão de dados apresentados neste site e no desenvolvimento dos experimentos."
+            "The [**Dados Agro**](https://dadosagro.com/) Project is an initiative by Código Agro that supports the production of graphs \
+            and data management presented on this site, as well as the development of experiments."
         )
+
 
 pagina_apoio()

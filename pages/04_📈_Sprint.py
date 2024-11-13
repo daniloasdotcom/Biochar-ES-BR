@@ -22,10 +22,10 @@ def sprints():
 
     st.markdown(text01, unsafe_allow_html=True)
 
-    time = ["07/10", "08/10", "09/10", "10/10", "11/10",
-            "14/10", "15/10", "16/10", "17/10", "18/10"]
+    time = ["11/11", "12/11", "13/11", "14/11", "15/11",
+            "18/11", "19/11", "20/11", "21/11", "22/11"]
     progress_desired = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    real_progress = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    real_progress = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0]
 
     fig02 = plt.figure(figsize=(10, 5))
 
@@ -62,69 +62,69 @@ def sprints():
                 # To do
     """)
 
-    with st.expander("Day 07/10 - Monday"):
+    with st.expander("Day 11/11 - Monday"):
         st.markdown("""
 
-        - ~Day for reviewing the details of the FAPES Call for Proposals~
+        - ~Day off~
 
         """)
-    with st.expander("Day 08/10 - Tuesday"):
+    with st.expander("Day 12/10 - Tuesday"):
+        st.markdown("""    
+
+        - To complete the text of project
+
+        """)
+
+    with st.expander("Day 13/10 - Wednesday"):
+        st.markdown("""    
+
+        - ~Meeting with Renato discussion about the project
+
+        """)
+
+    with st.expander("Day 14/10 - Thursday"):
+        st.markdown("""    
+
+        - ~Insertion of the first informations for the project in SIGFAPES
+
+        """)
+
+    with st.expander("Day 15/11 - Friday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 09/10 - Wednesday"):
-        st.markdown("""    
-
-        - 
-
-        """)
-
-    with st.expander("Day 10/10 - Thursday"):
-        st.markdown("""    
-
-        - 
-
-        """)
-
-    with st.expander("Day 11/10 - Friday"):
-        st.markdown("""    
-
-        - 
-
-        """)
-
-    with st.expander("Day 14/10 - Monday"):
+    with st.expander("Day 18/11 - Monday"):
         st.markdown("""    
 
         - Day Off
 
         """)
 
-    with st.expander("Day 15/10 - Tuesday"):
+    with st.expander("Day 19/11 - Tuesday"):
         st.markdown("""    
 
         - Day Off
 
         """)
 
-    with st.expander("Day 16/10 - Wednesday"):
+    with st.expander("Day 20/11 - Wednesday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 17/10 - Thursday"):
+    with st.expander("Day 21/11 - Thursday"):
         st.markdown("""    
 
         - 
 
         """)
 
-    with st.expander("Day 18/10 - Friday"):
+    with st.expander("Day 22/11 - Friday"):
         st.markdown("""    
 
         - 

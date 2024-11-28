@@ -28,6 +28,17 @@ def blog():
     st.subheader("📅 Latest Posts")
     st.markdown("---")
 
+    # Second post
+    st.markdown("<h3><em>Biochar and Carbon Addition to Soil</em></h3>", unsafe_allow_html=True)
+    st.write("**Date:** 26/11/2024")
+    st.write("""
+                Learn how biochar application can increase soil carbon levels, contributing to carbon sequestration 
+                and improving soil health.
+            """)
+    if st.button("🔍 View Carbon Post"):
+        st.session_state['page'] = 'grafico_carbon'  # Navigate to carbon graph page
+    st.markdown("---")
+
     # First post
     st.markdown("<h3><em>Coffee Husk Biochar: A Source of K</em></h3>", unsafe_allow_html=True)
     st.write("**Date:** 01/10/2024")
@@ -38,18 +49,6 @@ def blog():
     if st.button("🔍 View Potassium Post"):
         st.session_state['page'] = 'grafico_potassium'  # Navigate to potassium graph page
     st.markdown("---")
-
-    # Second post
-    st.markdown("<h3><em>Biochar and Carbon Addition to Soil</em></h3>", unsafe_allow_html=True)
-    st.write("**Date:** 26/11/2024")
-    st.write("""
-            Learn how biochar application can increase soil carbon levels, contributing to carbon sequestration 
-            and improving soil health.
-        """)
-    if st.button("🔍 View Carbon Post"):
-        st.session_state['page'] = 'grafico_carbon'  # Navigate to carbon graph page
-    st.markdown("---")
-
 
 # Function for the potassium graph
 def potassium_graph():

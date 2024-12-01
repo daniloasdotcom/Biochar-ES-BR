@@ -20,7 +20,7 @@ def display_carbon_squares(dose, carbon_levels):
                     text-align: center;
                 ">
                     <h5 style="margin: 0; color: #333333; font-size: 12px;">{biochar}</h5>
-                    <p style="font-size: 28px; font-weight: bold; color: #2ECC71; margin-top: 10px;">{carbon_value} kg</p>
+                    <p style="font-size: 24px; font-weight: bold; color: #2ECC71; margin-top: 10px;">{carbon_value} kg</p>
                 </div>
             """, unsafe_allow_html=True)
 

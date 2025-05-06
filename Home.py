@@ -40,7 +40,7 @@ def home():
     with col1:
         st.markdown("### ☕ Potassium in Coffee Husk Biochar")
         st.markdown("See how potassium levels vary with temperature and biomass source.")
-        st.link_button("Read Post", "https://biocharbydanilo.streamlit.app/Coffee_and_potassium")
+        st.link_button("Read Post", "pages/Coffee_and_potassium")
 
     with col2:
         st.markdown("### 🌍 Carbon Addition to Soil")

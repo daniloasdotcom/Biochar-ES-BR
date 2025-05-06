@@ -40,12 +40,34 @@ def home():
     with col1:
         st.markdown("### ☕ Potassium in Coffee Husk Biochar")
         st.markdown("See how potassium levels vary with temperature and biomass source.")
-        st.link_button("Read Post", "https://biocharbydanilo.streamlit.app/Coffee_and_potassium")
+        st.markdown("""
+            <a href="https://biocharbydanilo.streamlit.app/Coffee_and_potassium" target="_self" style="
+                display: inline-block;
+                padding: 0.5em 1em;
+                background-color: #3498db;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                margin-top: 10px;
+            ">Read Post</a>
+        """, unsafe_allow_html=True)
 
     with col2:
         st.markdown("### 🌍 Carbon Addition to Soil")
         st.markdown("Estimate how biochar application can increase soil carbon stocks.")
-        st.link_button("Read Post", "Carbon")
+        st.markdown("""
+            <a href="https://biocharbydanilo.streamlit.app/Carbon" target="_self" style="
+                display: inline-block;
+                padding: 0.5em 1em;
+                background-color: #27ae60;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                margin-top: 10px;
+            ">Read Post</a>
+        """, unsafe_allow_html=True)
 
     # Rodapé
     st.markdown("""<hr style="height:1px; border:none; color:#333; background-color:#333;" /> """,

@@ -15,8 +15,6 @@ def configure_sidebar():
     st.sidebar.image("images/projectLogo.png", use_column_width=True)
 
     st.sidebar.markdown('')
-    st.sidebar.markdown('Chief Researchers')
-    st.sidebar.markdown('[**Renato Ribeiro Passos**](http://lattes.cnpq.br/3882320619443256)', unsafe_allow_html=True)
     st.sidebar.markdown('[**Danilo Andrade**](https://daniloas.com/)', unsafe_allow_html=True)
     st.sidebar.write("##")
     st.sidebar.write("##")

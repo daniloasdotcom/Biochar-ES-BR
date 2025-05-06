@@ -4,7 +4,7 @@ from others.sidebar_utils import configure_sidebar
 
 # Configuração inicial da página
 st.set_page_config(
-    page_title="Biochar Blog",
+    page_title="Biochar Data Blog",
     page_icon="🌱",
     layout="centered"
 )
@@ -16,7 +16,7 @@ def home():
 
     st.image("images/biochar.png", use_column_width=True)
 
-    st.markdown("<h1 style='text-align: center; line-height: 1.15;'>Biochar Blog</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; line-height: 1.15;'>Biochar Data Blog</h1>", unsafe_allow_html=True)
     st.markdown(
         "<p style='text-align: center; font-size: 18px;'>Insights on biochar for soil improvement and carbon management</p>",
         unsafe_allow_html=True)

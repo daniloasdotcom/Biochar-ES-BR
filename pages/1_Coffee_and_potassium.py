@@ -2,6 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+from others.load_css import local_css
+from others.sidebar_utils import configure_sidebar
 
 st.set_page_config(page_title="Carbon", page_icon="🌍")
 
@@ -154,6 +156,8 @@ def plot_3d_biochar_with_points(depth, width, length, dose_per_hole):
 
 # Function for the potassium graph
 def potassium_graph(): # Calls the function to configure the sidebar
+    configure_sidebar()
+    local_css("others/style.css")
 
     # Add custom CSS
     st.markdown("""

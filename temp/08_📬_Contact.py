@@ -1,6 +1,6 @@
 import streamlit as st
-from pages.others.load_css import local_css
-from pages.others.sidebar_utils import configure_sidebar
+from others.load_css import local_css
+from others.sidebar_utils import configure_sidebar
 
 configure_sidebar()  # Chama a função para configurar a barra lateral
 

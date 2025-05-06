@@ -1,5 +1,5 @@
 import streamlit as st
-from pages.others.sidebar_utils import configure_sidebar
+from others.sidebar_utils import configure_sidebar
 
 def pagina_apoio():
     configure_sidebar()  # Chama a função para configurar a barra lateral

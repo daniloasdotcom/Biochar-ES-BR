@@ -1,7 +1,7 @@
 import streamlit as st
-import pages.posts.potassium as PostPotassium  # Import the potassium graph
-import pages.posts.carbon as PostCarbon  # Import the carbon addition graph
-from pages.others.sidebar_utils import configure_sidebar
+import pages.Coffee_and_potassium as PostPotassium  # Import the potassium graph
+import pages.carbon as PostCarbon  # Import the carbon addition graph
+from others.sidebar_utils import configure_sidebar
 
 st.set_page_config(
     page_title="Interactive Blog",

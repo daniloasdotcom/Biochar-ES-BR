@@ -1,8 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import datetime
-from pages.others.load_css import local_css
-from pages.others.sidebar_utils import configure_sidebar
+from others.load_css import local_css
+from others.sidebar_utils import configure_sidebar
 
 # Usando nosso recursos css
 local_css("pages/others/style.css")

@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(page_title="Carbon", page_icon="🌍")
+
 # Function to display carbon amounts as squares with percentage
 def display_carbon_squares(dose, carbon_levels):
     biochars = ['CH350ºC', 'CH600ºC', 'EB350ºC', 'EB600ºC']
@@ -55,9 +57,6 @@ def carbon_dashboard():
         }
         </style>
     """, unsafe_allow_html=True)
-
-    if st.button("Back to Blog"):
-        st.session_state['page'] = 'blog'
 
     st.title("Carbon Addition to Soil by Biochar Application")
 
@@ -163,3 +162,6 @@ def carbon_dashboard():
     st.write("""
         <p class="justified-text">To promote a sustainable increase in organic carbon, it is necessary to use recalcitrant sources, that is, those that resist decomposition and remain in the soil longer. Biochar presents this characteristic, especially when produced from biomass with a high lignin content or subjected to higher temperatures during its production. The higher the production temperature and the lignin content of the biomass, the more recalcitrant the biochar, prolonging its permanence in the soil.</p>
     """, unsafe_allow_html=True)
+
+
+carbon_dashboard()

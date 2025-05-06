@@ -2,8 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from pages.others.sidebar_utils import configure_sidebar
 
+st.set_page_config(page_title="Carbon", page_icon="🌍")
 
 # Function to generate the K and K2O graph per ton of biochar
 def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):
@@ -153,8 +153,7 @@ def plot_3d_biochar_with_points(depth, width, length, dose_per_hole):
 
 
 # Function for the potassium graph
-def potassium_graph():
-    configure_sidebar()  # Calls the function to configure the sidebar
+def potassium_graph(): # Calls the function to configure the sidebar
 
     # Add custom CSS
     st.markdown("""
@@ -169,11 +168,6 @@ def potassium_graph():
             }
             </style>
             """, unsafe_allow_html=True)
-
-    # Add a button to return to the blog page
-    if st.button("Back to Blog"):
-        # Change the page state to "blog"
-        st.session_state['page'] = 'blog'
 
     st.title("Coffee Husk Biochar: A Source of K")
 

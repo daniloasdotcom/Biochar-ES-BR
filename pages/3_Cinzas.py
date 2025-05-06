@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # Função para carregar o arquivo Excel
 def load_data():
-    file_path = "cinzas.xlsx"
+    file_path = "data/cinzas.xlsx"
     try:
         return pd.read_excel(file_path)
     except FileNotFoundError:

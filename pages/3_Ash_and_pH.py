@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from others.load_css import local_css
+from others.sidebar_utils import configure_sidebar
 
 def load_data():
     file_path = "data/cinzas.xlsx"
@@ -98,6 +99,9 @@ def plot_graph(df, x_col, y_col, title, x_label, y_label, selected_option, color
 
 
 def main():
+    configure_sidebar()
+    local_css("others/style.css")
+
     st.title("pH vs Ash Content in Biochars")
 
     show_explanatory_text01()

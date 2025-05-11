@@ -204,7 +204,7 @@ def potassium_graph(): # Calls the function to configure the sidebar
         to eucalyptus bark biochars. Eucalyptus bark, on the other hand, contains slightly more calcium \
         than coffee husk biochars. These differences in nutrient levels between the two materials are \
         related to biochemical aspects, which I explain in my blog post on biochemistry \
-        <a href="https://bioquimicacomdanilo.com.br/2024/09/24/nutrientes-biocarvoes.html" target="_blank">here</a>.</p>
+        <a href="https://bioquimicacomdanilo.com.br/2024/11/18/nutrientes-biocarvoes.html" target="_blank">here</a>.</p>
     """, unsafe_allow_html=True)
 
     st.write("""

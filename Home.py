@@ -27,9 +27,11 @@ def home():
     # Sobre o autor
     with st.expander("👨‍🔬 About the Author"):
         st.markdown("""
-            <p class="justified-text">Hi, I'm <a href="https://daniloas.com" target="_blank"><strong>Danilo Andrade Santos</strong></a>. 
-            Since 2012, I’ve been researching biochars and their effects on tropical soils, especially in Espírito Santo, Brazil. 
-            Here you’ll find blog posts, experiments, and data visualizations related to the use of biochar as a soil conditioner.</p>
+            <p class="justified-text">
+            Hi, I'm <a href="https://daniloas.com" target="_blank"><strong>Danilo Andrade Santos</strong></a>.
+            Since 2012, I’ve been researching biochars and their effects on tropical soils, especially in Espírito Santo, Brazil.
+            This blog is a space to share insights and data visualizations related to the use of biochar for soil improvement and carbon management.
+            </p>
         """, unsafe_allow_html=True)
 
     # Seção de posts recentes

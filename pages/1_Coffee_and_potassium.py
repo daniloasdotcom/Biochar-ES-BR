@@ -5,7 +5,7 @@ import numpy as np
 from others.load_css import local_css
 from others.sidebar_utils import configure_sidebar
 
-st.set_page_config(page_title="Carbon", page_icon="🌍")
+st.set_page_config(page_title="Coffee and Potassium", page_icon="☕")
 
 # Function to generate the K and K2O graph per ton of biochar
 def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):

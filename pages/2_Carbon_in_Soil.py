@@ -92,11 +92,11 @@ def carbon_dashboard():
 
     st.write("""
         <p class="justified-text">
-The presented percentages represent the estimated increase in soil carbon content resulting from biochar application. 
-It is important to note that these percentages are calculated relative to the total soil mass considered in this model 
-(2,000,000 kg, corresponding to 1 hectare of area × 20 cm soil depth × 1 kg/dm³ bulk density). 
-For the calculations, the following assumptions were adopted:
-</p>
+        The presented percentages represent the estimated increase in soil carbon content resulting from biochar application. 
+        It is important to note that these percentages are calculated relative to the total soil mass considered in this model 
+        (2,000,000 kg, corresponding to 1 hectare of area × 20 cm soil depth × 1 kg/dm³ bulk density). 
+        For the calculations, the following assumptions were adopted:
+        </p>
 
         <ul class="justified-text">
             <li>Calculation based on mass/mass.</li>

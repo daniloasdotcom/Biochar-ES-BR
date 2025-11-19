@@ -3,6 +3,16 @@ from others.load_css import local_css
 
 st.set_page_config(page_title="Carbon", page_icon="🌍", initial_sidebar_state="expanded")
 
+st.sidebar.image("images/projectLogo.png", use_container_width=True)
+st.sidebar.markdown(
+    """
+    <div style='text-align: center; font-size: 1.2rem; margin-top: 0.5rem;'>
+        Developed by<br><a href="https://daniloas.com" target="_blank" style="text-decoration: none;">daniloas.com</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # Function to display carbon amounts as squares with percentage
 def display_carbon_squares(dose, carbon_levels):
     biochars = ['CH350ºC', 'CH600ºC', 'EB350ºC', 'EB600ºC']

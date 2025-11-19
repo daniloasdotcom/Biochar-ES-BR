@@ -2,7 +2,24 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from others.load_css import local_css
-from others.sidebar_utils import configure_sidebar
+
+# Configuração inicial da página
+st.set_page_config(
+    page_title="ph and Ash Content in Biochars",
+    page_icon="🌱",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
+
+st.sidebar.image("images/projectLogo.png", use_container_width=True)
+st.sidebar.markdown(
+    """
+    <div style='text-align: center; font-size: 1.2rem; margin-top: 0.5rem;'>
+        Developed by<br><a href="https://daniloas.com" target="_blank" style="text-decoration: none;">daniloas.com</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 def load_data():
     file_path = "data/cinzas.xlsx"
@@ -99,8 +116,6 @@ def plot_graph(df, x_col, y_col, title, x_label, y_label, selected_option, color
 
 
 def main():
-    configure_sidebar()
-    local_css("others/style.css")
 
     st.title("pH vs Ash Content in Biochars")
 

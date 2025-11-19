@@ -3,9 +3,18 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from others.load_css import local_css
-from others.sidebar_utils import configure_sidebar
 
-st.set_page_config(page_title="Coffee and Potassium", page_icon="☕")
+st.set_page_config(page_title="Coffee and Potassium", page_icon="☕", initial_sidebar_state="expanded")
+
+st.sidebar.image("images/projectLogo.png", use_container_width=True)
+st.sidebar.markdown(
+    """
+    <div style='text-align: center; font-size: 1.2rem; margin-top: 0.5rem;'>
+        Developed by<br><a href="https://daniloas.com" target="_blank" style="text-decoration: none;">daniloas.com</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Function to generate the K and K2O graph per ton of biochar
 def plot_k_k2o_and_ca_levels(dose, k_levels, ca_levels):
@@ -156,8 +165,6 @@ def plot_3d_biochar_with_points(depth, width, length, dose_per_hole):
 
 # Function for the potassium graph
 def potassium_graph(): # Calls the function to configure the sidebar
-    configure_sidebar()
-    local_css("others/style.css")
 
     # Add custom CSS
     st.markdown("""

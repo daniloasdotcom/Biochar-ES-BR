@@ -19,7 +19,7 @@ def home():
     st.markdown("""<hr style="height:1px; border:none; color:#333; background-color:#333;" /> """,
                 unsafe_allow_html=True)
 
-    col2.image(img_biochar01, width=1920, use_column_width=True)
+    col2.image(img_biochar01, width=1920, use_container_width=True)
 
     text04 = "<h1 style='text-align: center; line-height: 1.15'>Fontes de Financiamento</h1> "
 

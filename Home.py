@@ -1,20 +1,27 @@
 import streamlit as st
 from others.load_css import local_css
-from others.sidebar_utils import configure_sidebar
 
 # Configuração inicial da página
 st.set_page_config(
     page_title="Biochar Data Blog",
     page_icon="🌱",
-    layout="centered"
+    layout="centered",
+    initial_sidebar_state="expanded"
 )
 
+st.sidebar.image("images/projectLogo.png", use_container_width=True)
+st.sidebar.markdown(
+    """
+    <div style='text-align: center; font-size: 1.2rem; margin-top: 0.5rem;'>
+        Developed by<br><a href="https://daniloas.com" target="_blank" style="text-decoration: none;">daniloas.com</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 def home():
-    configure_sidebar()
-    local_css("others/style.css")
 
-    st.image("images/biochar.png", use_column_width=True)
+    st.image("images/biochar.png", use_container_width=True)
 
     st.markdown("<h1 style='text-align: center; line-height: 1.15;'>Biochar Data Blog</h1>", unsafe_allow_html=True)
     st.markdown(
@@ -35,17 +42,17 @@ def home():
         """, unsafe_allow_html=True)
 
     # Seção de posts recentes
-    st.markdown("## 📰 Latest Blog Posts")
+    st.markdown("### 📰 Latest Blog Posts - Click on the sidebar")
 
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("### ☕ Potassium in Coffee Husk Biochar")
+        st.markdown("#### ☕ Potassium in Coffee Husk Biochar")
         st.markdown("See how potassium levels vary with temperature and biomass source.")
         st.markdown("*Navigate to this post using the sidebar.*")
 
     with col2:
-        st.markdown("### 🌍 Carbon Addition to Soil")
+        st.markdown("#### 🌍 Carbon Addition to Soil")
         st.markdown("Estimate how biochar application can increase soil carbon stocks.")
         st.markdown("*Navigate to this post using the sidebar.*")
 

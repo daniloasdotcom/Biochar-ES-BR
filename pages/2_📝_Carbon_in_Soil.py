@@ -1,8 +1,7 @@
 import streamlit as st
 from others.load_css import local_css
-from others.sidebar_utils import configure_sidebar
 
-st.set_page_config(page_title="Carbon", page_icon="🌍")
+st.set_page_config(page_title="Carbon", page_icon="🌍", initial_sidebar_state="expanded")
 
 # Function to display carbon amounts as squares with percentage
 def display_carbon_squares(dose, carbon_levels):
@@ -47,8 +46,6 @@ def display_carbon_squares(dose, carbon_levels):
 
 # Function to display the carbon dashboard
 def carbon_dashboard():
-    configure_sidebar()
-    local_css("others/style.css")
     st.markdown("""
         <style>
         .slider-label {

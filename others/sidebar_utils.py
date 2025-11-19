@@ -12,7 +12,7 @@ def configure_sidebar():
         </style>
         """, unsafe_allow_html=True)
 
-    st.sidebar.image("images/projectLogo.png", use_column_width=True)
+    st.sidebar.image("images/projectLogo.png", use_container_width=True)
 
     st.sidebar.markdown('')
     st.sidebar.markdown('[**Danilo Andrade**](https://daniloas.com/)', unsafe_allow_html=True)

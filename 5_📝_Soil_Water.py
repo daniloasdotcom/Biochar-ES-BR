@@ -3,6 +3,17 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
+
+st.sidebar.markdown(
+    """
+    <div style='text-align: center; font-size: 1.2rem; margin-top: 0.5rem;'>
+        Developed by<br><a href="https://daniloas.com" target="_blank" style="text-decoration: none;">daniloas.com</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.sidebar.image("images/projectLogo.png", use_container_width=True)
 # --------------------------------------------------------------------------
 # 1. Configuração da Página
 # --------------------------------------------------------------------------
@@ -34,8 +45,6 @@ st.markdown("""
 /* Dá mais espaço vertical entre eles */
 .stCheckbox {
     margin-bottom: 4px;
-
-    
 }
 
 </style>
@@ -101,26 +110,28 @@ st.divider()
 # 3. Introdução
 # --------------------------------------------------------------------------
 st.markdown("""
-A gestão da água em solos agrícolas, especialmente os de textura arenosa, é um dos maiores desafios para a agricultura. 
-Quanto maior a proporção de areia, mais rapidamente drenam, retendo pouca humidade para as plantas.
+A gestão da água em solos agrícolas, especialmente os de textura mais grosseira, é um dos maiores desafios para a agricultura. 
+Quanto maior a proporção de areia e menor o conteúdo orgânico, mais rapidamente drenam, retendo pouca umidade para o abastecimento das plantas.
 
-O **Biocarvão (Biochar)** pode atuar como uma tecnologia promissora para mitigar este problema. Ao ser incorporado ao solo, ele pode atuar como um condicionador físico,
+O **Biocarvão (Biochar)** pode atuar como uma tecnologia promissora para mitigar este problema. Ao ser incorporado ao solo, ele pode atuar como um condicionador físico (além de químico e biológico),
 potencialmente aumentando a **Capacidade de Retenção de Água (CRA)** e, mais importante, a **Água Disponível (AD)** para as culturas.
+
+E para que ele exerça este papel de esponja no solo, é fundamental entender os mecanismos envolvidos e como diferentes características do biochar influenciam esses processos.
 """)
 
 # --------------------------------------------------------------------------
 # 4. Mecanismos
 # --------------------------------------------------------------------------
-st.markdown("### 🔍 O Mecanismo: Como Biochars podem contribuir para a retenção de água?")
+st.markdown("### 🔍 Os Mecanismos: Como Biochars podem contribuir para a retenção de água?")
 st.write("A capacidade do biocarvão de alterar a hidrologia do solo não é mágica — é física e química. Podemos dividir sua atuação em três pilares:")
 
 # --- SEÇÃO 1: POROSIDADE (ATUALIZADA) ---
 with st.expander("1. Efeito de Porosidade (Intraporos vs. Interporos)", expanded=True):
     st.markdown("""
-    Esta é a chave para compreender como diferentes granulometrias de biochar modificam o comportamento hídrico do solo.
+    Esta é a chave para compreender como diferentes granulometrias (tamanhos) de biochar modificam o comportamento hídrico do solo.
 
     **• Intraporos (os “micro-reservatórios”):**  
-    São poros internos, localizados **dentro** da partícula de biochar e suficientemente pequenos para reter água sob tensões elevadas, mas ainda acessível às plantas — por isso são os principais responsáveis pelo aumento da **Água Disponível (AD)**.
+    São poros internos (menos que 0,01 mm (10 µm)), localizados **dentro** da partícula de biochar e suficientemente pequenos para reter água sob tensões elevadas, mas ainda acessível às plantas — por isso são os principais responsáveis pelo aumento da **Água Disponível (AD)**.
 
     **• Interporos (o “espaço entre partículas”):**  
     São poros maiores,  formados **entre** as partículas do solo e as partículas de biochar.  
@@ -158,10 +169,6 @@ with st.expander("3. Alteração da Estrutura do Solo"):
     Partículas de biochar são angulares, irregulares e possuem cargas elétricas. Ao misturá-las com as particulas do solo, alteram o empacotamento do solo, criando novos sítios de interação ecaminhos para a retenção e movimento da água.
     """)
 
-st.info("""
-**Experimente você mesmo:**
-O gráfico interativo abaixo mostra dados reais baseados em Liu et al. (2017). Observe como o **Biochar Grosseiro** (que preservou seus poros internos) altera os parâmetros hídricos em comparação à areia pura.
-""")
 
 # --------------------------------------------------------------------------
 # 5. Dados Experimentais (Parâmetros do Artigo)
@@ -253,7 +260,19 @@ def compute_data(data_parameters, psi_min=0.1, psi_max=100000, n_points=1000):
 # --------------------------------------------------------------------------
 # 7. Interface do Simulador
 # --------------------------------------------------------------------------
-st.markdown("### 📊 Simulador de Parâmetros Hídricos")
+st.markdown("### 📊 Porosidade dos biocarvões afetam a retenção de água")
+
+
+st.info("""
+Liu et al. (2017), testou a retenção de água em areia  com biocarvões de diferentes granulometrias e também com areias mais finas.
+""")
+
+st.info("""
+**Experimente você mesmo:**
+O gráfico interativo abaixo mostra dados reais baseados em Liu et al. (2017). Observe como o **Biochar Grosseiro** (que preservou seus poros internos) altera os parâmetros hídricos em comparação à areia pura.
+""")
+
+
 st.caption("Selecione os tratamentos para comparar:")
 
 col_t1, col_t2 = st.columns(2)
@@ -541,6 +560,16 @@ def pore_size_dist_slope(psi, params):
     return np.abs(slope)
 
 st.markdown("### Funcionalização de Biochars e Retenção de Água no Solo")
+
+st.markdown("""
+Ter muito espaço poroso é ótimo, pois quanto mais poros mais superficie para interagir com a água. Mas se estas superficies (paredes internas dos poros e também as paredes externas do biocarvão) não forem hidrofílicas, a água não interage com o biocarvão, ou seja, ele não exerce seu papel de reter água!
+""")
+
+st.markdown("""
+Suliman et al. (2017) experimentaram provocar essa molhabilidade do biocarvão através de um processo de oxidação química, que adiciona grupos funcionais como carboxilas (–COO⁻) na superfície do biocarvão, tornando-o mais hidrofílico. Veja abaixo como isso afeta a retenção de água em solos arenosos tratados com biocarvões de diferentes matérias-primas e pirólise.
+""")
+
+
 st.markdown("""
 Selecione individualmente os tratamentos (Oxidados ou Não Oxidados) para comparação detalhada.
 """)

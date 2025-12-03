@@ -416,3 +416,64 @@ if selected_treatments:
 
 else:
     st.info("Selecione pelo menos um tratamento acima para gerar a simulação.")
+
+
+
+"""
+tab1, tab2 = st.tabs(["📊 Água Disponível (AWC)", "🔬 Distribuição de Poros"])
+"""
+
+"""
+with tab2:
+    st.markdown("### Distribuição de Tamanho de Poros")
+    fig_dist = go.Figure()
+    
+    for item in selected_options:
+        label = item["label"]
+        treatment_key = item["key"]
+        t_type = item["type"]
+        
+        if t_type == "control":
+            fig_dist.add_trace(go.Scatter(
+                x=psi_points, y=dist_soil, 
+                mode='lines', 
+                name='Areia (Controle)',
+                line=dict(color=HEX_SOIL, width=2),
+                fill='tozeroy',
+                fillcolor=RGBA_SOIL
+            ))
+        else:
+            data = DATA_SULIMAN[treatment_key][t_type]
+            dist_val = pore_size_dist_slope(psi_points, data["vg_params"])
+            
+            color_line = HEX_UO if t_type == "UO" else HEX_AO
+            color_fill = RGBA_UO if t_type == "UO" else RGBA_AO
+            line_style = 'solid' if t_type == "UO" else 'dot'
+            
+            fig_dist.add_trace(go.Scatter(
+                x=psi_points, y=dist_val, 
+                mode='lines', 
+                name=label,
+                line=dict(color=color_line, width=2, dash=line_style),
+                fill='tozeroy',
+                fillcolor=color_fill
+            ))
+
+    fig_dist.update_layout(
+        xaxis_type="log",
+        xaxis_title="Potencial Matricial (-kPa)",
+        yaxis_title="Frequência Relativa",
+        template="plotly_white",
+        height=500,
+        margin=dict(l=50, r=50, t=50, b=50),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    )
+    
+    fig_dist.add_vline(x=10, line_dash="dash", line_color="gray", opacity=0.5)
+    fig_dist.add_annotation(x=np.log10(10), y=0.25, text="Macro", showarrow=False, xshift=-20, font=dict(color="gray"))
+    fig_dist.add_vline(x=1500, line_dash="dash", line_color="gray", opacity=0.5)
+    fig_dist.add_annotation(x=np.log10(1500), y=0.25, text="PMP", showarrow=False, xshift=20, font=dict(color="gray"))
+
+    st.plotly_chart(fig_dist, use_container_width=True)
+
+"""

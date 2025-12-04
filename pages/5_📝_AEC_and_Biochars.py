@@ -77,91 +77,14 @@ st.title('⚡ O Lado Positivo dos Biocarvões')
 st.markdown("### 🔍 A Origem da Carga (Biocarvão Natural)")
 
 texto_intro = """
-Para explicar a presença de cargas positivas em biocarvões **não modificados**, Dey et al. (2023) referenciam a literatura estabelecida (Banik et al., 2018).
 
-A teoria aceita é que essas cargas (AEC) surgem principalmente de:
-1. <span class='highlight'>Grupos Oxônio:</span> Heterociclos de oxigênio (átomos de O com carga positiva integrados aos anéis aromáticos).
-2. **Estruturas de Piridínio:** (Em menor grau, dependendo do nitrogênio).
+As cargas positivas de biocarvões não oxidados são oriundas de <span class='highlight'>grupos funcionais oxônio (heterociclos de oxigênio)</span> 
+e, em menor grau, de estruturas de piridínio. Elas possuem papel fundamental na <span class='highlight'>retenção de ânions (como nitrato e fosfato)</span>, 
+além de contribuírem (assim como a CTC) para a molhabilidade (hidrofilicidade) de biocarvões (Banik et al., 2018).
 
 Esses grupos são tipicamente associados a **altas temperaturas de pirólise** (≥700°C), onde a estrutura aromática está condensada.
 """
 st.markdown(texto_intro, unsafe_allow_html=True)
-
-# --- Estudo de Caso: Dey et al. 2023 ---
-st.divider()
-st.markdown("### 🍚 O Caso Curioso de Dey et al. (2023)")
-
-col1, col2 = st.columns([1.5, 1])
-
-with col1:
-    st.write("""
-    **O Material:** Palha de Arroz (Rice Straw).
-    **A Temperatura:** 400°C.
-    
-    Aqui temos um ponto interessante. Embora a literatura diga que a 400°C a carga positiva (AEC) deveria ser baixa, o controle de Dey (RBC-W) apresentou uma AEC considerável.
-    
-    Ainda assim, para **aumentar** drasticamente essa capacidade, eles não dependeram dos grupos oxônio naturais. Eles criaram uma nova superfície via engenharia química.
-    """)
-
-with col2:
-    st.markdown("""
-    <div class='nuance-box'>
-    <b>🧐 Nuance Científica:</b><br>
-    Dey et al. não explicam a origem específica da AEC no controle a 400°C, mas o mecanismo do material <b>modificado</b> é claro:
-    <br><br>
-    👉 <b>Complexos de Ferro (Goethite)</b><br>
-    👉 <b>Protonação por Ácido</b>
-    </div>
-    """, unsafe_allow_html=True)
-
-# --- Seção Educativa: Desvendando os Mistérios ---
-with st.expander("🕵️ Desvendando os Mistérios (Clique para entender)", expanded=False):
-    st.markdown("""
-    <div class='mystery-box'>
-    <h4>1. Por que a carga deveria ser baixa a 400°C?</h4>
-    <p>A literatura (Banik et al., 2018) mostra que em baixas temperaturas (≤ 500°C), a superfície é dominada por grupos <b>negativos</b> (carboxilas -COOH). Os grupos positivos naturais (oxônio) geralmente só se formam quando o carbono se torna aromático/grafítico acima de 700°C.</p>
-    <hr>
-    <h4>2. De onde vem a Goethita se o material é orgânico?</h4>
-    <p>Ela não "nasceu" lá! Foi <b>adicionada</b>. O processo de engenharia envolveu mergulhar o biocarvão em <b>Cloreto Férrico ($FeCl_3$)</b>. O ferro precipitou na superfície do carbono formando um mineral (Goethita), transformando o biocarvão em um material híbrido (orgânico + mineral).</p>
-    <hr>
-    <h4>3. O que é Protonação por Ácido?</h4>
-    <p>É o ato de "colar" prótons ($H^+$) na superfície. Ao lavar o biocarvão com ácido (HCl), os íons $H^+$ se ligam aos grupos funcionais (como OH vira $OH_2^+$). Como o $H^+$ é positivo, a superfície inteira fica mais positiva, atraindo ânions como um ímã.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-# Dados Dey et al.
-dados_dey = {
-    'Biocarvão': ['Não Modificado (400°C)', 'Não Modificado (400°C)', 'Modificado (O₃ + FeCl₃)', 'Modificado (O₃ + FeCl₃)'],
-    'Tipo de Carga': ['CTC (Negativa)', 'CTA (Positiva)', 'CTC (Negativa)', 'CTA (Positiva)'],
-    'Valor (cmol/kg)': [39.4, 26.6, 65.6, 58.1]
-}
-df_dey = pd.DataFrame(dados_dey)
-
-# Gráfico Dey et al.
-mostrar_modificado = st.toggle("✨ Revelar o efeito da Engenharia Química", value=False)
-
-if mostrar_modificado:
-    df_filtrado = df_dey
-    st.success("A modificação química dobrou a capacidade de retenção de ânions (CTA)!")
-else:
-    df_filtrado = df_dey[df_dey['Biocarvão'] == 'Não Modificado (400°C)']
-
-fig_dey = px.bar(
-    df_filtrado, x='Biocarvão', y='Valor (cmol/kg)', color='Tipo de Carga',
-    barmode='group', text_auto=True,
-    color_discrete_map={'CTC (Negativa)': '#81c784', 'CTA (Positiva)': '#ffb74d'},
-    title="Capacidade de Troca Iônica (Dey et al. 2023)"
-)
-# Atualizado para notação científica
-fig_dey.update_layout(yaxis_title="Carga (cmol · kg⁻¹)", xaxis_title="", template="plotly_white", font=dict(size=14))
-st.plotly_chart(fig_dey, use_container_width=True)
-
-st.markdown("""
-<div class='citation'>
-"Banik et al. (2018) relataram que em temperaturas mais altas, grupos heterocíclicos de oxigênio (grupos oxônio em ponte) dominavam, aumentando a carga positiva..."
-<br>— <em>Citado na Introdução de Dey et al. (2023)</em>
-</div>
-""", unsafe_allow_html=True)
 
 # --- Seção Nova: Banik 2018 e a Temperatura ---
 st.write("---")
@@ -264,7 +187,9 @@ st.write("---")
 st.markdown("### 📉 A Influência do pH (Lawrinenko et al., 2015)")
 
 st.write("""
-Além da temperatura, **Lawrinenko et al. (2015)** mostram que a carga positiva (CTA) é altamente sensível ao pH do solo.
+Como pode ser visto acima, além da tempertura, o ambiente químico (pH) também influencia significativamente as cargas. 
+
+Veja no gráfico abaixo outros dados experimentais de **Lawrinenko et al. (2015)**, que investigaram a AEC em função do pH para diversos biocarvões. 
 """)
 
 col_ph1, col_ph2 = st.columns(2)
@@ -286,7 +211,7 @@ with col_ph2:
     Apenas as cargas "permanentes" restam (Grupos Oxônio).
     </div>
     """, unsafe_allow_html=True)
-
+    
 # --- Dados Completos Lawrinenko 2015 (Tabela 1) ---
 data_lawrinenko = [
     # Albumin
@@ -376,8 +301,6 @@ else:
 
     st.plotly_chart(fig_ph, use_container_width=True)
 
-st.info("💡 **Dica de Visualização:** Agora, a **COR** indica o material e o **ESTILO DA LINHA** (sólida/tracejada) indica a temperatura de produção.")
-
 # --- Nova Seção: Aplicação Prática no Solo ---
 st.write("---")
 st.markdown("### 🌱 Aplicação Prática no Solo")
@@ -401,3 +324,83 @@ st.markdown("""
 <br>— <em>Banik et al. (2018)</em>
 </div>
 """, unsafe_allow_html=True)
+
+# --- Estudo de Caso: Dey et al. 2023 ---
+st.divider()
+st.markdown("### 🍚 O Caso Curioso de Dey et al. (2023)")
+
+col1, col2 = st.columns([1.5, 1])
+
+with col1:
+    st.write("""
+    **O Material:** Palha de Arroz (Rice Straw).
+    **A Temperatura:** 400°C.
+    
+    Como vimos a CTC e a CTA estão presentes nos biocarvões. Contudo, podemos **modificar quimicamente** a superfície para aumentalas, e as possibilidades são muitas.
+
+    Dey et al. (2023), por exemplo, aplicaram 15 tipos de modificações químicas, e apresentou os resultados das três com maiores resultados de aumento na CEC e AEC.
+
+    Veja uma exemplo no gráfico abaixo:
+    """)
+
+with col2:
+    st.markdown("""
+    <div class='nuance-box'>
+    <b>🧐 Nuance Científica:</b><br>
+    Dey et al. não explicam a origem específica da AEC no controle a 400°C, mas o mecanismo do material <b>modificado</b> é claro:
+    <br><br>
+    👉 <b>Complexos de Ferro (Goethite)</b><br>
+    👉 <b>Protonação por Ácido</b>
+    </div>
+    """, unsafe_allow_html=True)
+
+# --- Seção Educativa: Desvendando os Mistérios ---
+with st.expander("🕵️ Desvendando os Mistérios (Clique para entender)", expanded=False):
+    st.markdown("""
+    <div class='mystery-box'>
+    <h4>1. Por que a carga deveria ser baixa a 400°C?</h4>
+    <p>A literatura (Banik et al., 2018) mostra que em baixas temperaturas (≤ 500°C), a superfície é dominada por grupos <b>negativos</b> (carboxilas -COOH). Os grupos positivos naturais (oxônio) geralmente só se formam quando o carbono se torna aromático/grafítico acima de 700°C.</p>
+    <hr>
+    <h4>2. De onde vem a Goethita se o material é orgânico?</h4>
+    <p>Ela não "nasceu" lá! Foi <b>adicionada</b>. O processo de engenharia envolveu mergulhar o biocarvão em <b>Cloreto Férrico ($FeCl_3$)</b>. O ferro precipitou na superfície do carbono formando um mineral (Goethita), transformando o biocarvão em um material híbrido (orgânico + mineral).</p>
+    <hr>
+    <h4>3. O que é Protonação por Ácido?</h4>
+    <p>É o ato de "colar" prótons ($H^+$) na superfície. Ao lavar o biocarvão com ácido (HCl), os íons $H^+$ se ligam aos grupos funcionais (como OH vira $OH_2^+$). Como o $H^+$ é positivo, a superfície inteira fica mais positiva, atraindo ânions como um ímã.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Dados Dey et al.
+dados_dey = {
+    'Biocarvão': ['Não Modificado (400°C)', 'Não Modificado (400°C)', 'Modificado (O₃ + FeCl₃)', 'Modificado (O₃ + FeCl₃)'],
+    'Tipo de Carga': ['CTC (Negativa)', 'CTA (Positiva)', 'CTC (Negativa)', 'CTA (Positiva)'],
+    'Valor (cmol/kg)': [39.4, 26.6, 65.6, 58.1]
+}
+df_dey = pd.DataFrame(dados_dey)
+
+# Gráfico Dey et al.
+mostrar_modificado = st.toggle("✨ Revelar o efeito da Engenharia Química", value=False)
+
+if mostrar_modificado:
+    df_filtrado = df_dey
+    st.success("A modificação química dobrou a capacidade de retenção de ânions (CTA)!")
+else:
+    df_filtrado = df_dey[df_dey['Biocarvão'] == 'Não Modificado (400°C)']
+
+fig_dey = px.bar(
+    df_filtrado, x='Biocarvão', y='Valor (cmol/kg)', color='Tipo de Carga',
+    barmode='group', text_auto=True,
+    color_discrete_map={'CTC (Negativa)': '#81c784', 'CTA (Positiva)': '#ffb74d'},
+    title="Capacidade de Troca Iônica (Dey et al. 2023)"
+)
+# Atualizado para notação científica
+fig_dey.update_layout(yaxis_title="Carga (cmol · kg⁻¹)", xaxis_title="", template="plotly_white", font=dict(size=14))
+st.plotly_chart(fig_dey, use_container_width=True)
+
+st.markdown("""
+<div class='citation'>
+"Banik et al. (2018) relataram que em temperaturas mais altas, grupos heterocíclicos de oxigênio (grupos oxônio em ponte) dominavam, aumentando a carga positiva..."
+<br>— <em>Citado na Introdução de Dey et al. (2023)</em>
+</div>
+""", unsafe_allow_html=True)
+
+

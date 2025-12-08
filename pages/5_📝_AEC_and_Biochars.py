@@ -11,6 +11,18 @@ st.set_page_config(
     layout="centered"
 )
 
+st.sidebar.markdown(
+    """
+    <div style='text-align: center; font-size: 1.2rem; margin-top: 0.5rem;'>
+        Developed by<br><a href="https://daniloas.com" target="_blank" style="text-decoration: none;">daniloas.com</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Make sure you have this image in your folder, or comment this line out if not
+st.sidebar.image("images/projectLogo.png", use_container_width=True)
+
 # Custom Styling
 st.markdown("""
 <style>

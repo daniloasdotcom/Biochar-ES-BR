@@ -92,14 +92,15 @@ st.title("🌱 Persistência do biocarvão no solo")
 st.markdown("""
 Confiar nas propriedades químicas do biocarvão para garantir sua permanência no solo pode ser enganoso. Estudos mostram que, mesmo materiais altamente estáveis, podem migrar ou ser "perdidos" do solo devido a erosão e movimentação vertical.
 
-Tais efeitos, sobretudo as perdas por erosão, devem ser considerados em projetos de uso de biocarvão, seja para melhoria agronômica (permanência na camada alvo) ou para projetos de remoção de carbono atmosférico, a fim de que sejam desenvolvidas estratégias de manejo adequadas.
-
-Adicionalmente é interessante notar que o biocarvão, permanecendo no solo, pode gerar, também, ganhos adicionais de carbono nativo no solo, comportando-se como novas superficies de interação para mecanismos como **proteção física em agregados** e **interações organo-minerais** (Weng et al., 2022). 
-
-Contudo, ainda que os biocarvões sejam quimicamente estáveis, evidências de campo de longa duração contrapõem a persistencia dos biocarvões no solo, no local de aplicação. **Ding et al. (2023)** e **Gross et al. (2024)**, por exemplo, relatam reduções significativas do estoque de Carbono oriundo dos biocarvões, quantificando movimentações verticais, especialmente em solos com menor teor de argila.
+Tais efeitos, sobretudo as perdas por erosão, devem ser considerados em projetos de uso de biocarvão, seja para melhoria agronômica ou para projetos de remoção de carbono atmosférico, a fim de que sejam desenvolvidas estratégias de manejo adequadas.
 """)
 
 st.subheader("📉 Evidências de Perda em Longa Duração")
+
+st.markdown("""
+Examinemos, primeiramente, dados que evidenciam a movimentação vertical. **Ding et al. (2023)** e **Gross et al. (2024)**, por exemplo, relatam reduções significativas do estoque de Carbono oriundo dos biocarvões, quantificando movimentações verticais, especialmente em solos com menor teor de argila.
+""")
+
 st.markdown("Resumo dos experimentos de campo citados:")
 
 # --- LAYOUT DE CARDS ---
@@ -180,26 +181,28 @@ with col3:
 st.divider()
 
 st.markdown("""
-Mas uma informações ainda fica em aberto: **qual a dinâmica física do biocarvão no solo?** Ou seja, como o material se move verticalmente e lateralmente, e quais fatores influenciam essa movimentação?
-""")
 
-st.divider()
+""")
+st.markdown("""
+Como observado **Ding et al. (2023)** e **Gross et al. (2024)** não fizeram quantificações de movimentação lateral. Além disso, será que a granulometria ou dose aplicada influenciam essa movimentação? 
+""")
 
 # --- Transição para Obia et al. ---
 st.markdown("""
-***Obia et al. (2024)** aprofundou essa investigação focando na física do transporte. Eles observaram a movimentação vertical e horizontal em solo franco-arenoso (75% de areia) cultivado com milho, testando o efeito da granulometria e da dose.*
+O trabalho de **Obia et al. (2024)** trás insights importantes sobre essa questão. Eles aprofundaram essa investigação focando na física do transporte. Os dados a seguir são um extrato das observações de **Obia et al. (2024)** em solo franco-arenoso (75% de areia) cultivado com milho, testando o efeito da granulometria e da dose.*
 
-Analisemos os dados de Obia et al.:
+Observemos:
 """)
 
 st.divider()
 
 # --- Contexto Experimental ---
 st.header("📍 Contexto Experimental")
-st.markdown("Características do local (Mkushi, Zâmbia) e manejo adotado durante os 4,5 anos:")
 
-with st.expander("📋 Ver detalhes completos de Solo, Manejo e Clima", expanded=True):
+with st.expander("📋 Ver detalhes completos de Solo, Manejo e Clima", expanded=False):
     st.markdown("""
+    * **O Biocarvão:** dry corncob in a retort kiln at a temperature of approximately 400 to 500˚C with a residence time of 24 hrs.
+    * **Profundidade de aplicação:** 0-7 cm.
     * **O Solo (Fator Crítico):** Classificado como **Acrisol (FAO)**, textura **Franco-Arenosa**.
         * **Composição Granulométrica:** 75,1% Areia, 15,9% Silte, 9,0% Argila.
         * **Química:** Solo ácido (pH 5,8) e pobre em Carbono Orgânico (0,74%).
@@ -360,7 +363,5 @@ st.markdown("""
 
 > Ding X, Li G, Zhao X, Lin Q, Wang X (2023) **Biochar application significantly increases soil organic carbon under conservation tillage: an 11-year field experiment.** Biochar 5:28.
 
-> Gross A, Bromm T, Polifka S, Fischer D, Glaser B (2024) **Long-term biochar and soil organic carbon stability – Evidence from field experiments in Germany.** Science of The Total Environment 954:176340.
-
-> Weng Z, et al. (2022) **Microspectroscopic visualization of how biochar lifts the soil organic carbon ceiling.** Nature Communications 13:5177.
+> Gross A, Bromm T, Polifka S, Fischer D, Glaser B (2024) **Long-term biochar and soil organic carbon stability - Evidence from field experiments in Germany.** Science of The Total Environment 954:176340.
 """)

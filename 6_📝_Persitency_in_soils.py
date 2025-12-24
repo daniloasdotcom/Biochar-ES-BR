@@ -90,13 +90,13 @@ st.title("🌱 Persistência do biocarvão no solo")
 
 # --- Introdução ---
 st.markdown("""
-Confiar nas propriedades químicas do biocarvão para garantir sua permanência no solo pode ser enganoso. Estudos mostram que, mesmo materiais altamente estáveis, podem migrar ou ser perdidos do solo devido a fatores físicos — como erosão hídrica e movimentação vertical — e biológicos.
+Confiar nas propriedades químicas do biocarvão para garantir sua permanência no solo pode ser enganoso. Estudos mostram que, mesmo materiais altamente estáveis, podem migrar ou ser "perdidos" do solo devido a erosão e movimentação vertical.
 
-Tais efeitos, sobretudo as perdas por erosão, devem ser considerados em projetos de uso de biocarvão, seja para melhoria agronômica ou para remoção de Carbono (CDR), a fim de que sejam desenvolvidas estratégias de manejo adequadas.
+Tais efeitos, sobretudo as perdas por erosão, devem ser considerados em projetos de uso de biocarvão, seja para melhoria agronômica (permanência na camada alvo) ou para projetos de remoção de carbono atmosférico, a fim de que sejam desenvolvidas estratégias de manejo adequadas.
 
-É interessante notar que o biocarvão pode gerar ganhos de carbono nativo no solo comportando-se como novas superficies de interação para mecanismos como **proteção física em agregados** e **interações organo-minerais** (Weng et al., 2022). 
+Adicionalmente é interessante notar que o biocarvão, permanecendo no solo, pode gerar, também, ganhos adicionais de carbono nativo no solo, comportando-se como novas superficies de interação para mecanismos como **proteção física em agregados** e **interações organo-minerais** (Weng et al., 2022). 
 
-Contudo, evidências de campo de longa duração contrapõem a persistencia dos biocarvões no solo. **Ding et al. (2023)** e **Gross et al. (2024)**, por exemplo, relatam reduções significativas do estoque de Carbono oriundo dos biocarvões, quantificando movimentações verticais, especialmente em solos com menor teor de argila.
+Contudo, ainda que os biocarvões sejam quimicamente estáveis, evidências de campo de longa duração contrapõem a persistencia dos biocarvões no solo, no local de aplicação. **Ding et al. (2023)** e **Gross et al. (2024)**, por exemplo, relatam reduções significativas do estoque de Carbono oriundo dos biocarvões, quantificando movimentações verticais, especialmente em solos com menor teor de argila.
 """)
 
 st.subheader("📉 Evidências de Perda em Longa Duração")
@@ -342,9 +342,9 @@ st.divider()
 st.subheader("🚨 Implicações para Mercados de Carbono e Manejo")
 
 st.markdown("""
-Os dados apresentados evidenciam um risco estrutural: **a contabilidade de créditos de carbono baseada apenas na "aplicação" mostrou-se insuficiente e arriscada.** Se as perdas observadas são resultado de **movimentação lateral (erosão)**, a premissa fundamental de que o biocarvão permanece no solo é quebrada. Essa migração não representa apenas uma falha contábil; ela introduz o risco de carrear o material para cursos d'água ou ecossistemas adjacentes.
+Os dados apresentados evidenciam um risco estrutural: do ponto de vista agronômico é desejável que o biocarvão permaneça no solo para que expresse seus efeitos positivos na produção agricola; já no que se refere à sua função como sumidouro de carbono atmosférico, **a contabilidade de créditos de carbono baseada apenas na "aplicação" mostra-se insuficiente e arriscada.** Para ambos os pontos de vista, se as perdas observadas são resultado de **movimentação lateral (erosão)**, a premissa fundamental de que o biocarvão permanece no solo é quebrada. Essa migração não representa apenas uma falha contábil no mercado de carbono; ela representa perda de insumos e introduz o risco de carrear o material para cursos d'água ou ecossistemas adjacentes.
 
-Para garantir a integridade dos créditos de carbono via biocarvão (Biochar Carbon Removal - BCR), os protocolos devem evoluir para exigir:
+Para garantir que os biocarvões possam cumprir com sucesso suas funções, algumas recomendações práticas são essenciais:
 
 1.  **Monitoramento da Estabilidade Física:** Não basta medir a estabilidade química (razão H/C); é imperativo monitorar a permanência física do material no local (risco de erosão).
 2.  **Manejo Conservacionista Obrigatório:** A elegibilidade para créditos deve estar condicionada à adoção de práticas que mitiguem a erosão (como plantio direto, curvas de nível e cobertura de solo), criando redundância na segurança do armazenamento.

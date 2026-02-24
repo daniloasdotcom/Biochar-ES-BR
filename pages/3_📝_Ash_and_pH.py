@@ -33,7 +33,7 @@ def load_data():
 def show_explanatory_text01():
     explanatory_text = """
     <div style="text-align: justify;">
-    The pyrolysis temperature and the type of biomass feedstock are critical factors in determining the properties of biochars. These factors influence nutrient content and availability, the amount of functional groups, the degree of recalcitrance, and the alkalinity of the final biochar.
+    Pyrolysis temperature and feedstock composition are critical determinants of biochar properties. These factors govern nutrient bioavailability, the nature and abundance of functional groups, recalcitrance, and the alkalinity of the final product.
     <br><br>
     Alkalinity is essential for using biochar as a soil amendment because it directly affects its ability to neutralize soil acidity, creating a more favorable environment for crop growth. Additionally, alkalinity is associated with the cation exchange capacity, which is key to retaining and making nutrients available to plants. Thus, the selection of a biochar should consider its potential to influence soil pH for proper agronomic use.
     <br><br>

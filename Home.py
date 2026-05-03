@@ -46,7 +46,7 @@ def home():
         """, unsafe_allow_html=True)
 
     # --- BLOG POSTS SECTION ---
-    st.markdown("### 📰 Latest Blog Posts")
+    st.markdown("### 📰 Latest Insights")
 
     col1, col2 = st.columns(2)
 

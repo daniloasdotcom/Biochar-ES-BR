@@ -5,7 +5,7 @@ from utils import show_sidebar
 # ------------------- PAGE CONFIGURATION ------------------
 # ---------------------------------------------------------
 st.set_page_config(
-    page_title="Biochar Data Blog",
+    page_title="Biochar Insights",
     page_icon="🏠",
     layout="centered",
     initial_sidebar_state="expanded"
@@ -27,7 +27,7 @@ def home():
         st.warning("Note: 'images/biochar.png' was not found.")
 
     # --- Header ---
-    st.markdown("<h1 style='text-align: center; line-height: 1.15;'>Biochar Data Blog</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; line-height: 1.15;'>Biochar Insights</h1>", unsafe_allow_html=True)
     st.markdown(
         "<p style='text-align: center; font-size: 18px; color: #666;'>Insights on biochar for soil improvement and carbon management</p>",
         unsafe_allow_html=True)

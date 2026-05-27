@@ -25,6 +25,55 @@ biochar_cec = {
     "Sugarcane Bagasse": {350: 4.6, 450: 1.8, 750: 1.3}
 }
 
+# Observed empirical regression equations from Figure 1 (Domingues et al., 2020)
+# 'x' is the biochar rate (%)
+observed_equations = {
+    "Red Latosol": {
+        "Chicken Manure": {
+            350: lambda x: 20.20 + 0.35 * x,
+            450: lambda x: 24.39 - 0.51 * x + 0.03 * (x**2),
+            750: lambda x: 18.93 + 0.32 * x
+        },
+        "Eucalyptus Sawdust": {
+            350: lambda x: 19.1, # y = y_bar (linha base do controle)
+            450: lambda x: 18.11 - 0.20 * x,
+            750: lambda x: 17.41 - 0.16 * x
+        },
+        "Coffee Husk": {
+            350: lambda x: 15.13 + 1.24 * x,
+            450: lambda x: 18.86 + 0.53 * x,
+            750: lambda x: 15.42 + 0.85 * x - 0.02 * (x**2)
+        },
+        "Sugarcane Bagasse": {
+            350: lambda x: 20.07 - 0.56 * x + 0.02 * (x**2),
+            450: lambda x: 20.41 - 0.68 * x + 0.02 * (x**2),
+            750: lambda x: 17.94 - 0.23 * x
+        }
+    },
+    "Red-Yellow Latosol": {
+        "Chicken Manure": {
+            350: lambda x: 2.70 + 0.40 * x,
+            450: lambda x: 2.82 + 0.26 * x,
+            750: lambda x: 3.36 + 0.08 * x
+        },
+        "Eucalyptus Sawdust": {
+            350: lambda x: 2.46 + 0.11 * x,
+            450: lambda x: 2.4, # y = y_bar
+            750: lambda x: 2.4  # y = y_bar
+        },
+        "Coffee Husk": {
+            350: lambda x: 1.78 + 1.12 * x,
+            450: lambda x: 0.98 + 1.38 * x - 0.05 * (x**2),
+            750: lambda x: 1.38 + 0.42 * x - 0.01 * (x**2)
+        },
+        "Sugarcane Bagasse": {
+            350: lambda x: 3.58 - 0.22 * x + 0.02 * (x**2),
+            450: lambda x: 3.58 - 0.22 * x + 0.02 * (x**2),
+            750: lambda x: 3.58 - 0.22 * x + 0.02 * (x**2)
+        }
+    }
+}
+
 # Local path to the scientific PDF (ensure file exists)
 pdf_path = "agronomy-10-00824-v3.pdf"
 
@@ -144,9 +193,7 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-# Make sure you have this image in your folder, or comment this line out if not
 st.sidebar.image("images/projectLogo.png", use_container_width=True)
-
 
 # ---------------------------------------------------------
 # ---- CALCULATE RESULTING SOIL CEC BASED ON MIXTURE -----
@@ -196,16 +243,30 @@ st.markdown(f"""
 
 # Generate data for plotting 0% to 20%
 rates = list(range(0, 21))
-cecs = [((1 - r/100) * initial_soil_cec) + ((r/100) * selected_biochar_cec) for r in rates]
 
-df_graph = pd.DataFrame({"Biochar Rate (%)": rates, "Soil CEC (cmolc/kg)": cecs})
+# Hipotético / Teórico
+pred_cecs = [((1 - r/100) * initial_soil_cec) + ((r/100) * selected_biochar_cec) for r in rates]
+
+# Observado / Real
+try:
+    obs_func = observed_equations[soil_choice][biochar_choice][temperature_choice]
+    obs_cecs = [obs_func(r) for r in rates]
+except KeyError:
+    obs_cecs = pred_cecs # Fallback de segurança
+
+# Combinar os dados para o Plotly traçar as duas linhas
+df_pred = pd.DataFrame({"Biochar Rate (%)": rates, "Soil CEC (cmolc/kg)": pred_cecs, "Model": "Hipotético (Teórico)"})
+df_obs = pd.DataFrame({"Biochar Rate (%)": rates, "Soil CEC (cmolc/kg)": obs_cecs, "Model": "Observado (Real)"})
+df_graph = pd.concat([df_pred, df_obs])
 
 fig = px.line(
     df_graph,
     x="Biochar Rate (%)",
     y="Soil CEC (cmolc/kg)",
+    color="Model",
     title=f"Effect of {biochar_choice} dose on {soil_choice} CEC",
-    markers=True
+    markers=True,
+    color_discrete_sequence=["#1f77b4", "#ff7f0e"] # Azul para teórico, Laranja para observado
 )
 
 # Add reference line for initial soil CEC
@@ -215,7 +276,7 @@ fig.add_hline(y=initial_soil_cec, line_dash="dot",
 fig.update_layout(
     xaxis_title="Biochar Application Rate (%)",
     yaxis_title="Final Soil CEC (cmolc/kg)",
-    hovermode="x"
+    hovermode="x unified"
 )
 
 st.plotly_chart(fig, use_container_width=True)

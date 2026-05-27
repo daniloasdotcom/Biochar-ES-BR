@@ -112,7 +112,7 @@ st.divider()
 st.markdown("""
 A gestão da água em solos agrícolas, especialmente os de textura mais grosseira, é um dos maiores desafios para a agricultura, pois, quanto maior a proporção de areia e menor o conteúdo orgânico, mais rapidamente drenam, retendo pouca umidade para o abastecimento das plantas.
 
-O **Biocarvão (Biochar)** pode atuar como uma tecnologia promissora para mitigar este problema. Ao ser incorporado ao solo, ele pode atuar como um condicionador físico (além de químico e biológico), potencialmente aumentando a **Capacidade de Retenção de Água (CRA)** e, mais importante, do ponto de vista agrícola, a **Água Disponível (AD)** para as culturas.
+O **Biocarvão (Biochar)** pode contribuir para mitigar este problema. Ao ser incorporado ao solo, ele pode atuar como um condicionador físico (além de químico e biológico), potencialmente aumentando a **Capacidade de Retenção de Água (CRA)** e, mais importante, do ponto de vista agrícola, a **Água Disponível (AD)** para as culturas.
 
 Para que ele exerça este papel de esponja no solo, é fundamental entender os mecanismos envolvidos e como diferentes características do biochar influenciam esses processos.
 """)
@@ -130,7 +130,7 @@ with st.expander("1. Efeito de Adsorção e Superfície", expanded=True):
 
     Assim, por exemplo, biochars produzidos a menor temperatura tendem a ser mais hidrofílicos, enquanto aqueles produzidos a temperaturas mais elevadas são mais hidrofóbicos.
 
-    Essa **química da superfície** do biochar, inclusive, pode ser modificada — e isso altera profundamente sua afinidade pela água.
+    Essa **química da superfície** do biochar, inclusive, pode ser modificada, naturalmente ou em laboratório, e isso altera profundamente sua afinidade pela água.
 
     **• Oxidação superficial:**  
     Quando exposto ao ar, ao solo ou a tratamentos químicos, o biochar desenvolve grupos funcionais como **carboxilas (–COOH)**.  
@@ -303,12 +303,7 @@ if selected_treatments:
 
     # --- TAB 1 ---
     with tab1:
-        st.markdown("""
-        **Comparativo de Disponibilidade Hídrica (Valores reportados por Liu et al., 2017):**
-        * **PMP (Ponto de Murcha Permanente):** Água retida com muita força, indisponível para plantas.
-        * **AD (Água Disponível):** O "tanque" de água que a planta consegue beber.
-        * **CC (Capacidade de Campo):** Soma de PMP + AD. O máximo que o solo segura sem drenar.
-        """)
+        
         
         fig_bar = go.Figure()
         
@@ -355,7 +350,8 @@ if selected_treatments:
 
         fig_bar.update_layout(
             barmode='group',
-            title="Parâmetros Hídricos Experimentais (m³/m³)",
+            title="Parâmetros Hídricos Experimentais (m³/m³) - Baseado em Liu et al. (2017)",
+            
             yaxis_title="Umidade Volumétrica (m³/m³)",
             xaxis_tickangle=0,
             template="plotly_white",
@@ -384,6 +380,11 @@ if selected_treatments:
                 "AD": vals_ad[i],
                 "CC": vals_cc[i]
             })
+        st.markdown("""
+        * **PMP (Ponto de Murcha Permanente):** Água retida com muita força, indisponível para plantas.
+        * **AD (Água Disponível):** O "tanque" de água que a planta consegue beber.
+        * **CC (Capacidade de Campo):** Soma de PMP + AD. O máximo que o solo segura sem drenar.
+        """)
 
     # --- TAB 2 ---
     with tab2:

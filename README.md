@@ -29,22 +29,12 @@ Instead of navigating through dense academic papers, users can explore data-driv
 
 ---
 
-## 📸 Screenshots
-
-| Home Page & Latest Insights | CEC Simulator | Persistence & Mass Balance |
-|:---:|:---:|:---:|
-| <img src="image_e73cf0.jpg" width="250"> | <img src="image_e73a22.jpg" width="250"> | <img src="image_e739cc.jpg" width="250"> |
-
-*(Note: Ensure the image files are in the root directory of your repository for these to render correctly)*
-
----
-
 ## 🛠️ Technologies Used
 
 * **[Python](https://www.python.org/)** - Core programming language.
 * **[Streamlit](https://streamlit.io/)** - Framework used to build the interactive web application quickly and beautifully.
-* **[Pandas](https://pandas.pydata.org/)** *(Assumed)* - For data manipulation and dataset handling.
-* **[Plotly / Altair](https://plotly.com/)** *(Assumed)* - For rendering the interactive charts and graphs.
+* **[Pandas](https://pandas.pydata.org/)** - For data manipulation and dataset handling.
+* **[Plotly / Altair](https://plotly.com/)** - For rendering the interactive charts and graphs.
 
 ---
 

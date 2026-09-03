@@ -1,9 +1,57 @@
-# biocharScience
+# 🌱 Biochar Insights
 
 ![logo](https://github.com/daniloaspk/biocharScience/blob/main/images/projectLogo.png)
 
-Biochars have drawn the attention of Soil Science to the understanding of their effects on the chemical, physical and biological attributes of soils. In this context, the State of Espírito Santo has, within the areas of agricultural production, materials that are generated in large volume and with the potential to be used for energy conversion and consequent production and reuse of biochars to return to the field as soil conditioners.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-My name is Danilo, Regional Scholarship Researcher and coordinator of the present set of studies on biochars as soil conditioners under the supervision of Professor Renato Ribeiro Passos and funding from the Fundação de Amparo à Pesquisa e Inovação do Espírito Santo and the National Council for Scientific and Technological Development.
+> **Bridging the gap between scientific literature and practical soil management through interactive data.**
 
-And this is the website created to publicize the progress of research approved and developed from the FAPES/CNPq No. of Espírito Santo with the objective of obtaining insights into the effectiveness of the use of carbonized organic waste and presenting solutions for its use as soil conditioners.
+## 📖 About the Project
+
+**Biochar Insights** is an interactive web application built to present scientific data and literature reviews on biochar in an accessible, engaging format. 
+
+Instead of navigating through dense academic papers, users can explore data-driven "mini-articles" or blogs. The application extracts key insights from scientific research and presents them through clear arguments supported by **interactive charts and simulators**.
+
+### 🎯 Key Objectives
+* **Democratize Science:** Make complex academic findings about biochar accessible to students, researchers, and agronomists.
+* **Interactive Learning:** Allow users to simulate scenarios (e.g., dynamic soil CEC) based on real experimental datasets.
+* **Evidence-Based:** Ground all insights, charts, and claims in published scientific literature.
+
+---
+
+## ✨ Features
+
+* **📚 Thematic Mini-Articles:** Curated insights on specific topics such as *Coffee and Potassium*, *Carbon in Soil*, *Ash and pH*, and *Biochar Persistence*.
+* **🧮 Interactive Simulators:** Tools like the **Dynamic Soil CEC Simulator**, which allows users to adjust biochar application rates, select soil types, and choose feedstock to see immediate estimated impacts.
+* **📊 Data Visualization:** Dynamic pie charts, bar graphs, and line charts comparing different application rates and depths, built directly from scientific datasets.
+
+---
+
+## 📸 Screenshots
+
+| Home Page & Latest Insights | CEC Simulator | Persistence & Mass Balance |
+|:---:|:---:|:---:|
+| <img src="image_e73cf0.jpg" width="250"> | <img src="image_e73a22.jpg" width="250"> | <img src="image_e739cc.jpg" width="250"> |
+
+*(Note: Ensure the image files are in the root directory of your repository for these to render correctly)*
+
+---
+
+## 🛠️ Technologies Used
+
+* **[Python](https://www.python.org/)** - Core programming language.
+* **[Streamlit](https://streamlit.io/)** - Framework used to build the interactive web application quickly and beautifully.
+* **[Pandas](https://pandas.pydata.org/)** *(Assumed)* - For data manipulation and dataset handling.
+* **[Plotly / Altair](https://plotly.com/)** *(Assumed)* - For rendering the interactive charts and graphs.
+
+---
+
+
+## 📝 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+*Home [Biochar Insights](https://biocharinsights.streamlit.app/)*
+*Developed by [Danilo Andrade Santos](https://daniloas.com)*
